@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Text;
-using OpenCvSharp;
 
 namespace ReliefAnalyze
 {
@@ -14,7 +13,6 @@ namespace ReliefAnalyze
     {
         private Image MyImage { get; set; }
         private string MyFileName { get; set; }
-
         private System.Drawing.Point coordinatesAnalyze { get; set; }
         private int RectSide { get; set; }
         public MainForm()
@@ -24,7 +22,7 @@ namespace ReliefAnalyze
 
         private void ExitMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void OpenFileMenuItem_Click(object sender, EventArgs e)
@@ -95,9 +93,11 @@ namespace ReliefAnalyze
             }
             var allColors = colorDictionary.OrderByDescending(elem => elem.Value.ColorCount).ToList();
             var mainColors = allColors.Take(20).ToList();
-            
 
-            using (StreamWriter writer = new StreamWriter(@"E:\dev\C#\ReliefAnalyze\imageinfo.txt"))
+            var projectDir = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+
+
+            using (StreamWriter writer = new StreamWriter($@"{projectDir}\imageinfo.txt"))
             {
                 foreach (KeyValuePair<string, ColorInfo> keyValue in colorDictionary.OrderByDescending(elem => elem.Value.ColorCount))
                 {
@@ -147,19 +147,6 @@ namespace ReliefAnalyze
 
         }
 
-        private void MainPictureBox_Click(object sender, EventArgs e)
-        {
-            //MouseEventArgs me = (MouseEventArgs)e;
-            //Point coordinates = me.Location;
-            //var imageBitmap = new Bitmap(MyImage);
-            //int rectSide = imageBitmap.Height > imageBitmap.Width ? Convert.ToInt32(imageBitmap.Width * 0.1) : Convert.ToInt32((int)imageBitmap.Height * 0.1);
-            //var diag = Math.Sqrt(2 * rectSide);
-            //Graphics g = Graphics.FromImage(imageBitmap);
-            //g.DrawRectangle(new Pen(Color.Gray, 3), coordinates.X, coordinates.Y, coordinates.X + rectSide / 2 , coordinates.Y + rectSide / 2);
-            //g.Save();
-            //mainPictureBox.Image = imageBitmap;
-        }
-
         private void MainPictureBox_MouseDown(object sender, MouseEventArgs e)
         {
             if (this.mainPictureBox.Image != null)
@@ -184,8 +171,13 @@ namespace ReliefAnalyze
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MyImage = Image.FromFile(Environment.CurrentDirectory + "\\..\\..\\..\\map (4).png");
-            mainPictureBox.Image = MyImage;
+            var projectDir = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+
+            if (File.Exists($@"{projectDir}\map.png")) {
+                MyImage = Image.FromFile($@"{projectDir}\map.png");
+                mainPictureBox.Image = MyImage;
+            }
+
         }
 
         private void ControursButton_Click(object sender, EventArgs e)
