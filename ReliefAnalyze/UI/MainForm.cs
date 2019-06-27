@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Text;
+using ReliefAnalyze.UI;
 
 namespace ReliefAnalyze
 {
@@ -47,22 +48,68 @@ namespace ReliefAnalyze
             }
         }
 
+        private void FragmentContours()
+        {
+            var imageBitmap = new Bitmap(MyImage);
+            var contoursBitmap = new Bitmap(imageBitmap);
+            if (!coordinatesAnalyze.IsEmpty)
+            {
+                var xstart = coordinatesAnalyze.X - RectSide / 2;
+                var ystart = coordinatesAnalyze.Y - RectSide / 2;
+                var xend = coordinatesAnalyze.X + RectSide / 2;
+                var yend = coordinatesAnalyze.Y + RectSide / 2;
+                var xmin = xstart > 0 ? xstart : 0;
+                var ymin = ystart > 0 ? ystart : 0;
+                var xmax = xend < Width ? xend : Width;
+                var ymax = yend < Height ? yend : Height;
+                var newWidth = xmax - xmin;
+                var newHeight = ymax - ymin;
+                for (int i = 0; i < newWidth; i++)
+                {
+                    for (int j = 0; j < newHeight; j++)
+                    {
+                        if (!(i == 0 || j == 0 || i == newWidth - 1 || j == newHeight - 1))
+                        {
+                            var medium = imageBitmap.GetPixel(i + xmin - 1, j + ymin - 1);
+                            contoursBitmap.SetPixel(i, j, medium);
+                        }
+                    }
+                }
+
+                contoursBitmap = ImageFilter.PrewittFilter(contoursBitmap, false);
+                FilteredImageForm filteredImageForm = new FilteredImageForm();
+                filteredImageForm.Image = contoursBitmap;
+                filteredImageForm.Show();
+            }
+
+        }
+
+        private void Contours()
+        {
+            var contoursBitmap = new Bitmap(MyImage);
+            contoursBitmap = ImageFilter.PrewittFilter(contoursBitmap, false);
+            ContoursForm contoursForm = new ContoursForm();
+            contoursForm.Image = contoursBitmap;
+            contoursForm.Show();
+        }
+
         private void Analyze()
         {
             var imageBitmap = new Bitmap(MyImage);
             var colorDictionary = new Dictionary<string, ColorInfo>();
             var Width = MyImage.Width;
             var Height = MyImage.Height;
-            var xstart = coordinatesAnalyze.X - RectSide / 2;
-            var ystart = coordinatesAnalyze.Y - RectSide / 2;
-            var xend = coordinatesAnalyze.X + RectSide / 2;
-            var yend = coordinatesAnalyze.Y + RectSide / 2;
-            var xmin = xstart > 0 ? xstart : 0;
-            var ymin = ystart > 0 ? ystart : 0;
-            var xmax = xend < Width ? xend : Width;
-            var ymax = yend < Height ? yend : Height;
-            if (coordinatesAnalyze != null)
+            if (!coordinatesAnalyze.IsEmpty)
             {
+                var xstart = coordinatesAnalyze.X - RectSide / 2;
+                var ystart = coordinatesAnalyze.Y - RectSide / 2;
+                var xend = coordinatesAnalyze.X + RectSide / 2;
+                var yend = coordinatesAnalyze.Y + RectSide / 2;
+                var xmin = xstart > 0 ? xstart : 0;
+                var ymin = ystart > 0 ? ystart : 0;
+                var xmax = xend < Width ? xend : Width;
+                var ymax = yend < Height ? yend : Height;
+
 
                 for (int i = xmin; i < xmax; i++)
                 {
@@ -89,7 +136,7 @@ namespace ReliefAnalyze
             }
             else
             {
-                MessageBox.Show("Вы не открыли изображение!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Вы не выбрали фрагмент!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             var allColors = colorDictionary.OrderByDescending(elem => elem.Value.ColorCount).ToList();
             var mainColors = allColors.Take(20).ToList();
@@ -112,22 +159,22 @@ namespace ReliefAnalyze
             MessageBox.Show("Анализ проведён!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             AnalyzeForm analyzeForm = new AnalyzeForm();
             analyzeForm.SetDataGridView(mainColors);
-            
+
             analyzeForm.Show();
         }
 
-        private string AnalyzeColors(List<KeyValuePair<string,ColorInfo>> allColors)
+        private string AnalyzeColors(List<KeyValuePair<string, ColorInfo>> allColors)
         {
             StringBuilder analyze = new StringBuilder("");
             var midBlue = allColors.Take(30).Where(clr => clr.Value.NearColor == Color.MidnightBlue.ToString());
-            
+
             if (midBlue != null)
             {
                 analyze.Append("Есть река");
             }
             //switch (mainColors.First().Value.NearColor)
             //{
-                
+
             //}
             return analyze.ToString();
         }
@@ -143,7 +190,7 @@ namespace ReliefAnalyze
             else
             {
                 MessageBox.Show("Вы не открыли изображение!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
+            }
 
         }
 
@@ -173,15 +220,22 @@ namespace ReliefAnalyze
         {
             var projectDir = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
-            if (File.Exists($@"{projectDir}\map.png")) {
-                MyImage = Image.FromFile($@"{projectDir}\map.png");
+            if (File.Exists($@"{projectDir}\map (6).png"))
+            {
+                MyImage = Image.FromFile($@"{projectDir}\map (6).png");
                 mainPictureBox.Image = MyImage;
             }
 
         }
 
-        private void ControursButton_Click(object sender, EventArgs e)
+        private void ContoursButton_Click(object sender, EventArgs e)
         {
+            Contours();
+        }
+
+        private void FragmentControursButton_Click(object sender, EventArgs e)
+        {
+            FragmentContours();
 
         }
     }

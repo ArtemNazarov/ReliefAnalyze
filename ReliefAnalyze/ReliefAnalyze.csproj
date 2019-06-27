@@ -70,36 +70,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnalyzeForm.cs">
+    <Compile Include="UI\AnalyzeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnalyzeForm.Designer.cs">
+    <Compile Include="UI\AnalyzeForm.Designer.cs">
       <DependentUpon>AnalyzeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ColorHelper.cs" />
-    <Compile Include="ColorInfo.cs" />
-    <Compile Include="ColorReference.cs" />
-    <Compile Include="HistogramForm.cs">
+    <Compile Include="Logic\Color\ColorHelper.cs" />
+    <Compile Include="Logic\Color\ColorInfo.cs" />
+    <Compile Include="Logic\Color\ColorReference.cs" />
+    <Compile Include="Logic\ImageFilter.cs" />
+    <Compile Include="UI\ContoursForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistogramForm.Designer.cs">
+    <Compile Include="UI\ContoursForm.Designer.cs">
+      <DependentUpon>ContoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FilteredImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FilteredImageForm.Designer.cs">
+      <DependentUpon>FilteredImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HistogramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HistogramForm.Designer.cs">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="UI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AnalyzeForm.resx">
+    <EmbeddedResource Include="UI\AnalyzeForm.resx">
       <DependentUpon>AnalyzeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistogramForm.resx">
+    <EmbeddedResource Include="UI\ContoursForm.resx">
+      <DependentUpon>ContoursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FilteredImageForm.resx">
+      <DependentUpon>FilteredImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HistogramForm.resx">
       <DependentUpon>HistogramForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
