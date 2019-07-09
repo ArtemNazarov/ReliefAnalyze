@@ -7,6 +7,9 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Text;
 using ReliefAnalyze.UI;
+using Accord.Imaging;
+using Image = System.Drawing.Image;
+using Accord.Imaging.Filters;
 
 namespace ReliefAnalyze
 {
@@ -46,6 +49,43 @@ namespace ReliefAnalyze
             {
                 MessageBox.Show("Вы не открыли изображение!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Hough()
+        {
+            var imgBitmap = new Bitmap(MyImage);
+            var lineTransform = new Accord.Imaging.HoughLineTransformation();
+            // Convert it to binary and mark the possible lines 
+            // in white so it can be processed by the transform
+            var sequence = new FiltersSequence(
+                Grayscale.CommonAlgorithms.BT709,
+                new NiblackThreshold(),
+                new Invert()
+            );
+            var contoursBitmap = ImageFilter.PrewittFilter(imgBitmap, false);
+            // Apply the sequence of filters above:
+            Bitmap binaryImage = sequence.Apply(contoursBitmap);
+            lineTransform.ProcessImage(binaryImage);
+            // Now, let's say we would like to retrieve the lines and use them
+            // for further processing. First, the lines can be ordered by their
+            // relative intensity using
+            HoughLine[] lines = lineTransform.GetLinesByRelativeIntensity(1);
+
+            // Then, let's plot them on top of the input image. Since we will
+            // apply many operations to a single image, it is better to first
+            // convert it to an UnmanagedImage object to avoid having to lock
+            // the image into memory multiple times.
+
+            UnmanagedImage unmanagedImage = UnmanagedImage.FromManagedImage(binaryImage);
+
+            // Finally, plot them in order:
+            foreach (HoughLine line in lines)
+            {
+                line.Draw(unmanagedImage, color: Color.Red);
+            }
+            ContoursForm contoursForm = new ContoursForm();
+            contoursForm.Image = unmanagedImage.ToManagedImage();
+            contoursForm.Show();
         }
 
         private void FragmentContours()
@@ -237,6 +277,11 @@ namespace ReliefAnalyze
         {
             FragmentContours();
 
+        }
+
+        private void HoughButton_Click(object sender, EventArgs e)
+        {
+            Hough();
         }
     }
 }

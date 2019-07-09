@@ -40,6 +40,7 @@
             this.contoursButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainPictureBox = new System.Windows.Forms.PictureBox();
+            this.HoughButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
@@ -103,7 +104,7 @@
             // analyzeButton
             // 
             this.analyzeButton.Location = new System.Drawing.Point(117, 70);
-            this.analyzeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.analyzeButton.Margin = new System.Windows.Forms.Padding(4);
             this.analyzeButton.Name = "analyzeButton";
             this.analyzeButton.Size = new System.Drawing.Size(100, 28);
             this.analyzeButton.TabIndex = 2;
@@ -152,12 +153,24 @@
             this.mainPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.mainPictureBox.TabIndex = 1;
             this.mainPictureBox.TabStop = false;
+            this.mainPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPictureBox_MouseDown);
+            // 
+            // HoughButton
+            // 
+            this.HoughButton.Location = new System.Drawing.Point(579, 70);
+            this.HoughButton.Name = "HoughButton";
+            this.HoughButton.Size = new System.Drawing.Size(113, 28);
+            this.HoughButton.TabIndex = 6;
+            this.HoughButton.Text = "hough";
+            this.HoughButton.UseVisualStyleBackColor = true;
+            this.HoughButton.Click += new System.EventHandler(this.HoughButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1407, 826);
+            this.Controls.Add(this.HoughButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.contoursButton);
             this.Controls.Add(this.fragmentControursButton);
@@ -191,6 +204,7 @@
         private System.Windows.Forms.Button contoursButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox mainPictureBox;
+        private System.Windows.Forms.Button HoughButton;
     }
 }
 
