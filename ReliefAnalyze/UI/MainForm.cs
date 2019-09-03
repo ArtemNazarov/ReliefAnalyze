@@ -55,9 +55,9 @@ namespace ReliefAnalyze
             }
         }
 
-        private void Hough()
+        private Bitmap HoughTransform(Bitmap originalImage)
         {
-            var imgBitmap = new Bitmap(MyImage);
+            var imgBitmap = new Bitmap(originalImage);
             var lineTransform = new Accord.Imaging.HoughLineTransformation();
             // Convert it to binary and mark the possible lines 
             // in white so it can be processed by the transform
@@ -87,8 +87,15 @@ namespace ReliefAnalyze
             {
                 line.Draw(unmanagedImage, color: Color.Red);
             }
+
+            return unmanagedImage.ToManagedImage();
+        }
+
+        private void Hough()
+        {
+            var houghBitmap = HoughTransform(new Bitmap(MyImage));
             ContoursForm contoursForm = new ContoursForm();
-            contoursForm.Image = unmanagedImage.ToManagedImage();
+            contoursForm.Image = houghBitmap;
             contoursForm.Show();
         }
 
