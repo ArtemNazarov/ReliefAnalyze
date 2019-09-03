@@ -23,6 +23,16 @@ namespace ReliefAnalyze
             return resultBitmap;
         }
 
+        public static Bitmap SobelFilter(this Bitmap sourceBitmap, bool grayscale=true)
+        {
+            Bitmap resultBitmap = ConvolutionFilter(sourceBitmap,
+                                   Matrix.Sobel3x3Horizontal,
+                                     Matrix.Sobel3x3Vertical,
+                                            1.0, 0, grayscale);
+
+            return resultBitmap;
+        }
+
         public static Bitmap ConvolutionFilter(this Bitmap sourceBitmap,
                                         double[,] xFilterMatrix,
                                         double[,] yFilterMatrix,

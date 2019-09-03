@@ -1,0 +1,2954 @@
+-1 : 33 , near color = White
+White
+-12779521 : 12 , near color = Turquoise
+Turquoise
+-14342875 : 8 , near color = DarkSlateGray
+DarkSlateGray
+-14408668 : 6 , near color = DarkSlateGray
+DarkSlateGray
+-14277082 : 5 , near color = DarkSlateGray
+DarkSlateGray
+-14084281 : 5 , near color = MidnightBlue
+MidnightBlue
+-13421773 : 4 , near color = DarkSlateGray
+DarkSlateGray
+-13355980 : 4 , near color = DarkSlateGray
+DarkSlateGray
+-10800733 : 4 , near color = DarkSlateBlue
+DarkSlateBlue
+-5177345 : 4 , near color = PaleTurquoise
+PaleTurquoise
+-6199809 : 3 , near color = MediumPurple
+MediumPurple
+-6265601 : 3 , near color = MediumPurple
+MediumPurple
+-13684945 : 3 , near color = DarkSlateGray
+DarkSlateGray
+-13290187 : 3 , near color = DarkSlateGray
+DarkSlateGray
+-13948117 : 3 , near color = DarkSlateGray
+DarkSlateGray
+-9699493 : 3 , near color = LightGreen
+LightGreen
+-14145496 : 3 , near color = DarkSlateGray
+DarkSlateGray
+-14740939 : 3 , near color = MidnightBlue
+MidnightBlue
+-10669147 : 3 , near color = DarkSlateBlue
+DarkSlateBlue
+-5942026 : 3 , near color = MediumOrchid
+MediumOrchid
+-11009 : 3 , near color = LavenderBlush
+LavenderBlush
+-18689 : 3 , near color = Plum
+Plum
+-11777 : 3 , near color = LavenderBlush
+LavenderBlush
+-11265 : 3 , near color = LavenderBlush
+LavenderBlush
+-13569 : 3 , near color = Lavender
+Lavender
+-5242881 : 3 , near color = PaleTurquoise
+PaleTurquoise
+-12545 : 3 , near color = Lavender
+Lavender
+-6925834 : 2 , near color = MediumSlateBlue
+MediumSlateBlue
+-6397185 : 2 , near color = MediumSlateBlue
+MediumSlateBlue
+-6791937 : 2 , near color = MediumSlateBlue
+MediumSlateBlue
+-7844620 : 2 , near color = MediumSlateBlue
+MediumSlateBlue
+-8305171 : 2 , near color = BlueViolet
+BlueViolet
+-8568343 : 2 , near color = BlueViolet
+BlueViolet
+-8107792 : 2 , near color = BlueViolet
+BlueViolet
+-14079703 : 2 , near color = DarkSlateGray
+DarkSlateGray
+-14013910 : 2 , near color = DarkSlateGray
+DarkSlateGray
+-9306279 : 2 , near color = LightGreen
+LightGreen
+-13882324 : 2 , near color = DarkSlateGray
+DarkSlateGray
+-13883851 : 2 , near color = DarkSlateGray
+DarkSlateGray
+-9087558 : 2 , near color = SlateBlue
+SlateBlue
+-8433707 : 2 , near color = SlateBlue
+SlateBlue
+-12047234 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-12047490 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-9240694 : 2 , near color = LightGreen
+LightGreen
+-11981700 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-11915907 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-12572818 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-14281660 : 2 , near color = MidnightBlue
+MidnightBlue
+-10537561 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-10208340 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-12047495 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-11261031 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-13619152 : 2 , near color = DarkSlateGray
+DarkSlateGray
+-10471768 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-5810440 : 2 , near color = MediumOrchid
+MediumOrchid
+-13886902 : 2 , near color = MidnightBlue
+MidnightBlue
+-6007819 : 2 , near color = MediumOrchid
+MediumOrchid
+-5744647 : 2 , near color = MediumOrchid
+MediumOrchid
+-5678854 : 2 , near color = MediumOrchid
+MediumOrchid
+-5218305 : 2 , near color = MediumOrchid
+MediumOrchid
+-9747530 : 2 , near color = SlateBlue
+SlateBlue
+-12179588 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-13952693 : 2 , near color = MidnightBlue
+MidnightBlue
+-14150074 : 2 , near color = MidnightBlue
+MidnightBlue
+-12442250 : 2 , near color = DarkSlateBlue
+DarkSlateBlue
+-18615 : 2 , near color = SandyBrown
+SandyBrown
+-9824249 : 2 , near color = Maroon
+Maroon
+-9217 : 2 , near color = LavenderBlush
+LavenderBlush
+-45292 : 2 , near color = OrangeRed
+OrangeRed
+-56423 : 2 , near color = DeepPink
+DeepPink
+-5308417 : 2 , near color = PaleTurquoise
+PaleTurquoise
+-4980737 : 2 , near color = PaleTurquoise
+PaleTurquoise
+-5046273 : 2 , near color = PaleTurquoise
+PaleTurquoise
+-13825 : 2 , near color = Lavender
+Lavender
+-13313 : 2 , near color = Lavender
+Lavender
+-4353 : 2 , near color = LavenderBlush
+LavenderBlush
+-12582913 : 2 , near color = Turquoise
+Turquoise
+-7681 : 2 , near color = LavenderBlush
+LavenderBlush
+-14801613 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12307601 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9156422 : 1 , near color = SlateBlue
+SlateBlue
+-7318552 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-6860041 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7189006 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7254799 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7057420 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7123213 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7517199 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7648013 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7449606 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-6857729 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-6331393 : 1 , near color = MediumPurple
+MediumPurple
+-6462977 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7186690 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7252483 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-6989313 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-6726145 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7318276 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7778827 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7976206 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7713034 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7449862 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7515655 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-8765722 : 1 , near color = BlueViolet
+BlueViolet
+-8831515 : 1 , near color = BlueViolet
+BlueViolet
+-8239378 : 1 , near color = BlueViolet
+BlueViolet
+-8370964 : 1 , near color = BlueViolet
+BlueViolet
+-7581705 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-6595585 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-6531073 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-6662914 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-7585041 : 1 , near color = BlueViolet
+BlueViolet
+-7911704 : 1 , near color = BlueViolet
+BlueViolet
+-8623396 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-11172865 : 1 , near color = CornflowerBlue
+CornflowerBlue
+-13796609 : 1 , near color = DodgerBlue
+DodgerBlue
+-12671233 : 1 , near color = DodgerBlue
+DodgerBlue
+-10464304 : 1 , near color = SlateBlue
+SlateBlue
+-8242729 : 1 , near color = BlueViolet
+BlueViolet
+-7324956 : 1 , near color = BlueViolet
+BlueViolet
+-6733075 : 1 , near color = BlueViolet
+BlueViolet
+-6798613 : 1 , near color = BlueViolet
+BlueViolet
+-6469650 : 1 , near color = BlueViolet
+BlueViolet
+-6206737 : 1 , near color = MediumOrchid
+MediumOrchid
+-6009872 : 1 , near color = MediumOrchid
+MediumOrchid
+-6272792 : 1 , near color = MediumOrchid
+MediumOrchid
+-7848765 : 1 , near color = DarkOrchid
+DarkOrchid
+-10343291 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13625542 : 1 , near color = MidnightBlue
+MidnightBlue
+-14538975 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14599156 : 1 , near color = DarkGreen
+DarkGreen
+-11755494 : 1 , near color = OliveDrab
+OliveDrab
+-11354058 : 1 , near color = LimeGreen
+LimeGreen
+-14464254 : 1 , near color = DarkGreen
+DarkGreen
+-14195129 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-10963135 : 1 , near color = LimeGreen
+LimeGreen
+-11239923 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-12896973 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13488594 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14140637 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11621086 : 1 , near color = OliveDrab
+OliveDrab
+-11353800 : 1 , near color = LimeGreen
+LimeGreen
+-14462714 : 1 , near color = DarkGreen
+DarkGreen
+-13865657 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11359942 : 1 , near color = OliveDrab
+OliveDrab
+-11833062 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-13028300 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13685973 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14474201 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14535906 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12410829 : 1 , near color = ForestGreen
+ForestGreen
+-12802746 : 1 , near color = SeaGreen
+SeaGreen
+-14187675 : 1 , near color = SeaGreen
+SeaGreen
+-12868766 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-12415938 : 1 , near color = SeaGreen
+SeaGreen
+-11962087 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-12892634 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13817044 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12738490 : 1 , near color = SeaGreen
+SeaGreen
+-12537001 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-16573639 : 1 , near color = MidnightBlue
+MidnightBlue
+-15047849 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12205186 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-11026086 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-11564246 : 1 , near color = OliveDrab
+OliveDrab
+-11768040 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-12628196 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-11876271 : 1 , near color = LimeGreen
+LimeGreen
+-12803515 : 1 , near color = SeaGreen
+SeaGreen
+-14192067 : 1 , near color = SeaGreen
+SeaGreen
+-12940245 : 1 , near color = ForestGreen
+ForestGreen
+-11483587 : 1 , near color = LimeGreen
+LimeGreen
+-14463735 : 1 , near color = DarkGreen
+DarkGreen
+-14592453 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-10097814 : 1 , near color = LightGreen
+LightGreen
+-8454329 : 1 , near color = GreenYellow
+GreenYellow
+-9587180 : 1 , near color = OliveDrab
+OliveDrab
+-11510221 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-12169679 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-13816540 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14533624 : 1 , near color = DarkGreen
+DarkGreen
+-11419076 : 1 , near color = LimeGreen
+LimeGreen
+-10289309 : 1 , near color = LightGreen
+LightGreen
+-12272310 : 1 , near color = LimeGreen
+LimeGreen
+-11676839 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-12145095 : 1 , near color = LimeGreen
+LimeGreen
+-11218620 : 1 , near color = LimeGreen
+LimeGreen
+-11019954 : 1 , near color = LimeGreen
+LimeGreen
+-12540866 : 1 , near color = SeaGreen
+SeaGreen
+-13210331 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-9178545 : 1 , near color = YellowGreen
+YellowGreen
+-7274679 : 1 , near color = GreenYellow
+GreenYellow
+-8198871 : 1 , near color = YellowGreen
+YellowGreen
+-10783951 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-12632264 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14276830 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14467046 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12542672 : 1 , near color = ForestGreen
+ForestGreen
+-12077765 : 1 , near color = LimeGreen
+LimeGreen
+-13599440 : 1 , near color = ForestGreen
+ForestGreen
+-13597386 : 1 , near color = ForestGreen
+ForestGreen
+-12669880 : 1 , near color = SeaGreen
+SeaGreen
+-14857948 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13995481 : 1 , near color = ForestGreen
+ForestGreen
+-11743652 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-10751893 : 1 , near color = LightGreen
+LightGreen
+-13134784 : 1 , near color = SeaGreen
+SeaGreen
+-12878546 : 1 , near color = ForestGreen
+ForestGreen
+-10237638 : 1 , near color = LimeGreen
+LimeGreen
+-8457672 : 1 , near color = YellowGreen
+YellowGreen
+-8595951 : 1 , near color = LawnGreen
+LawnGreen
+-10515681 : 1 , near color = OliveDrab
+OliveDrab
+-12829637 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-15454933 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14528473 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14400752 : 1 , near color = DarkGreen
+DarkGreen
+-13202883 : 1 , near color = SeaGreen
+SeaGreen
+-13134793 : 1 , near color = ForestGreen
+ForestGreen
+-15253235 : 1 , near color = DarkGreen
+DarkGreen
+-10952902 : 1 , near color = LimeGreen
+LimeGreen
+-9371818 : 1 , near color = LightGreen
+LightGreen
+-11283129 : 1 , near color = LimeGreen
+LimeGreen
+-14989796 : 1 , near color = DarkGreen
+DarkGreen
+-14988260 : 1 , near color = DarkGreen
+DarkGreen
+-11614379 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-10158473 : 1 , near color = LightGreen
+LightGreen
+-11813282 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-13075145 : 1 , near color = ForestGreen
+ForestGreen
+-10171071 : 1 , near color = LimeGreen
+LimeGreen
+-9053654 : 1 , near color = YellowGreen
+YellowGreen
+-9191413 : 1 , near color = YellowGreen
+YellowGreen
+-10316263 : 1 , near color = OliveDrab
+OliveDrab
+-12563411 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-14277085 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14192572 : 1 , near color = SeaGreen
+SeaGreen
+-11683774 : 1 , near color = LimeGreen
+LimeGreen
+-15582427 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14004978 : 1 , near color = DarkGreen
+DarkGreen
+-13079794 : 1 , near color = ForestGreen
+ForestGreen
+-11883215 : 1 , near color = LimeGreen
+LimeGreen
+-13397950 : 1 , near color = SeaGreen
+SeaGreen
+-12147160 : 1 , near color = OliveDrab
+OliveDrab
+-11684313 : 1 , near color = LimeGreen
+LimeGreen
+-13012462 : 1 , near color = ForestGreen
+ForestGreen
+-13478883 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-14604255 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-15451626 : 1 , near color = DarkGreen
+DarkGreen
+-14131942 : 1 , near color = ForestGreen
+ForestGreen
+-11819467 : 1 , near color = OliveDrab
+OliveDrab
+-10298798 : 1 , near color = LimeGreen
+LimeGreen
+-11223992 : 1 , near color = LimeGreen
+LimeGreen
+-13008841 : 1 , near color = ForestGreen
+ForestGreen
+-9311409 : 1 , near color = YellowGreen
+YellowGreen
+-8986060 : 1 , near color = YellowGreen
+YellowGreen
+-10313467 : 1 , near color = Olive
+Olive
+-12030710 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-13812207 : 1 , near color = DarkGreen
+DarkGreen
+-13462720 : 1 , near color = SeaGreen
+SeaGreen
+-12743898 : 1 , near color = ForestGreen
+ForestGreen
+-11418041 : 1 , near color = LimeGreen
+LimeGreen
+-15647198 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14402551 : 1 , near color = DarkGreen
+DarkGreen
+-14073842 : 1 , near color = DarkGreen
+DarkGreen
+-13081072 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-10428351 : 1 , near color = LimeGreen
+LimeGreen
+-11545530 : 1 , near color = LimeGreen
+LimeGreen
+-14727926 : 1 , near color = DarkGreen
+DarkGreen
+-12081871 : 1 , near color = OliveDrab
+OliveDrab
+-12083157 : 1 , near color = OliveDrab
+OliveDrab
+-14267638 : 1 , near color = DarkGreen
+DarkGreen
+-14341850 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14276312 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14597350 : 1 , near color = DarkGreen
+DarkGreen
+-12088288 : 1 , near color = ForestGreen
+ForestGreen
+-10502104 : 1 , near color = LimeGreen
+LimeGreen
+-10234819 : 1 , near color = LimeGreen
+LimeGreen
+-11683507 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-16042973 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12882653 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-9375137 : 1 , near color = LightGreen
+LightGreen
+-9113008 : 1 , near color = YellowGreen
+YellowGreen
+-11364058 : 1 , near color = OliveDrab
+OliveDrab
+-11747243 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-15068339 : 1 , near color = MidnightBlue
+MidnightBlue
+-11164147 : 1 , near color = OliveDrab
+OliveDrab
+-11551686 : 1 , near color = LimeGreen
+LimeGreen
+-15118817 : 1 , near color = DarkGreen
+DarkGreen
+-14211294 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13224394 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13284059 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11287233 : 1 , near color = LimeGreen
+LimeGreen
+-9633959 : 1 , near color = LightGreen
+LightGreen
+-8454281 : 1 , near color = LightGreen
+LightGreen
+-8454280 : 1 , near color = LightGreen
+LightGreen
+-9240730 : 1 , near color = LightGreen
+LightGreen
+-11619801 : 1 , near color = LimeGreen
+LimeGreen
+-13534406 : 1 , near color = ForestGreen
+ForestGreen
+-10762451 : 1 , near color = LimeGreen
+LimeGreen
+-11161823 : 1 , near color = OliveDrab
+OliveDrab
+-14861290 : 1 , near color = DarkGreen
+DarkGreen
+-14539221 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14209749 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14472149 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13728202 : 1 , near color = ForestGreen
+ForestGreen
+-11745201 : 1 , near color = LimeGreen
+LimeGreen
+-11611815 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-13527218 : 1 , near color = SeaGreen
+SeaGreen
+-12685795 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-9838250 : 1 , near color = YellowGreen
+YellowGreen
+-11422643 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-14251912 : 1 , near color = SeaGreen
+SeaGreen
+-14934708 : 1 , near color = MidnightBlue
+MidnightBlue
+-11097327 : 1 , near color = OliveDrab
+OliveDrab
+-9702852 : 1 , near color = YellowGreen
+YellowGreen
+-11089865 : 1 , near color = LimeGreen
+LimeGreen
+-13206752 : 1 , near color = ForestGreen
+ForestGreen
+-14147022 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13949387 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12029414 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-11096304 : 1 , near color = OliveDrab
+OliveDrab
+-10429394 : 1 , near color = LimeGreen
+LimeGreen
+-9965511 : 1 , near color = LawnGreen
+LawnGreen
+-10162883 : 1 , near color = LimeGreen
+LimeGreen
+-10426302 : 1 , near color = LimeGreen
+LimeGreen
+-10689211 : 1 , near color = LimeGreen
+LimeGreen
+-10955457 : 1 , near color = LimeGreen
+LimeGreen
+-11816910 : 1 , near color = LimeGreen
+LimeGreen
+-13010919 : 1 , near color = ForestGreen
+ForestGreen
+-14269437 : 1 , near color = DarkGreen
+DarkGreen
+-14663676 : 1 , near color = DarkGreen
+DarkGreen
+-14192586 : 1 , near color = ForestGreen
+ForestGreen
+-10619552 : 1 , near color = LightGreen
+LightGreen
+-9109663 : 1 , near color = LightGreen
+LightGreen
+-10826178 : 1 , near color = LimeGreen
+LimeGreen
+-15125473 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14144966 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13421501 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13093306 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13752517 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14539481 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13336292 : 1 , near color = ForestGreen
+ForestGreen
+-11742885 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-11540105 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-14317742 : 1 , near color = SeaGreen
+SeaGreen
+-13611208 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11955405 : 1 , near color = OliveDrab
+OliveDrab
+-13265312 : 1 , near color = SeaGreen
+SeaGreen
+-16377288 : 1 , near color = MidnightBlue
+MidnightBlue
+-12617456 : 1 , near color = ForestGreen
+ForestGreen
+-10496709 : 1 , near color = LimeGreen
+LimeGreen
+-11154364 : 1 , near color = LimeGreen
+LimeGreen
+-12674499 : 1 , near color = SeaGreen
+SeaGreen
+-14129106 : 1 , near color = ForestGreen
+ForestGreen
+-11507906 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-9730474 : 1 , near color = DimGray
+DimGray
+-9203873 : 1 , near color = Gray
+Gray
+-9073308 : 1 , near color = Gray
+Gray
+-8415377 : 1 , near color = Gray
+Gray
+-7757447 : 1 , near color = Gray
+Gray
+-7559811 : 1 , near color = DarkSeaGreen
+DarkSeaGreen
+-8217742 : 1 , near color = Gray
+Gray
+-9201315 : 1 , near color = Gray
+Gray
+-10514616 : 1 , near color = OliveDrab
+OliveDrab
+-11901381 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-12099272 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-12757458 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-13349595 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13613023 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13882564 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-16166270 : 1 , near color = Teal
+Teal
+-14627391 : 1 , near color = LightSeaGreen
+LightSeaGreen
+-12582932 : 1 , near color = Turquoise
+Turquoise
+-12386326 : 1 , near color = Turquoise
+Turquoise
+-12517416 : 1 , near color = Turquoise
+Turquoise
+-12850772 : 1 , near color = Turquoise
+Turquoise
+-13724295 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-14408343 : 1 , near color = MidnightBlue
+MidnightBlue
+-12509050 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10666341 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10665576 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11981436 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12968843 : 1 , near color = MidnightBlue
+MidnightBlue
+-12376454 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10995059 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10073956 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10469226 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11324281 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12639885 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13166998 : 1 , near color = MidnightBlue
+MidnightBlue
+-13694117 : 1 , near color = MidnightBlue
+MidnightBlue
+-14480828 : 1 , near color = MidnightBlue
+MidnightBlue
+-14328304 : 1 , near color = DarkGreen
+DarkGreen
+-11940779 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-10551437 : 1 , near color = LightGreen
+LightGreen
+-14077904 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12035282 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-11694039 : 1 , near color = OliveDrab
+OliveDrab
+-10628781 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-10034864 : 1 , near color = LimeGreen
+LimeGreen
+-13804772 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-14724063 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-10624945 : 1 , near color = LimeGreen
+LimeGreen
+-11020977 : 1 , near color = LimeGreen
+LimeGreen
+-12873931 : 1 , near color = ForestGreen
+ForestGreen
+-13734360 : 1 , near color = ForestGreen
+ForestGreen
+-14198498 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14992108 : 1 , near color = DarkGreen
+DarkGreen
+-14856672 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13866706 : 1 , near color = ForestGreen
+ForestGreen
+-14392269 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14852297 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14654923 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13865947 : 1 , near color = ForestGreen
+ForestGreen
+-11369678 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-8745861 : 1 , near color = Gray
+Gray
+-8357470 : 1 , near color = LightSlateGray
+LightSlateGray
+-8493898 : 1 , near color = SlateBlue
+SlateBlue
+-8824645 : 1 , near color = SlateBlue
+SlateBlue
+-9022022 : 1 , near color = SlateBlue
+SlateBlue
+-9219145 : 1 , near color = SlateBlue
+SlateBlue
+-10799927 : 1 , near color = SlateBlue
+SlateBlue
+-12886297 : 1 , near color = RoyalBlue
+RoyalBlue
+-15230465 : 1 , near color = DodgerBlue
+DodgerBlue
+-15748865 : 1 , near color = DeepSkyBlue
+DeepSkyBlue
+-15618305 : 1 , near color = DeepSkyBlue
+DeepSkyBlue
+-15488001 : 1 , near color = DeepSkyBlue
+DeepSkyBlue
+-15357185 : 1 , near color = DodgerBlue
+DodgerBlue
+-15163393 : 1 , near color = DodgerBlue
+DodgerBlue
+-13923589 : 1 , near color = DodgerBlue
+DodgerBlue
+-13541658 : 1 , near color = RoyalBlue
+RoyalBlue
+-13224233 : 1 , near color = RoyalBlue
+RoyalBlue
+-13158695 : 1 , near color = RoyalBlue
+RoyalBlue
+-12637478 : 1 , near color = RoyalBlue
+RoyalBlue
+-11261740 : 1 , near color = SlateBlue
+SlateBlue
+-9685037 : 1 , near color = SlateBlue
+SlateBlue
+-8104741 : 1 , near color = MediumSlateBlue
+MediumSlateBlue
+-9091636 : 1 , near color = SlateBlue
+SlateBlue
+-9683773 : 1 , near color = SlateBlue
+SlateBlue
+-9881150 : 1 , near color = SlateBlue
+SlateBlue
+-9486394 : 1 , near color = SlateBlue
+SlateBlue
+-8828465 : 1 , near color = SlateBlue
+SlateBlue
+-8302123 : 1 , near color = SlateBlue
+SlateBlue
+-8433708 : 1 , near color = SlateBlue
+SlateBlue
+-9025844 : 1 , near color = SlateBlue
+SlateBlue
+-9749568 : 1 , near color = SlateBlue
+SlateBlue
+-10144840 : 1 , near color = SlateBlue
+SlateBlue
+-10867546 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11458413 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13560224 : 1 , near color = MidnightBlue
+MidnightBlue
+-14067948 : 1 , near color = DarkGreen
+DarkGreen
+-13142772 : 1 , near color = ForestGreen
+ForestGreen
+-13086953 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-12551646 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-11360202 : 1 , near color = OliveDrab
+OliveDrab
+-10630074 : 1 , near color = LimeGreen
+LimeGreen
+-11024055 : 1 , near color = LimeGreen
+LimeGreen
+-14788817 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14463211 : 1 , near color = DarkGreen
+DarkGreen
+-10226598 : 1 , near color = LightGreen
+LightGreen
+-8061061 : 1 , near color = LightGreen
+LightGreen
+-9502872 : 1 , near color = LightGreen
+LightGreen
+-11284400 : 1 , near color = LimeGreen
+LimeGreen
+-15252188 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12538550 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-10814868 : 1 , near color = LightGreen
+LightGreen
+-8913026 : 1 , near color = LightGreen
+LightGreen
+-7995530 : 1 , near color = LightGreen
+LightGreen
+-7667854 : 1 , near color = LightGreen
+LightGreen
+-7798925 : 1 , near color = LightGreen
+LightGreen
+-8061071 : 1 , near color = LightGreen
+LightGreen
+-9706107 : 1 , near color = LightGreen
+LightGreen
+-10853185 : 1 , near color = SlateBlue
+SlateBlue
+-13296986 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14731110 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14797158 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14993001 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-15123563 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-15123308 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-15058026 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14927208 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14861927 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14796647 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14731366 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14535779 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14339936 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14274911 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14080355 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13295727 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12575098 : 1 , near color = Indigo
+Indigo
+-11981953 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11850367 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11652988 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11455353 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11257974 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11455097 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11915904 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12508041 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12639627 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12441992 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12178564 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11915648 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11915392 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12376455 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12376965 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11194725 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11588720 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13361571 : 1 , near color = MidnightBlue
+MidnightBlue
+-14150072 : 1 , near color = MidnightBlue
+MidnightBlue
+-14807238 : 1 , near color = MidnightBlue
+MidnightBlue
+-13999810 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11816113 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-11151784 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-12144570 : 1 , near color = LimeGreen
+LimeGreen
+-13865943 : 1 , near color = ForestGreen
+ForestGreen
+-14660840 : 1 , near color = DarkGreen
+DarkGreen
+-12608195 : 1 , near color = SeaGreen
+SeaGreen
+-9109650 : 1 , near color = LightGreen
+LightGreen
+-8519812 : 1 , near color = LightGreen
+LightGreen
+-10950808 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-13596086 : 1 , near color = SeaGreen
+SeaGreen
+-14660060 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11415989 : 1 , near color = LimeGreen
+LimeGreen
+-9437337 : 1 , near color = LightGreen
+LightGreen
+-8323204 : 1 , near color = LightGreen
+LightGreen
+-8585344 : 1 , near color = LightGreen
+LightGreen
+-8847484 : 1 , near color = LightGreen
+LightGreen
+-8978554 : 1 , near color = LightGreen
+LightGreen
+-9371774 : 1 , near color = LightGreen
+LightGreen
+-12601256 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-15779545 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14991597 : 1 , near color = DarkGreen
+DarkGreen
+-15515613 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-15976150 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-15910103 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-15319757 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14133088 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12822037 : 1 , near color = RoyalBlue
+RoyalBlue
+-13946227 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14741702 : 1 , near color = MidnightBlue
+MidnightBlue
+-12509062 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11392617 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11194980 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10866523 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11326056 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12574601 : 1 , near color = Indigo
+Indigo
+-14413752 : 1 , near color = MidnightBlue
+MidnightBlue
+-13870310 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-10627773 : 1 , near color = LimeGreen
+LimeGreen
+-8585378 : 1 , near color = LightGreen
+LightGreen
+-7536781 : 1 , near color = LightGreen
+LightGreen
+-10359211 : 1 , near color = LimeGreen
+LimeGreen
+-14128855 : 1 , near color = ForestGreen
+ForestGreen
+-14265063 : 1 , near color = DarkGreen
+DarkGreen
+-12741065 : 1 , near color = ForestGreen
+ForestGreen
+-11482289 : 1 , near color = LimeGreen
+LimeGreen
+-11481260 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-12806341 : 1 , near color = SeaGreen
+SeaGreen
+-15123434 : 1 , near color = DarkGreen
+DarkGreen
+-14926062 : 1 , near color = DarkGreen
+DarkGreen
+-12082895 : 1 , near color = OliveDrab
+OliveDrab
+-10033852 : 1 , near color = LimeGreen
+LimeGreen
+-8978606 : 1 , near color = GreenYellow
+GreenYellow
+-9109678 : 1 , near color = GreenYellow
+GreenYellow
+-9833402 : 1 , near color = YellowGreen
+YellowGreen
+-10893520 : 1 , near color = LimeGreen
+LimeGreen
+-12746985 : 1 , near color = ForestGreen
+ForestGreen
+-14002930 : 1 , near color = DarkGreen
+DarkGreen
+-14265583 : 1 , near color = DarkGreen
+DarkGreen
+-14528492 : 1 , near color = DarkGreen
+DarkGreen
+-14594283 : 1 , near color = DarkGreen
+DarkGreen
+-15056878 : 1 , near color = DarkGreen
+DarkGreen
+-14398446 : 1 , near color = DarkGreen
+DarkGreen
+-11153856 : 1 , near color = LimeGreen
+LimeGreen
+-8388751 : 1 , near color = LightGreen
+LightGreen
+-8847485 : 1 , near color = LightGreen
+LightGreen
+-9109625 : 1 , near color = LightGreen
+LightGreen
+-9044097 : 1 , near color = LightGreen
+LightGreen
+-10423885 : 1 , near color = MediumAquamarine
+MediumAquamarine
+-11171858 : 1 , near color = CornflowerBlue
+CornflowerBlue
+-13099903 : 1 , near color = Indigo
+Indigo
+-14413751 : 1 , near color = MidnightBlue
+MidnightBlue
+-13034894 : 1 , near color = MidnightBlue
+MidnightBlue
+-12050036 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11392866 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11129186 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10931807 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12114047 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14676166 : 1 , near color = MidnightBlue
+MidnightBlue
+-13355723 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14013653 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12479699 : 1 , near color = ForestGreen
+ForestGreen
+-10161574 : 1 , near color = LightGreen
+LightGreen
+-8847499 : 1 , near color = LightGreen
+LightGreen
+-8585352 : 1 , near color = LightGreen
+LightGreen
+-12674497 : 1 , near color = SeaGreen
+SeaGreen
+-11882184 : 1 , near color = LimeGreen
+LimeGreen
+-10890943 : 1 , near color = LimeGreen
+LimeGreen
+-11156421 : 1 , near color = LimeGreen
+LimeGreen
+-11157192 : 1 , near color = LimeGreen
+LimeGreen
+-11091401 : 1 , near color = LimeGreen
+LimeGreen
+-10827977 : 1 , near color = LimeGreen
+LimeGreen
+-10431170 : 1 , near color = LimeGreen
+LimeGreen
+-10696649 : 1 , near color = LimeGreen
+LimeGreen
+-10565582 : 1 , near color = LimeGreen
+LimeGreen
+-10433489 : 1 , near color = LimeGreen
+LimeGreen
+-12551918 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-15715531 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12199307 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-10027114 : 1 , near color = LightGreen
+LightGreen
+-9830509 : 1 , near color = LightGreen
+LightGreen
+-9502834 : 1 , near color = LightGreen
+LightGreen
+-9306237 : 1 , near color = LightGreen
+LightGreen
+-11419592 : 1 , near color = LimeGreen
+LimeGreen
+-14600418 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12177539 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9552953 : 1 , near color = SlateBlue
+SlateBlue
+-12376711 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14807492 : 1 , near color = MidnightBlue
+MidnightBlue
+-14544829 : 1 , near color = MidnightBlue
+MidnightBlue
+-13624999 : 1 , near color = MidnightBlue
+MidnightBlue
+-11456876 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11062624 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12048256 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12048258 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12442509 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13296548 : 1 , near color = MidnightBlue
+MidnightBlue
+-14343132 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14463723 : 1 , near color = DarkGreen
+DarkGreen
+-13933277 : 1 , near color = ForestGreen
+ForestGreen
+-13470168 : 1 , near color = ForestGreen
+ForestGreen
+-11748285 : 1 , near color = LimeGreen
+LimeGreen
+-10754987 : 1 , near color = LimeGreen
+LimeGreen
+-12606911 : 1 , near color = SeaGreen
+SeaGreen
+-11816647 : 1 , near color = LimeGreen
+LimeGreen
+-9437353 : 1 , near color = LightGreen
+LightGreen
+-9502888 : 1 , near color = LightGreen
+LightGreen
+-11948485 : 1 , near color = LimeGreen
+LimeGreen
+-12146368 : 1 , near color = LimeGreen
+LimeGreen
+-9699491 : 1 , near color = LightGreen
+LightGreen
+-10490279 : 1 , near color = LimeGreen
+LimeGreen
+-11809703 : 1 , near color = MediumSeaGreen
+MediumSeaGreen
+-13465282 : 1 , near color = SeaGreen
+SeaGreen
+-14062805 : 1 , near color = ForestGreen
+ForestGreen
+-13799639 : 1 , near color = ForestGreen
+ForestGreen
+-13536221 : 1 , near color = ForestGreen
+ForestGreen
+-13273057 : 1 , near color = ForestGreen
+ForestGreen
+-13207781 : 1 , near color = ForestGreen
+ForestGreen
+-13015019 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-14729467 : 1 , near color = DarkGreen
+DarkGreen
+-11916164 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-8828471 : 1 , near color = SlateBlue
+SlateBlue
+-13033366 : 1 , near color = MidnightBlue
+MidnightBlue
+-11325542 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10537296 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10077763 : 1 , near color = SlateBlue
+SlateBlue
+-10800725 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11655277 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14067435 : 1 , near color = DarkGreen
+DarkGreen
+-12941011 : 1 , near color = ForestGreen
+ForestGreen
+-12078011 : 1 , near color = LimeGreen
+LimeGreen
+-11483317 : 1 , near color = LimeGreen
+LimeGreen
+-11814331 : 1 , near color = LimeGreen
+LimeGreen
+-11749311 : 1 , near color = LimeGreen
+LimeGreen
+-11683520 : 1 , near color = LimeGreen
+LimeGreen
+-11485632 : 1 , near color = LimeGreen
+LimeGreen
+-10957500 : 1 , near color = LimeGreen
+LimeGreen
+-11091395 : 1 , near color = LimeGreen
+LimeGreen
+-10565326 : 1 , near color = LimeGreen
+LimeGreen
+-10038488 : 1 , near color = LimeGreen
+LimeGreen
+-10305760 : 1 , near color = OliveDrab
+OliveDrab
+-11760856 : 1 , near color = OliveDrab
+OliveDrab
+-13087449 : 1 , near color = DarkOliveGreen
+DarkOliveGreen
+-13487566 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11653248 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-8433714 : 1 , near color = SlateBlue
+SlateBlue
+-11718528 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13887659 : 1 , near color = MidnightBlue
+MidnightBlue
+-13164951 : 1 , near color = MidnightBlue
+MidnightBlue
+-12902029 : 1 , near color = MidnightBlue
+MidnightBlue
+-12836233 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11851371 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-15320808 : 1 , near color = DarkGreen
+DarkGreen
+-12740550 : 1 , near color = SeaGreen
+SeaGreen
+-10888625 : 1 , near color = LimeGreen
+LimeGreen
+-10888882 : 1 , near color = LimeGreen
+LimeGreen
+-12740551 : 1 , near color = SeaGreen
+SeaGreen
+-15254505 : 1 , near color = DarkGreen
+DarkGreen
+-14211289 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12179336 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-8499507 : 1 , near color = SlateBlue
+SlateBlue
+-11521405 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14938054 : 1 , near color = MidnightBlue
+MidnightBlue
+-12704901 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12507279 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9025593 : 1 , near color = SlateBlue
+SlateBlue
+-11652991 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14281397 : 1 , near color = MidnightBlue
+MidnightBlue
+-13232023 : 1 , near color = MidnightBlue
+MidnightBlue
+-9617985 : 1 , near color = SlateBlue
+SlateBlue
+-12574093 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9749570 : 1 , near color = SlateBlue
+SlateBlue
+-12244872 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14409429 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11455357 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9223228 : 1 , near color = SlateBlue
+SlateBlue
+-12179079 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14541270 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-10731890 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-8696883 : 1 , near color = SlateBlue
+SlateBlue
+-10534766 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-8302127 : 1 , near color = SlateBlue
+SlateBlue
+-11784321 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10666608 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-8433712 : 1 , near color = SlateBlue
+SlateBlue
+-11849858 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11126903 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-8565299 : 1 , near color = SlateBlue
+SlateBlue
+-12113034 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9156417 : 1 , near color = SlateBlue
+SlateBlue
+-11324793 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14215360 : 1 , near color = MidnightBlue
+MidnightBlue
+-13098406 : 1 , near color = MidnightBlue
+MidnightBlue
+-9879130 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9682521 : 1 , near color = SlateBlue
+SlateBlue
+-11259514 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13492909 : 1 , near color = MidnightBlue
+MidnightBlue
+-12310678 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10405226 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9945948 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11456891 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14280640 : 1 , near color = MidnightBlue
+MidnightBlue
+-13164715 : 1 , near color = MidnightBlue
+MidnightBlue
+-10734703 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10405729 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11784574 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12046981 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12507025 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13361319 : 1 , near color = MidnightBlue
+MidnightBlue
+-12574621 : 1 , near color = MidnightBlue
+MidnightBlue
+-10603623 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9683275 : 1 , near color = SlateBlue
+SlateBlue
+-8960056 : 1 , near color = SlateBlue
+SlateBlue
+-9551176 : 1 , near color = SlateBlue
+SlateBlue
+-10536544 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13099432 : 1 , near color = MidnightBlue
+MidnightBlue
+-12179084 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11587966 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11456378 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10339419 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10931048 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13361829 : 1 , near color = MidnightBlue
+MidnightBlue
+-14347453 : 1 , near color = MidnightBlue
+MidnightBlue
+-14413246 : 1 , near color = MidnightBlue
+MidnightBlue
+-14215612 : 1 , near color = MidnightBlue
+MidnightBlue
+-14543813 : 1 , near color = MidnightBlue
+MidnightBlue
+-14083518 : 1 , near color = MidnightBlue
+MidnightBlue
+-11456121 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10734432 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11326569 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11195492 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11195491 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10602844 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11193711 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13228714 : 1 , near color = MidnightBlue
+MidnightBlue
+-12442248 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11852404 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10998112 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10405721 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10668639 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10931045 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13427620 : 1 , near color = MidnightBlue
+MidnightBlue
+-14740428 : 1 , near color = MidnightBlue
+MidnightBlue
+-14544322 : 1 , near color = MidnightBlue
+MidnightBlue
+-13755059 : 1 , near color = MidnightBlue
+MidnightBlue
+-13097131 : 1 , near color = MidnightBlue
+MidnightBlue
+-13097387 : 1 , near color = MidnightBlue
+MidnightBlue
+-13558192 : 1 , near color = MidnightBlue
+MidnightBlue
+-10471516 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12114814 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13888428 : 1 , near color = MidnightBlue
+MidnightBlue
+-12702628 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11193204 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11261288 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11919222 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13494434 : 1 , near color = MidnightBlue
+MidnightBlue
+-13292476 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12636323 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11589998 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12312192 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14806985 : 1 , near color = MidnightBlue
+MidnightBlue
+-13557935 : 1 , near color = MidnightBlue
+MidnightBlue
+-14281405 : 1 , near color = MidnightBlue
+MidnightBlue
+-12510631 : 1 , near color = MidnightBlue
+MidnightBlue
+-10932063 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9160535 : 1 , near color = SlateBlue
+SlateBlue
+-14808004 : 1 , near color = MidnightBlue
+MidnightBlue
+-14018488 : 1 , near color = MidnightBlue
+MidnightBlue
+-6927138 : 1 , near color = DarkOrchid
+DarkOrchid
+-14873541 : 1 , near color = MidnightBlue
+MidnightBlue
+-14544832 : 1 , near color = MidnightBlue
+MidnightBlue
+-13158601 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13750738 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13556661 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-10208085 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12569257 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-9089093 : 1 , near color = SlateBlue
+SlateBlue
+-9221446 : 1 , near color = SlateBlue
+SlateBlue
+-13492144 : 1 , near color = MidnightBlue
+MidnightBlue
+-13293999 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-8431930 : 1 , near color = SlateBlue
+SlateBlue
+-8366392 : 1 , near color = SlateBlue
+SlateBlue
+-13163179 : 1 , near color = MidnightBlue
+MidnightBlue
+-13360559 : 1 , near color = MidnightBlue
+MidnightBlue
+-8169013 : 1 , near color = SlateBlue
+SlateBlue
+-8234806 : 1 , near color = SlateBlue
+SlateBlue
+-13228972 : 1 , near color = MidnightBlue
+MidnightBlue
+-12372642 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-8431675 : 1 , near color = SlateBlue
+SlateBlue
+-9024067 : 1 , near color = SlateBlue
+SlateBlue
+-13623730 : 1 , near color = MidnightBlue
+MidnightBlue
+-12766629 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-9418826 : 1 , near color = SlateBlue
+SlateBlue
+-9814608 : 1 , near color = SlateBlue
+SlateBlue
+-13887158 : 1 , near color = MidnightBlue
+MidnightBlue
+-13360046 : 1 , near color = MidnightBlue
+MidnightBlue
+-10143831 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10210136 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13953207 : 1 , near color = MidnightBlue
+MidnightBlue
+-13755572 : 1 , near color = MidnightBlue
+MidnightBlue
+-10407517 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10144857 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13821877 : 1 , near color = MidnightBlue
+MidnightBlue
+-6139405 : 1 , near color = MediumOrchid
+MediumOrchid
+-13887414 : 1 , near color = MidnightBlue
+MidnightBlue
+-10539102 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10210394 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13821878 : 1 , near color = MidnightBlue
+MidnightBlue
+-6205198 : 1 , near color = MediumOrchid
+MediumOrchid
+-14216127 : 1 , near color = MidnightBlue
+MidnightBlue
+-11327343 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10735972 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13099684 : 1 , near color = MidnightBlue
+MidnightBlue
+-12378250 : 1 , near color = Indigo
+Indigo
+-10801765 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11129712 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12705944 : 1 , near color = MidnightBlue
+MidnightBlue
+-13690545 : 1 , near color = MidnightBlue
+MidnightBlue
+-11786369 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10538851 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10604644 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13231524 : 1 , near color = MidnightBlue
+MidnightBlue
+-5349889 : 1 , near color = MediumOrchid
+MediumOrchid
+-13820603 : 1 , near color = MidnightBlue
+MidnightBlue
+-11719299 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9946709 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11129459 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12968353 : 1 , near color = MidnightBlue
+MidnightBlue
+-14675658 : 1 , near color = MidnightBlue
+MidnightBlue
+-13097388 : 1 , near color = MidnightBlue
+MidnightBlue
+-10404456 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9222988 : 1 , near color = SlateBlue
+SlateBlue
+-9749082 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12113551 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14016458 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12308127 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10403953 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-8893770 : 1 , near color = SlateBlue
+SlateBlue
+-9945180 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13164706 : 1 , near color = MidnightBlue
+MidnightBlue
+-14412737 : 1 , near color = MidnightBlue
+MidnightBlue
+-14873035 : 1 , near color = MidnightBlue
+MidnightBlue
+-14610625 : 1 , near color = MidnightBlue
+MidnightBlue
+-5473828 : 1 , near color = MediumPurple
+MediumPurple
+-13689274 : 1 , near color = MidnightBlue
+MidnightBlue
+-9878885 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9090890 : 1 , near color = SlateBlue
+SlateBlue
+-10668638 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10734940 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11392108 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12443017 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13953459 : 1 , near color = MidnightBlue
+MidnightBlue
+-14740937 : 1 , near color = MidnightBlue
+MidnightBlue
+-12770195 : 1 , near color = MidnightBlue
+MidnightBlue
+-11522673 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10931806 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-7706718 : 1 , near color = LightSlateGray
+LightSlateGray
+-12309666 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-10865014 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10931301 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10997603 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11194726 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12179587 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14544068 : 1 , near color = MidnightBlue
+MidnightBlue
+-12901276 : 1 , near color = MidnightBlue
+MidnightBlue
+-10470490 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10076242 : 1 , near color = SlateBlue
+SlateBlue
+-10462640 : 1 , near color = DimGray
+DimGray
+-14149834 : 1 , near color = MidnightBlue
+MidnightBlue
+-14083772 : 1 , near color = MidnightBlue
+MidnightBlue
+-13689523 : 1 , near color = MidnightBlue
+MidnightBlue
+-13032864 : 1 , near color = MidnightBlue
+MidnightBlue
+-11457137 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11128679 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12245128 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12639123 : 1 , near color = MidnightBlue
+MidnightBlue
+-13427369 : 1 , near color = MidnightBlue
+MidnightBlue
+-12770200 : 1 , near color = MidnightBlue
+MidnightBlue
+-12047493 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11850112 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10733159 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11521148 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12505502 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11860471 : 1 , near color = Maroon
+Maroon
+-8316152 : 1 , near color = Maroon
+Maroon
+-5232633 : 1 , near color = Firebrick
+Firebrick
+-4247541 : 1 , near color = Firebrick
+Firebrick
+-4704492 : 1 , near color = Firebrick
+Firebrick
+-5292261 : 1 , near color = Brown
+Brown
+-5814750 : 1 , near color = Sienna
+Sienna
+-6010587 : 1 , near color = Sienna
+Sienna
+-5879773 : 1 , near color = Sienna
+Sienna
+-5422306 : 1 , near color = Sienna
+Sienna
+-7195881 : 1 , near color = SaddleBrown
+SaddleBrown
+-10410990 : 1 , near color = Maroon
+Maroon
+-14608590 : 1 , near color = MidnightBlue
+MidnightBlue
+-12376209 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10931815 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10340947 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9749569 : 1 , near color = SlateBlue
+SlateBlue
+-10209104 : 1 , near color = SlateBlue
+SlateBlue
+-10865766 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12638868 : 1 , near color = MidnightBlue
+MidnightBlue
+-14084025 : 1 , near color = MidnightBlue
+MidnightBlue
+-11587959 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10603099 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9617475 : 1 , near color = SlateBlue
+SlateBlue
+-9420093 : 1 , near color = SlateBlue
+SlateBlue
+-9879372 : 1 , near color = SlateBlue
+SlateBlue
+-10929768 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13360299 : 1 , near color = MidnightBlue
+MidnightBlue
+-12447995 : 1 , near color = Maroon
+Maroon
+-12449023 : 1 , near color = Maroon
+Maroon
+-11729906 : 1 , near color = Maroon
+Maroon
+-11137254 : 1 , near color = Maroon
+Maroon
+-10873054 : 1 , near color = Maroon
+Maroon
+-11199706 : 1 , near color = Maroon
+Maroon
+-53234 : 1 , near color = OrangeRed
+OrangeRed
+-34782 : 1 , near color = DarkOrange
+DarkOrange
+-25815 : 1 , near color = Goldenrod
+Goldenrod
+-22998 : 1 , near color = Goldenrod
+Goldenrod
+-25567 : 1 , near color = Orange
+Orange
+-28393 : 1 , near color = DarkOrange
+DarkOrange
+-30450 : 1 , near color = DarkOrange
+DarkOrange
+-31220 : 1 , near color = DarkOrange
+DarkOrange
+-30961 : 1 , near color = DarkOrange
+DarkOrange
+-30192 : 1 , near color = DarkOrange
+DarkOrange
+-37109 : 1 , near color = DarkOrange
+DarkOrange
+-43510 : 1 , near color = OrangeRed
+OrangeRed
+-7922425 : 1 , near color = DarkRed
+DarkRed
+-14082752 : 1 , near color = MidnightBlue
+MidnightBlue
+-13163940 : 1 , near color = MidnightBlue
+MidnightBlue
+-12770708 : 1 , near color = MidnightBlue
+MidnightBlue
+-12310921 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10734177 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10996841 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13296292 : 1 , near color = MidnightBlue
+MidnightBlue
+-12244874 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10405979 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11785850 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12967320 : 1 , near color = MidnightBlue
+MidnightBlue
+-13886643 : 1 , near color = MidnightBlue
+MidnightBlue
+-8050161 : 1 , near color = SaddleBrown
+SaddleBrown
+-37076 : 1 , near color = Tomato
+Tomato
+-26822 : 1 , near color = Coral
+Coral
+-19129 : 1 , near color = SandyBrown
+SandyBrown
+-19643 : 1 , near color = SandyBrown
+SandyBrown
+-20929 : 1 , near color = SandyBrown
+SandyBrown
+-22471 : 1 , near color = SandyBrown
+SandyBrown
+-26324 : 1 , near color = Goldenrod
+Goldenrod
+-32221 : 1 , near color = DarkOrange
+DarkOrange
+-40922 : 1 , near color = Tomato
+Tomato
+-49349 : 1 , near color = Tomato
+Tomato
+-54183 : 1 , near color = Crimson
+Crimson
+-58759 : 1 , near color = DeepPink
+DeepPink
+-42586 : 1 , near color = HotPink
+HotPink
+-32810 : 1 , near color = Violet
+Violet
+-21505 : 1 , near color = Violet
+Violet
+-2049 : 1 , near color = Snow
+Snow
+-37158 : 1 , near color = Violet
+Violet
+-48777 : 1 , near color = DeepPink
+DeepPink
+-38867 : 1 , near color = Tomato
+Tomato
+-39401 : 1 , near color = OrangeRed
+OrangeRed
+-45282 : 1 , near color = OrangeRed
+OrangeRed
+-14807499 : 1 , near color = MidnightBlue
+MidnightBlue
+-11850622 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10537309 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10866019 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10208596 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9945425 : 1 , near color = SlateBlue
+SlateBlue
+-9944915 : 1 , near color = SlateBlue
+SlateBlue
+-10207833 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-10734178 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-13427877 : 1 , near color = MidnightBlue
+MidnightBlue
+-633567 : 1 , near color = OrangeRed
+OrangeRed
+-32714 : 1 , near color = Coral
+Coral
+-27330 : 1 , near color = Coral
+Coral
+-28613 : 1 , near color = Coral
+Coral
+-29641 : 1 , near color = Coral
+Coral
+-29898 : 1 , near color = Coral
+Coral
+-29384 : 1 , near color = Coral
+Coral
+-29385 : 1 , near color = Coral
+Coral
+-30670 : 1 , near color = Coral
+Coral
+-34011 : 1 , near color = DarkOrange
+DarkOrange
+-39146 : 1 , near color = OrangeRed
+OrangeRed
+-45799 : 1 , near color = OrangeRed
+OrangeRed
+-52691 : 1 , near color = Crimson
+Crimson
+-58812 : 1 , near color = Crimson
+Crimson
+-59303 : 1 , near color = Crimson
+Crimson
+-48271 : 1 , near color = Tomato
+Tomato
+-55670 : 1 , near color = DeepPink
+DeepPink
+-50778 : 1 , near color = DeepPink
+DeepPink
+-43580 : 1 , near color = HotPink
+HotPink
+-35356 : 1 , near color = Violet
+Violet
+-26881 : 1 , near color = Violet
+Violet
+-17921 : 1 , near color = Lavender
+Lavender
+-24065 : 1 , near color = Violet
+Violet
+-29703 : 1 , near color = Violet
+Violet
+-24333 : 1 , near color = Violet
+Violet
+-13580 : 1 , near color = MistyRose
+MistyRose
+-11670024 : 1 , near color = Turquoise
+Turquoise
+-16716307 : 1 , near color = Aqua
+Aqua
+-16721190 : 1 , near color = DarkTurquoise
+DarkTurquoise
+-16726587 : 1 , near color = DarkTurquoise
+DarkTurquoise
+-16731984 : 1 , near color = LightSeaGreen
+LightSeaGreen
+-16736353 : 1 , near color = DarkCyan
+DarkCyan
+-16738152 : 1 , near color = DarkCyan
+DarkCyan
+-16731470 : 1 , near color = LightSeaGreen
+LightSeaGreen
+-3882530 : 1 , near color = LightSteelBlue
+LightSteelBlue
+-27911 : 1 , near color = Violet
+Violet
+-49764 : 1 , near color = DeepPink
+DeepPink
+-52911 : 1 , near color = Crimson
+Crimson
+-42717 : 1 , near color = Tomato
+Tomato
+-38629 : 1 , near color = DarkOrange
+DarkOrange
+-44009 : 1 , near color = OrangeRed
+OrangeRed
+-4244198 : 1 , near color = Firebrick
+Firebrick
+-13558189 : 1 , near color = MidnightBlue
+MidnightBlue
+-11982210 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-11062631 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-9879631 : 1 , near color = SlateBlue
+SlateBlue
+-9419080 : 1 , near color = SlateBlue
+SlateBlue
+-9155908 : 1 , near color = SlateBlue
+SlateBlue
+-9353034 : 1 , near color = SlateBlue
+SlateBlue
+-10536038 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-12310160 : 1 , near color = DarkSlateBlue
+DarkSlateBlue
+-14674889 : 1 , near color = MidnightBlue
+MidnightBlue
+-1227749 : 1 , near color = OrangeRed
+OrangeRed
+-39384 : 1 , near color = Tomato
+Tomato
+-41439 : 1 , near color = Tomato
+Tomato
+-49650 : 1 , near color = OrangeRed
+OrangeRed
+-53998 : 1 , near color = OrangeRed
+OrangeRed
+-57310 : 1 , near color = Crimson
+Crimson
+-56023 : 1 , near color = Crimson
+Crimson
+-44497 : 1 , near color = Tomato
+Tomato
+-47057 : 1 , near color = Tomato
+Tomato
+-49858 : 1 , near color = Tomato
+Tomato
+-56487 : 1 , near color = Crimson
+Crimson
+-62347 : 1 , near color = DeepPink
+DeepPink
+-60277 : 1 , near color = DeepPink
+DeepPink
+-56164 : 1 , near color = DeepPink
+DeepPink
+-51279 : 1 , near color = DeepPink
+DeepPink
+-46652 : 1 , near color = HotPink
+HotPink
+-42798 : 1 , near color = HotPink
+HotPink
+-42027 : 1 , near color = HotPink
+HotPink
+-41770 : 1 , near color = HotPink
+HotPink
+-42028 : 1 , near color = HotPink
+HotPink
+-42541 : 1 , near color = HotPink
+HotPink
+-34850 : 1 , near color = Violet
+Violet
+-17674 : 1 , near color = Pink
+Pink
+-4460801 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-12779777 : 1 , near color = Turquoise
+Turquoise
+-12855325 : 1 , near color = Turquoise
+Turquoise
+-12935510 : 1 , near color = SteelBlue
+SteelBlue
+-13014924 : 1 , near color = SeaGreen
+SeaGreen
+-12963780 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14270909 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-5415047 : 1 , near color = IndianRed
+IndianRed
+-36443 : 1 , near color = HotPink
+HotPink
+-26925 : 1 , near color = LightPink
+LightPink
+-13057 : 1 , near color = Lavender
+Lavender
+-1978373 : 1 , near color = Lavender
+Lavender
+-8439742 : 1 , near color = Sienna
+Sienna
+-14392730 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-11151898 : 1 , near color = MediumTurquoise
+MediumTurquoise
+-6913 : 1 , near color = LavenderBlush
+LavenderBlush
+-17409 : 1 , near color = Lavender
+Lavender
+-29959 : 1 , near color = Violet
+Violet
+-38444 : 1 , near color = HotPink
+HotPink
+-50786 : 1 , near color = DeepPink
+DeepPink
+-60325 : 1 , near color = Crimson
+Crimson
+-50146 : 1 , near color = OrangeRed
+OrangeRed
+-41689 : 1 , near color = Tomato
+Tomato
+-4306395 : 1 , near color = Sienna
+Sienna
+-10344166 : 1 , near color = SaddleBrown
+SaddleBrown
+-14543304 : 1 , near color = MidnightBlue
+MidnightBlue
+-13754806 : 1 , near color = MidnightBlue
+MidnightBlue
+-13031594 : 1 , near color = MidnightBlue
+MidnightBlue
+-13031337 : 1 , near color = MidnightBlue
+MidnightBlue
+-13360557 : 1 , near color = MidnightBlue
+MidnightBlue
+-14675655 : 1 , near color = MidnightBlue
+MidnightBlue
+-56260 : 1 , near color = Crimson
+Crimson
+-55465 : 1 , near color = Crimson
+Crimson
+-57757 : 1 , near color = DeepPink
+DeepPink
+-59535 : 1 , near color = DeepPink
+DeepPink
+-59007 : 1 , near color = DeepPink
+DeepPink
+-59251 : 1 , near color = DeepPink
+DeepPink
+-48722 : 1 , near color = HotPink
+HotPink
+-29231 : 1 , near color = Violet
+Violet
+-15628 : 1 , near color = MistyRose
+MistyRose
+-5444609 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-5374465 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-5187588 : 1 , near color = LightBlue
+LightBlue
+-5137471 : 1 , near color = DarkGray
+DarkGray
+-5152120 : 1 , near color = PaleVioletRed
+PaleVioletRed
+-6932393 : 1 , near color = Brown
+Brown
+-11461850 : 1 , near color = Maroon
+Maroon
+-7397833 : 1 , near color = Brown
+Brown
+-5094296 : 1 , near color = IndianRed
+IndianRed
+-5080418 : 1 , near color = RosyBrown
+RosyBrown
+-4999462 : 1 , near color = LightSteelBlue
+LightSteelBlue
+-4919041 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-5111809 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-8193 : 1 , near color = LavenderBlush
+LavenderBlush
+-22287 : 1 , near color = Plum
+Plum
+-38699 : 1 , near color = HotPink
+HotPink
+-46141 : 1 , near color = HotPink
+HotPink
+-49225 : 1 , near color = HotPink
+HotPink
+-52825 : 1 , near color = DeepPink
+DeepPink
+-59245 : 1 , near color = DeepPink
+DeepPink
+-47182 : 1 , near color = HotPink
+HotPink
+-33561 : 1 , near color = Violet
+Violet
+-983041 : 1 , near color = Azure
+Azure
+-5445889 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-12813947 : 1 , near color = SteelBlue
+SteelBlue
+-12640725 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-5396279 : 1 , near color = Silver
+Silver
+-4587521 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-3538945 : 1 , near color = LightCyan
+LightCyan
+-40251 : 1 , near color = HotPink
+HotPink
+-52864 : 1 , near color = DeepPink
+DeepPink
+-52921 : 1 , near color = Crimson
+Crimson
+-49630 : 1 , near color = OrangeRed
+OrangeRed
+-52973 : 1 , near color = OrangeRed
+OrangeRed
+-4904435 : 1 , near color = Firebrick
+Firebrick
+-6281464 : 1 , near color = Firebrick
+Firebrick
+-8841725 : 1 , near color = Maroon
+Maroon
+-513 : 1 , near color = White
+White
+-479777 : 1 , near color = Pink
+Pink
+-5335633 : 1 , near color = DarkGray
+DarkGray
+-12484728 : 1 , near color = SteelBlue
+SteelBlue
+-15048612 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-13947611 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12828081 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12813946 : 1 , near color = SteelBlue
+SteelBlue
+-12799040 : 1 , near color = MediumTurquoise
+MediumTurquoise
+-12786190 : 1 , near color = Turquoise
+Turquoise
+-7930369 : 1 , near color = Aquamarine
+Aquamarine
+-29720 : 1 , near color = Violet
+Violet
+-41256 : 1 , near color = HotPink
+HotPink
+-40999 : 1 , near color = HotPink
+HotPink
+-40485 : 1 , near color = HotPink
+HotPink
+-40742 : 1 , near color = HotPink
+HotPink
+-42026 : 1 , near color = HotPink
+HotPink
+-45110 : 1 , near color = HotPink
+HotPink
+-49223 : 1 , near color = HotPink
+HotPink
+-53594 : 1 , near color = DeepPink
+DeepPink
+-56678 : 1 , near color = DeepPink
+DeepPink
+-60279 : 1 , near color = DeepPink
+DeepPink
+-61067 : 1 , near color = DeepPink
+DeepPink
+-58786 : 1 , near color = Crimson
+Crimson
+-50606 : 1 , near color = Tomato
+Tomato
+-60849 : 1 , near color = Crimson
+Crimson
+-58287 : 1 , near color = Crimson
+Crimson
+-59317 : 1 , near color = Crimson
+Crimson
+-61120 : 1 , near color = Crimson
+Crimson
+-60624 : 1 , near color = Crimson
+Crimson
+-58079 : 1 , near color = Red
+Red
+-55752 : 1 , near color = Crimson
+Crimson
+-64686 : 1 , near color = Crimson
+Crimson
+-57219 : 1 , near color = DeepPink
+DeepPink
+-47694 : 1 , near color = HotPink
+HotPink
+-37157 : 1 , near color = Violet
+Violet
+-20993 : 1 , near color = Violet
+Violet
+-5121 : 1 , near color = LavenderBlush
+LavenderBlush
+-11207169 : 1 , near color = Turquoise
+Turquoise
+-13066325 : 1 , near color = LightSeaGreen
+LightSeaGreen
+-8939352 : 1 , near color = LightSlateGray
+LightSlateGray
+-1835009 : 1 , near color = LightCyan
+LightCyan
+-22785 : 1 , near color = Violet
+Violet
+-51556 : 1 , near color = DeepPink
+DeepPink
+-43191 : 1 , near color = Tomato
+Tomato
+-41717 : 1 , near color = OrangeRed
+OrangeRed
+-43757 : 1 , near color = OrangeRed
+OrangeRed
+-2613997 : 1 , near color = Firebrick
+Firebrick
+-11467504 : 1 , near color = Maroon
+Maroon
+-44094 : 1 , near color = HotPink
+HotPink
+-16755371 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-16747147 : 1 , near color = Teal
+Teal
+-16741236 : 1 , near color = DarkCyan
+DarkCyan
+-16735839 : 1 , near color = DarkCyan
+DarkCyan
+-16731727 : 1 , near color = LightSeaGreen
+LightSeaGreen
+-16727101 : 1 , near color = DarkTurquoise
+DarkTurquoise
+-16722732 : 1 , near color = DarkTurquoise
+DarkTurquoise
+-16717335 : 1 , near color = Aqua
+Aqua
+-15010311 : 1 , near color = Aqua
+Aqua
+-468998 : 1 , near color = Lavender
+Lavender
+-19974 : 1 , near color = Plum
+Plum
+-29187 : 1 , near color = Violet
+Violet
+-26113 : 1 , near color = Violet
+Violet
+-21249 : 1 , near color = Violet
+Violet
+-15873 : 1 , near color = Lavender
+Lavender
+-25601 : 1 , near color = Violet
+Violet
+-32011 : 1 , near color = Violet
+Violet
+-37665 : 1 , near color = Violet
+Violet
+-42805 : 1 , near color = HotPink
+HotPink
+-48974 : 1 , near color = HotPink
+HotPink
+-45672 : 1 , near color = HotPink
+HotPink
+-51844 : 1 , near color = DeepPink
+DeepPink
+-62883 : 1 , near color = Crimson
+Crimson
+-56773 : 1 , near color = Crimson
+Crimson
+-47590 : 1 , near color = OrangeRed
+OrangeRed
+-39658 : 1 , near color = OrangeRed
+OrangeRed
+-33495 : 1 , near color = Coral
+Coral
+-30926 : 1 , near color = Coral
+Coral
+-29899 : 1 , near color = Coral
+Coral
+-30156 : 1 , near color = Coral
+Coral
+-29386 : 1 , near color = Coral
+Coral
+-29900 : 1 , near color = Coral
+Coral
+-30928 : 1 , near color = Coral
+Coral
+-37340 : 1 , near color = Tomato
+Tomato
+-111592 : 1 , near color = OrangeRed
+OrangeRed
+-7721190 : 1 , near color = SaddleBrown
+SaddleBrown
+-40916 : 1 , near color = Tomato
+Tomato
+-35281 : 1 , near color = Tomato
+Tomato
+-41174 : 1 , near color = Tomato
+Tomato
+-59570 : 1 , near color = Crimson
+Crimson
+-49756 : 1 , near color = DeepPink
+DeepPink
+-29197 : 1 , near color = Violet
+Violet
+-18945 : 1 , near color = Plum
+Plum
+-4663052 : 1 , near color = LightBlue
+LightBlue
+-16732241 : 1 , near color = LightSeaGreen
+LightSeaGreen
+-16764623 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-12691102 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-865553 : 1 , near color = MistyRose
+MistyRose
+-38446 : 1 , near color = HotPink
+HotPink
+-53142 : 1 , near color = DeepPink
+DeepPink
+-34259 : 1 , near color = Tomato
+Tomato
+-34016 : 1 , near color = DarkOrange
+DarkOrange
+-41442 : 1 , near color = OrangeRed
+OrangeRed
+-10938103 : 1 , near color = Maroon
+Maroon
+-5889 : 1 , near color = LavenderBlush
+LavenderBlush
+-6657 : 1 , near color = LavenderBlush
+LavenderBlush
+-22529 : 1 , near color = Violet
+Violet
+-31006 : 1 , near color = Violet
+Violet
+-38720 : 1 , near color = HotPink
+HotPink
+-49510 : 1 , near color = DeepPink
+DeepPink
+-60815 : 1 , near color = DeepPink
+DeepPink
+-52660 : 1 , near color = Crimson
+Crimson
+-43477 : 1 , near color = Tomato
+Tomato
+-34272 : 1 , near color = DarkOrange
+DarkOrange
+-26330 : 1 , near color = Goldenrod
+Goldenrod
+-21194 : 1 , near color = Goldenrod
+Goldenrod
+-18881 : 1 , near color = SandyBrown
+SandyBrown
+-18880 : 1 , near color = SandyBrown
+SandyBrown
+-20164 : 1 , near color = SandyBrown
+SandyBrown
+-21963 : 1 , near color = Goldenrod
+Goldenrod
+-23762 : 1 , near color = Goldenrod
+Goldenrod
+-29662 : 1 , near color = DarkOrange
+DarkOrange
+-39396 : 1 , near color = Tomato
+Tomato
+-4571616 : 1 , near color = Firebrick
+Firebrick
+-435415 : 1 , near color = Tomato
+Tomato
+-29122 : 1 , near color = Coral
+Coral
+-25029 : 1 , near color = Coral
+Coral
+-39368 : 1 , near color = Tomato
+Tomato
+-59523 : 1 , near color = DeepPink
+DeepPink
+-23041 : 1 , near color = Violet
+Violet
+-10116689 : 1 , near color = CadetBlue
+CadetBlue
+-16749203 : 1 , near color = Teal
+Teal
+-7881005 : 1 , near color = SkyBlue
+SkyBlue
+-19457 : 1 , near color = Plum
+Plum
+-53101 : 1 , near color = DeepPink
+DeepPink
+-38122 : 1 , near color = DarkOrange
+DarkOrange
+-7592946 : 1 , near color = SaddleBrown
+SaddleBrown
+-40959 : 1 , near color = OrangeRed
+OrangeRed
+-34028 : 1 , near color = DarkOrange
+DarkOrange
+-28651 : 1 , near color = DarkOrange
+DarkOrange
+-24796 : 1 , near color = Orange
+Orange
+-21969 : 1 , near color = Goldenrod
+Goldenrod
+-20942 : 1 , near color = Goldenrod
+Goldenrod
+-20687 : 1 , near color = Goldenrod
+Goldenrod
+-21717 : 1 , near color = Goldenrod
+Goldenrod
+-22233 : 1 , near color = Goldenrod
+Goldenrod
+-25056 : 1 , near color = Orange
+Orange
+-35053 : 1 , near color = DarkOrange
+DarkOrange
+-45291 : 1 , near color = OrangeRed
+OrangeRed
+-10614247 : 1 , near color = Maroon
+Maroon
+-11859431 : 1 , near color = Maroon
+Maroon
+-11926252 : 1 , near color = Maroon
+Maroon
+-12123379 : 1 , near color = Maroon
+Maroon
+-12187639 : 1 , near color = Maroon
+Maroon
+-12187384 : 1 , near color = Maroon
+Maroon
+-11926262 : 1 , near color = Maroon
+Maroon
+-11795190 : 1 , near color = Maroon
+Maroon
+-11793907 : 1 , near color = Maroon
+Maroon
+-11923697 : 1 , near color = Maroon
+Maroon
+-12055026 : 1 , near color = Maroon
+Maroon
+-12385016 : 1 , near color = Maroon
+Maroon
+-12057592 : 1 , near color = Maroon
+Maroon
+-7398647 : 1 , near color = DarkRed
+DarkRed
+-38880 : 1 , near color = Tomato
+Tomato
+-33253 : 1 , near color = DarkOrange
+DarkOrange
+-33252 : 1 , near color = DarkOrange
+DarkOrange
+-52132 : 1 , near color = Tomato
+Tomato
+-40506 : 1 , near color = HotPink
+HotPink
+-411159 : 1 , near color = Pink
+Pink
+-7201998 : 1 , near color = Brown
+Brown
+-14118254 : 1 , near color = LightSeaGreen
+LightSeaGreen
+-43677 : 1 , near color = Tomato
+Tomato
+-51447 : 1 , near color = OrangeRed
+OrangeRed
+-12052727 : 1 , near color = Maroon
+Maroon
+-8702952 : 1 , near color = SaddleBrown
+SaddleBrown
+-6273761 : 1 , near color = Sienna
+Sienna
+-6402777 : 1 , near color = Sienna
+Sienna
+-6075867 : 1 , near color = Sienna
+Sienna
+-5488355 : 1 , near color = Sienna
+Sienna
+-4770029 : 1 , near color = Firebrick
+Firebrick
+-4182252 : 1 , near color = Firebrick
+Firebrick
+-3855861 : 1 , near color = Firebrick
+Firebrick
+-3790580 : 1 , near color = Firebrick
+Firebrick
+-4184565 : 1 , near color = Firebrick
+Firebrick
+-6875899 : 1 , near color = DarkRed
+DarkRed
+-10547190 : 1 , near color = Maroon
+Maroon
+-9954292 : 1 , near color = Maroon
+Maroon
+-7132143 : 1 , near color = SaddleBrown
+SaddleBrown
+-4641013 : 1 , near color = Firebrick
+Firebrick
+-51710 : 1 , near color = OrangeRed
+OrangeRed
+-47078 : 1 , near color = OrangeRed
+OrangeRed
+-52423 : 1 , near color = Crimson
+Crimson
+-51089 : 1 , near color = DeepPink
+DeepPink
+-44377 : 1 , near color = HotPink
+HotPink
+-35102 : 1 , near color = Violet
+Violet
+-14593 : 1 , near color = Lavender
+Lavender
+-67841 : 1 , near color = GhostWhite
+GhostWhite
+-12829886 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-87076 : 1 , near color = Pink
+Pink
+-35110 : 1 , near color = Violet
+Violet
+-52950 : 1 , near color = OrangeRed
+OrangeRed
+-4968693 : 1 , near color = Firebrick
+Firebrick
+-11724270 : 1 , near color = Maroon
+Maroon
+-4181743 : 1 , near color = Firebrick
+Firebrick
+-48882 : 1 , near color = OrangeRed
+OrangeRed
+-47853 : 1 , near color = OrangeRed
+OrangeRed
+-51921 : 1 , near color = OrangeRed
+OrangeRed
+-61869 : 1 , near color = Crimson
+Crimson
+-47977 : 1 , near color = HotPink
+HotPink
+-21763 : 1 , near color = Violet
+Violet
+-13830 : 1 , near color = MistyRose
+MistyRose
+-12051167 : 1 , near color = Maroon
+Maroon
+-12289 : 1 , near color = Lavender
+Lavender
+-51321 : 1 , near color = DeepPink
+DeepPink
+-56292 : 1 , near color = OrangeRed
+OrangeRed
+-10019830 : 1 , near color = Maroon
+Maroon
+-47095 : 1 , near color = OrangeRed
+OrangeRed
+-53192 : 1 , near color = Crimson
+Crimson
+-20481 : 1 , near color = Plum
+Plum
+-32081 : 1 , near color = HotPink
+HotPink
+-3969900 : 1 , near color = PaleVioletRed
+PaleVioletRed
+-30226 : 1 , near color = Violet
+Violet
+-63904 : 1 , near color = Crimson
+Crimson
+-4638701 : 1 , near color = Firebrick
+Firebrick
+-12115180 : 1 , near color = Maroon
+Maroon
+-44783 : 1 , near color = OrangeRed
+OrangeRed
+-51304 : 1 , near color = DeepPink
+DeepPink
+-10590637 : 1 , near color = DimGray
+DimGray
+-25889 : 1 , near color = Violet
+Violet
+-38976 : 1 , near color = HotPink
+HotPink
+-51168 : 1 , near color = OrangeRed
+OrangeRed
+-4636389 : 1 , near color = Firebrick
+Firebrick
+-12443373 : 1 , near color = Maroon
+Maroon
+-40687 : 1 , near color = OrangeRed
+OrangeRed
+-37423 : 1 , near color = HotPink
+HotPink
+-4929816 : 1 , near color = LightSteelBlue
+LightSteelBlue
+-11255472 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-19975 : 1 , near color = Plum
+Plum
+-56692 : 1 , near color = DeepPink
+DeepPink
+-43763 : 1 , near color = OrangeRed
+OrangeRed
+-37847 : 1 , near color = Tomato
+Tomato
+-59565 : 1 , near color = Crimson
+Crimson
+-25627 : 1 , near color = Violet
+Violet
+-6198649 : 1 , near color = Gray
+Gray
+-10376001 : 1 , near color = CadetBlue
+CadetBlue
+-27149 : 1 , near color = Violet
+Violet
+-49591 : 1 , near color = Tomato
+Tomato
+-7464696 : 1 , near color = DarkRed
+DarkRed
+-8506086 : 1 , near color = SaddleBrown
+SaddleBrown
+-46076 : 1 , near color = OrangeRed
+OrangeRed
+-50286 : 1 , near color = DeepPink
+DeepPink
+-27675 : 1 , near color = Violet
+Violet
+-8702676 : 1 , near color = SaddleBrown
+SaddleBrown
+-20746 : 1 , near color = Plum
+Plum
+-38443 : 1 , near color = HotPink
+HotPink
+-49388 : 1 , near color = OrangeRed
+OrangeRed
+-7922677 : 1 , near color = DarkRed
+DarkRed
+-7396340 : 1 , near color = SaddleBrown
+SaddleBrown
+-57279 : 1 , near color = Crimson
+Crimson
+-38454 : 1 , near color = HotPink
+HotPink
+-2117926 : 1 , near color = Plum
+Plum
+-4174226 : 1 , near color = IndianRed
+IndianRed
+-8961 : 1 , near color = LavenderBlush
+LavenderBlush
+-60819 : 1 , near color = DeepPink
+DeepPink
+-49395 : 1 , near color = OrangeRed
+OrangeRed
+-6481138 : 1 , near color = Firebrick
+Firebrick
+-511459 : 1 , near color = OrangeRed
+OrangeRed
+-52377 : 1 , near color = DeepPink
+DeepPink
+-7512462 : 1 , near color = DimGray
+DimGray
+-3878927 : 1 , near color = LightBlue
+LightBlue
+-19713 : 1 , near color = Plum
+Plum
+-49607 : 1 , near color = Tomato
+Tomato
+-1099234 : 1 , near color = OrangeRed
+OrangeRed
+-5297392 : 1 , near color = Firebrick
+Firebrick
+-50397 : 1 , near color = OrangeRed
+OrangeRed
+-40763 : 1 , near color = HotPink
+HotPink
+-15385279 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-46237 : 1 , near color = Tomato
+Tomato
+-45798 : 1 , near color = OrangeRed
+OrangeRed
+-14540248 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-14474455 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-838379 : 1 , near color = OrangeRed
+OrangeRed
+-44468 : 1 , near color = Tomato
+Tomato
+-16748689 : 1 , near color = Teal
+Teal
+-51057 : 1 , near color = DeepPink
+DeepPink
+-52457 : 1 , near color = OrangeRed
+OrangeRed
+-5294316 : 1 , near color = Firebrick
+Firebrick
+-35571 : 1 , near color = DarkOrange
+DarkOrange
+-14890804 : 1 , near color = DarkTurquoise
+DarkTurquoise
+-45636 : 1 , near color = HotPink
+HotPink
+-62150 : 1 , near color = Crimson
+Crimson
+-8507113 : 1 , near color = SaddleBrown
+SaddleBrown
+-37868 : 1 , near color = DarkOrange
+DarkOrange
+-16897 : 1 , near color = Lavender
+Lavender
+-12816 : 1 , near color = MistyRose
+MistyRose
+-3897945 : 1 , near color = RosyBrown
+RosyBrown
+-27407 : 1 , near color = Violet
+Violet
+-55204 : 1 , near color = Crimson
+Crimson
+-4244971 : 1 , near color = Firebrick
+Firebrick
+-11592949 : 1 , near color = Maroon
+Maroon
+-45551 : 1 , near color = OrangeRed
+OrangeRed
+-43844 : 1 , near color = HotPink
+HotPink
+-10541525 : 1 , near color = SaddleBrown
+SaddleBrown
+-5633 : 1 , near color = LavenderBlush
+LavenderBlush
+-56195 : 1 , near color = DeepPink
+DeepPink
+-41953 : 1 , near color = OrangeRed
+OrangeRed
+-11400442 : 1 , near color = Maroon
+Maroon
+-50576 : 1 , near color = DeepPink
+DeepPink
+-14081 : 1 , near color = Lavender
+Lavender
+-13482160 : 1 , near color = DarkSlateGray
+DarkSlateGray
+-3604481 : 1 , near color = LightCyan
+LightCyan
+-52576 : 1 , near color = DeepPink
+DeepPink
+-34777 : 1 , near color = Tomato
+Tomato
+-38603 : 1 , near color = Tomato
+Tomato
+-12600891 : 1 , near color = MediumTurquoise
+MediumTurquoise
+-4718593 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-43833 : 1 , near color = HotPink
+HotPink
+-38890 : 1 , near color = OrangeRed
+OrangeRed
+-29660 : 1 , near color = DarkOrange
+DarkOrange
+-5049601 : 1 , near color = PaleTurquoise
+PaleTurquoise
+-34581 : 1 , near color = Violet
+Violet
+-49376 : 1 , near color = OrangeRed
+OrangeRed
