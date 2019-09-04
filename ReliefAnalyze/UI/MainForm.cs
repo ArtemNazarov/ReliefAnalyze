@@ -99,6 +99,14 @@ namespace ReliefAnalyze
             contoursForm.Show();
         }
 
+        private Bitmap CannyFilter(Bitmap originalBitmap)
+        {
+            var originalMat = BitmapConverter.ToMat(originalBitmap);
+            var cannyMat = new Mat();
+            Cv2.Canny(originalMat, cannyMat, 50, 100);
+            return BitmapConverter.ToBitmap(cannyMat);
+        }
+
         private void FragmentContours()
         {
             var imageBitmap = new Bitmap(MyImage);
@@ -285,7 +293,8 @@ namespace ReliefAnalyze
         private void FindContours()
         {
             var originalBitmap = new Bitmap(MyImage);
-            var originalMat = FindContoursAndDraw(originalBitmap);
+            var houghBitmap = HoughTransform(originalBitmap);
+            var originalMat = FindContoursAndDraw(houghBitmap);
             var contoursBitmap = BitmapConverter.ToBitmap(originalMat);
             ContoursForm contoursForm = new ContoursForm();
             contoursForm.Image = contoursBitmap;
@@ -325,22 +334,21 @@ namespace ReliefAnalyze
             Mat blackWhiteMat = new Mat();
             Mat edgesMat = new Mat();
 
-            Cv2.CvtColor(originalMat, blackWhiteMat, ColorConversionCodes.BGRA2GRAY);
-            Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
-            Bitmap edgesMap = BitmapConverter.ToBitmap(edgesMat);
-            edgesMap = ImageFilter.SobelFilter(edgesMap, true);
-            edgesMat = BitmapConverter.ToMat(edgesMap);
+            //Cv2.CvtColor(originalMat, blackWhiteMat, ColorConversionCodes.BGRA2GRAY);
+            //Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
+            //Bitmap edgesMap = BitmapConverter.ToBitmap(edgesMat);
+            //edgesMap = ImageFilter.SobelFilter(edgesMap, true);
+            //edgesMat = BitmapConverter.ToMat(edgesMap);
 
             OpenCvSharp.Point[][] contours;
             HierarchyIndex[] hierarchyIndexes;
             Cv2.FindContours(
-                edgesMat,
+                blackWhiteMat,
                 out contours,
                 out hierarchyIndexes,
                 mode: RetrievalModes.Tree,
                 method: ContourApproximationModes.ApproxSimple);
 
-            var drawedCountours = new Mat(edgesMat.Size(), MatType.CV_8U, s: Scalar.All(0));
             var contourIndex = 0;
             while ((contourIndex >= 0))
             {
