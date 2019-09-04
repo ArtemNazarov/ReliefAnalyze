@@ -293,8 +293,9 @@ namespace ReliefAnalyze
         private void FindContours()
         {
             var originalBitmap = new Bitmap(MyImage);
-            var houghBitmap = HoughTransform(originalBitmap);
-            var originalMat = FindContoursAndDraw(houghBitmap);
+            //var houghBitmap = HoughTransform(originalBitmap);
+            //var invertedHoughBitmap = InvertImage(houghBitmap);
+            var originalMat = FindContoursAndDraw(originalBitmap);
             var contoursBitmap = BitmapConverter.ToBitmap(originalMat);
             ContoursForm contoursForm = new ContoursForm();
             contoursForm.Image = contoursBitmap;
@@ -328,14 +329,62 @@ namespace ReliefAnalyze
             return fragmentBitmap;
         }
 
+        private Bitmap InvertImage(Bitmap originalMap)
+        {
+            var invertedMap = new Bitmap(originalMap);
+            for (int y = 0; (y <= (originalMap.Height - 1)); y++)
+            {
+                for (int x = 0; (x <= (originalMap.Width - 1)); x++)
+                {
+                    Color inv = originalMap.GetPixel(x, y);
+                    inv = Color.FromArgb(255, (255 - inv.R), (255 - inv.G), (255 - inv.B));
+                    invertedMap.SetPixel(x, y, inv);
+                }
+            }
+            return invertedMap;
+        }
+
+        private Bitmap FindColor(Bitmap originalMap, string nearColor)
+        {
+            var coloredMap = new Bitmap(originalMap);
+            var colorDictionary = new Dictionary<string, ColorInfo>();
+            var width = coloredMap.Width;
+            var height = coloredMap.Height;
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < coloredMap.Height; j++)
+                {
+                    if (!(i == 0 || j == 0 || i == width - 1 || j == height - 1))
+                    {
+                        var medium = originalMap.GetPixel(i - 1, j - 1);
+                        if (medium.ToArgb() != 0)
+                        {
+                            var colorValue = medium.ToArgb().ToString();
+
+                            var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + medium.Name.Substring(2)));
+                            if (near != nearColor)
+                            {
+                                coloredMap.SetPixel(i - 1, j - 1, Color.Black);
+
+                            }
+                        }
+                    }
+                }
+            }
+            return coloredMap;
+        }
+
         private Mat FindContoursAndDraw(Bitmap originalMap, int minArea = 500, int maxArea = 10000)
         {
+            //var houghBitmap = HoughTransform(originalMap);
+            //var invertedHoughBitmap = InvertImage(houghBitmap);
             Mat originalMat = BitmapConverter.ToMat(originalMap);
+            //Mat invertedHoughMat = BitmapConverter.ToMat(invertedHoughBitmap);
             Mat blackWhiteMat = new Mat();
             Mat edgesMat = new Mat();
 
-            //Cv2.CvtColor(originalMat, blackWhiteMat, ColorConversionCodes.BGRA2GRAY);
-            //Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
+            Cv2.CvtColor(originalMat, blackWhiteMat, ColorConversionCodes.BGRA2GRAY);
+            Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
             //Bitmap edgesMap = BitmapConverter.ToBitmap(edgesMat);
             //edgesMap = ImageFilter.SobelFilter(edgesMap, true);
             //edgesMat = BitmapConverter.ToMat(edgesMap);
@@ -343,40 +392,47 @@ namespace ReliefAnalyze
             OpenCvSharp.Point[][] contours;
             HierarchyIndex[] hierarchyIndexes;
             Cv2.FindContours(
-                blackWhiteMat,
+                edgesMat,
                 out contours,
                 out hierarchyIndexes,
-                mode: RetrievalModes.Tree,
+                mode: RetrievalModes.CComp,
                 method: ContourApproximationModes.ApproxSimple);
-
+            var markers = new Mat(edgesMat.Size(), MatType.CV_8U, s: Scalar.All(0));
+            var componentCount = 0;
             var contourIndex = 0;
             while ((contourIndex >= 0))
             {
                 var contour = contours[contourIndex];
                 var boundingRect = Cv2.BoundingRect(contour);
                 var boundingRectArea = boundingRect.Width * boundingRect.Height;
-
-                if (boundingRectArea > minArea && boundingRectArea < maxArea)
+                var ca = Cv2.ContourArea(contour);
+                var cal = Cv2.ArcLength(contour, closed: true);
+                if (boundingRectArea > minArea)
                 {
-                    Cv2.Rectangle(originalMat,
-                    new OpenCvSharp.Point(boundingRect.X, boundingRect.Y),
-                    new OpenCvSharp.Point(boundingRect.Right, boundingRect.Bottom),
-                    Scalar.White, 2);
+                    //Cv2.Rectangle(originalMat,
+                    //new OpenCvSharp.Point(boundingRect.X, boundingRect.Y),
+                    //new OpenCvSharp.Point(boundingRect.Right, boundingRect.Bottom),
+                    //Scalar.White, 2);
+                    Cv2.PutText(originalMat, $"{ca} a", new OpenCvSharp.Point(boundingRect.X - 15, boundingRect.Y - 10), HersheyFonts.HersheyPlain, 1, Scalar.White, 2);
+                    Cv2.PutText(originalMat, $"{cal} l", new OpenCvSharp.Point(boundingRect.X + 10, boundingRect.Y), HersheyFonts.HersheyPlain, 1, Scalar.White, 2);
 
-                    Cv2.PutText(originalMat, $"{ boundingRect.Width}in", new OpenCvSharp.Point(boundingRect.X - 15, boundingRect.Y - 10), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
-                    Cv2.PutText(originalMat, $"{ boundingRect.Height}in", new OpenCvSharp.Point(boundingRect.X + 10, boundingRect.Y), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
+                    //Cv2.PutText(originalMat, $"{ boundingRect.Width}in", new OpenCvSharp.Point(boundingRect.X - 15, boundingRect.Y - 10), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
+                    //Cv2.PutText(originalMat, $"{ boundingRect.Height}in", new OpenCvSharp.Point(boundingRect.X + 10, boundingRect.Y), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
 
                 }
 
-                //Cv2.DrawContours(
-                //    originalMat,
-                //    contours,
-                //    contourIndex,
-                //    color: Scalar.All(componentCount + 1),
-                //    thickness: -1,
-                //    lineType: LineTypes.Link8,
-                //    hierarchy: hierarchyIndexes,
-                //    maxLevel: int.MaxValue);
+
+                Cv2.DrawContours(
+                    originalMat,
+                    contours,
+                    contourIndex,
+                    color: Scalar.All(componentCount + 1),
+                    thickness: -1,
+                    lineType: LineTypes.Link8,
+                    hierarchy: hierarchyIndexes,
+                    maxLevel: int.MaxValue);
+
+                componentCount++;
 
 
                 contourIndex = hierarchyIndexes[contourIndex].Next;
@@ -403,7 +459,7 @@ namespace ReliefAnalyze
             }
         }
 
-        
+
 
         private void DetectColors_Click(object sender, EventArgs e)
         {
@@ -447,7 +503,7 @@ namespace ReliefAnalyze
                             if (medium.ToArgb() != 0)
                             {
                                 var colorValue = medium.ToArgb().ToString();
-                                
+
                                 var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + medium.Name.Substring(2)));
                                 if (near != "Black")
                                 {
@@ -483,6 +539,38 @@ namespace ReliefAnalyze
                 FilteredImageForm filteredImageForm = new FilteredImageForm();
                 filteredImageForm.Image = contoursBitmap;
                 filteredImageForm.Show();
+            }
+        }
+
+        private void FindColorbutton_Click(object sender, EventArgs e)
+        {
+            var imageBitmap = new Bitmap(MyImage);
+            var waterBitmap = FindColor(imageBitmap, "LightSteelBlue");
+            var riversBitmap = FindColor(imageBitmap, "Navy");
+            var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(riversBitmap));
+
+            ContoursForm contoursForm = new ContoursForm();
+            contoursForm.Image = contoursBitmap;
+            contoursForm.Show();
+        }
+
+        private void FragmentColorsButton_Click(object sender, EventArgs e)
+        {
+
+            var imageBitmap = new Bitmap(MyImage);
+            if (!coordinatesAnalyze.IsEmpty)
+            {
+                var fragmentBitmap = FragmentBitmap(imageBitmap);
+                var waterBitmap = FindColor(fragmentBitmap, "LightSteelBlue");
+                var riversBitmap = FindColor(fragmentBitmap, "Navy");
+                var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(riversBitmap));
+                FilteredImageForm filteredImageForm = new FilteredImageForm();
+                filteredImageForm.Image = contoursBitmap;
+                filteredImageForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

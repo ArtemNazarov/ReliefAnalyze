@@ -44,6 +44,8 @@
             this.opencvbutton = new System.Windows.Forms.Button();
             this.FragmentFindContours = new System.Windows.Forms.Button();
             this.detectColors = new System.Windows.Forms.Button();
+            this.findColorbutton = new System.Windows.Forms.Button();
+            this.fragmentColorsButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
@@ -192,7 +194,7 @@
             // 
             // detectColors
             // 
-            this.detectColors.Location = new System.Drawing.Point(864, 57);
+            this.detectColors.Location = new System.Drawing.Point(833, 57);
             this.detectColors.Name = "detectColors";
             this.detectColors.Size = new System.Drawing.Size(139, 23);
             this.detectColors.TabIndex = 9;
@@ -200,11 +202,33 @@
             this.detectColors.UseVisualStyleBackColor = true;
             this.detectColors.Click += new System.EventHandler(this.DetectColors_Click);
             // 
+            // findColorbutton
+            // 
+            this.findColorbutton.Location = new System.Drawing.Point(978, 57);
+            this.findColorbutton.Name = "findColorbutton";
+            this.findColorbutton.Size = new System.Drawing.Size(75, 23);
+            this.findColorbutton.TabIndex = 10;
+            this.findColorbutton.Text = "Найти цвет";
+            this.findColorbutton.UseVisualStyleBackColor = true;
+            this.findColorbutton.Click += new System.EventHandler(this.FindColorbutton_Click);
+            // 
+            // fragmentColorsButton
+            // 
+            this.fragmentColorsButton.Location = new System.Drawing.Point(1069, 57);
+            this.fragmentColorsButton.Name = "fragmentColorsButton";
+            this.fragmentColorsButton.Size = new System.Drawing.Size(75, 23);
+            this.fragmentColorsButton.TabIndex = 11;
+            this.fragmentColorsButton.Text = "контуры фргамента";
+            this.fragmentColorsButton.UseVisualStyleBackColor = true;
+            this.fragmentColorsButton.Click += new System.EventHandler(this.FragmentColorsButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 671);
+            this.Controls.Add(this.fragmentColorsButton);
+            this.Controls.Add(this.findColorbutton);
             this.Controls.Add(this.detectColors);
             this.Controls.Add(this.FragmentFindContours);
             this.Controls.Add(this.opencvbutton);
@@ -247,6 +271,8 @@
         private System.Windows.Forms.Button opencvbutton;
         private System.Windows.Forms.Button FragmentFindContours;
         private System.Windows.Forms.Button detectColors;
+        private System.Windows.Forms.Button findColorbutton;
+        private System.Windows.Forms.Button fragmentColorsButton;
     }
 }
 
