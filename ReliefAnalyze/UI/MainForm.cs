@@ -573,5 +573,11 @@ namespace ReliefAnalyze
                 MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ChooseMainColorsButton_Click(object sender, EventArgs e)
+        {
+            MainColorsForm mainColorsForm = new MainColorsForm();
+            mainColorsForm.Show();
+        }
     }
 }

@@ -86,6 +86,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\MainColorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainColorsForm.Designer.cs">
+      <DependentUpon>MainColorsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AnalyzeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="Logic\Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\MainColorsForm.resx">
+      <DependentUpon>MainColorsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AnalyzeForm.resx">
       <DependentUpon>AnalyzeForm.cs</DependentUpon>
     </EmbeddedResource>

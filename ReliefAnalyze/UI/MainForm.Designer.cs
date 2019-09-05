@@ -46,6 +46,7 @@
             this.detectColors = new System.Windows.Forms.Button();
             this.findColorbutton = new System.Windows.Forms.Button();
             this.fragmentColorsButton = new System.Windows.Forms.Button();
+            this.chooseMainColorsButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
@@ -222,11 +223,22 @@
             this.fragmentColorsButton.UseVisualStyleBackColor = true;
             this.fragmentColorsButton.Click += new System.EventHandler(this.FragmentColorsButton_Click);
             // 
+            // chooseMainColorsButton
+            // 
+            this.chooseMainColorsButton.Location = new System.Drawing.Point(336, 27);
+            this.chooseMainColorsButton.Name = "chooseMainColorsButton";
+            this.chooseMainColorsButton.Size = new System.Drawing.Size(183, 23);
+            this.chooseMainColorsButton.TabIndex = 12;
+            this.chooseMainColorsButton.Text = "Выбрать главные цвета";
+            this.chooseMainColorsButton.UseVisualStyleBackColor = true;
+            this.chooseMainColorsButton.Click += new System.EventHandler(this.ChooseMainColorsButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 671);
+            this.Controls.Add(this.chooseMainColorsButton);
             this.Controls.Add(this.fragmentColorsButton);
             this.Controls.Add(this.findColorbutton);
             this.Controls.Add(this.detectColors);
@@ -273,6 +285,7 @@
         private System.Windows.Forms.Button detectColors;
         private System.Windows.Forms.Button findColorbutton;
         private System.Windows.Forms.Button fragmentColorsButton;
+        private System.Windows.Forms.Button chooseMainColorsButton;
     }
 }
 
