@@ -12,6 +12,7 @@ using Image = System.Drawing.Image;
 using Accord.Imaging.Filters;
 using OpenCvSharp;
 using OpenCvSharp.Extensions;
+using ReliefAnalyze.Logic.ColorDetect;
 
 namespace ReliefAnalyze
 {
@@ -267,6 +268,8 @@ namespace ReliefAnalyze
                 mainPictureBox.Image = MyImage;
             }
 
+            var mapColors = MapObjectsColors.getInstance();
+            mapColors.SetDefaultColors();
         }
 
         private void ContoursButton_Click(object sender, EventArgs e)
@@ -547,6 +550,8 @@ namespace ReliefAnalyze
             var imageBitmap = new Bitmap(MyImage);
             var waterBitmap = FindColor(imageBitmap, "LightSteelBlue");
             var riversBitmap = FindColor(imageBitmap, "Navy");
+            Color color = Color.LightSalmon;
+            var colorp = Color.LightPink;
             var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(riversBitmap));
 
             ContoursForm contoursForm = new ContoursForm();

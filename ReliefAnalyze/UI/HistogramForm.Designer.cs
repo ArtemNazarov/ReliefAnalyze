@@ -58,7 +58,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.histChart);
             this.Name = "HistogramForm";
-            this.Text = "HistogramForm";
+            this.Text = "Гистограмма";
             this.Load += new System.EventHandler(this.HistogramForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.histChart)).EndInit();
             this.ResumeLayout(false);
