@@ -49,6 +49,7 @@
             this.scaleBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.FragmentFindContours = new System.Windows.Forms.Button();
+            this.fragmentAnalyzeButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
@@ -67,7 +68,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1286, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1286, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
@@ -78,20 +79,20 @@
             this.openFileMenuItem,
             this.exitMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // openFileMenuItem
             // 
             this.openFileMenuItem.Name = "openFileMenuItem";
-            this.openFileMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.openFileMenuItem.Size = new System.Drawing.Size(121, 22);
             this.openFileMenuItem.Text = "Открыть";
             this.openFileMenuItem.Click += new System.EventHandler(this.OpenFileMenuItem_Click);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.exitMenuItem.Size = new System.Drawing.Size(121, 22);
             this.exitMenuItem.Text = "Выход";
             this.exitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -100,13 +101,13 @@
             this.дополнительноToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.histogramMenuItem});
             this.дополнительноToolStripMenuItem.Name = "дополнительноToolStripMenuItem";
-            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.дополнительноToolStripMenuItem.Text = "Дополнительно";
             // 
             // histogramMenuItem
             // 
             this.histogramMenuItem.Name = "histogramMenuItem";
-            this.histogramMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.histogramMenuItem.Size = new System.Drawing.Size(147, 22);
             this.histogramMenuItem.Text = "Гистограмма";
             this.histogramMenuItem.Click += new System.EventHandler(this.HistogramMenuItem_Click);
             // 
@@ -221,7 +222,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1035, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Масштаб";
             // 
@@ -246,7 +247,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1195, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 15);
+            this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "км / 100 пикс";
             // 
@@ -260,11 +261,22 @@
             this.FragmentFindContours.UseVisualStyleBackColor = true;
             this.FragmentFindContours.Click += new System.EventHandler(this.FragmentFindContours_Click);
             // 
+            // fragmentAnalyzeButton
+            // 
+            this.fragmentAnalyzeButton.Location = new System.Drawing.Point(88, 28);
+            this.fragmentAnalyzeButton.Name = "fragmentAnalyzeButton";
+            this.fragmentAnalyzeButton.Size = new System.Drawing.Size(198, 23);
+            this.fragmentAnalyzeButton.TabIndex = 17;
+            this.fragmentAnalyzeButton.Text = "Анализ фрагмента";
+            this.fragmentAnalyzeButton.UseVisualStyleBackColor = true;
+            this.fragmentAnalyzeButton.Click += new System.EventHandler(this.FragmentAnalyzeButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 671);
+            this.Controls.Add(this.fragmentAnalyzeButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.scaleBox);
             this.Controls.Add(this.label1);
@@ -317,6 +329,7 @@
         private System.Windows.Forms.ComboBox scaleBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button FragmentFindContours;
+        private System.Windows.Forms.Button fragmentAnalyzeButton;
     }
 }
 

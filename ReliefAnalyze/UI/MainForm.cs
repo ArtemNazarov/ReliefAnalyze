@@ -24,6 +24,8 @@ namespace ReliefAnalyze
         private System.Drawing.Point coordinatesAnalyze { get; set; }
         private int RectSide { get; set; }
 
+        private int PointSide { get; set; }
+
         private MapObjects mapObjects;
         private string ProjectDir { get; set; }
         public MainForm()
@@ -41,7 +43,7 @@ namespace ReliefAnalyze
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 var myImageFile = ImageFile.GetInstance();
-                myImageFile.FileInfo = new FileInfo (openFileDialog1.FileName);
+                myImageFile.FileInfo = new FileInfo(openFileDialog1.FileName);
                 myImageFile.Image = Image.FromFile(openFileDialog1.FileName);
                 mainPictureBox.Image = myImageFile.Image;
             }
@@ -246,6 +248,7 @@ namespace ReliefAnalyze
                 coordinatesAnalyze = coordinates;
                 var imageBitmap = new Bitmap(ImageFile.GetInstance().Image);
                 var rectSide = imageBitmap.Height > imageBitmap.Width ? Convert.ToInt32(imageBitmap.Width * 0.2) : Convert.ToInt32((int)imageBitmap.Height * 0.2);
+
                 var gr = Graphics.FromImage(imageBitmap);
                 var rect = new Rectangle(e.Location.X - rectSide / 2, e.Location.Y - rectSide / 2, rectSide, rectSide);
                 var point = new Rectangle(e.Location.X - 5, e.Location.Y - 5, 10, 10);
@@ -255,6 +258,7 @@ namespace ReliefAnalyze
                 gr.Save();
                 mainPictureBox.Image = imageBitmap;
                 RectSide = rectSide;
+                PointSide = 10;
             }
             else
             {
@@ -267,11 +271,11 @@ namespace ReliefAnalyze
         {
             ProjectDir = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
             mapObjects = new MapObjects();
-            if (File.Exists($@"{ProjectDir}\map (6).png"))
+            if (File.Exists($@"{ProjectDir}\map.png"))
             {
                 var imageFile = ImageFile.GetInstance();
-                imageFile.Image = Image.FromFile($@"{ProjectDir}\map (6).png");
-                imageFile.FileInfo = new FileInfo($@"{ProjectDir}\map (6).png");
+                imageFile.Image = Image.FromFile($@"{ProjectDir}\map.png");
+                imageFile.FileInfo = new FileInfo($@"{ProjectDir}\map.png");
                 scaleBox.SelectedIndex = 1;
                 mainPictureBox.Image = imageFile.Image;
             }
@@ -385,7 +389,6 @@ namespace ReliefAnalyze
             }
             return coloredMap;
         }
-
 
 
         private Mat FindContoursAndDraw(Bitmap originalMap, string objectName, int minArea = 500, int maxArea = 10000)
@@ -647,6 +650,130 @@ namespace ReliefAnalyze
         private void ContoursAnalyzeButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private Dictionary<string, ColorInfo> PointColors()
+        {
+            var xstart = coordinatesAnalyze.X - PointSide / 2;
+            var ystart = coordinatesAnalyze.Y - PointSide / 2;
+            var xend = coordinatesAnalyze.X + PointSide;
+            var yend = coordinatesAnalyze.Y + PointSide;
+            var xmin = xstart > 0 ? xstart : 0;
+            var ymin = ystart > 0 ? ystart : 0;
+            var xmax = xend < Width ? xend : Width;
+            var ymax = yend < Height ? yend : Height;
+            var newWidth = xmax - xmin;
+            var newHeight = ymax - ymin;
+            var imageBitmap = new Bitmap(ImageFile.GetInstance().Image);
+            var colorDictionary = new Dictionary<string, ColorInfo>();
+
+            for (int i = 0; i < newWidth; i++)
+            {
+                for (int j = 0; j < newHeight; j++)
+                {
+                    var medium = imageBitmap.GetPixel(i + xmin - 1, j + ymin - 1);
+                    if (medium.ToArgb() != 0)
+                    {
+                        var colorValue = medium.ToArgb().ToString();
+
+                        var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + medium.Name.Substring(2)));
+                        if (!colorDictionary.ContainsKey(near))
+                        {
+                            colorDictionary.Add(near, new ColorInfo { Color = medium, ColorCount = 1, NearColor = near });
+                        }
+                        else
+                        {
+                            colorDictionary[near].ColorCount += 1;
+                        }
+
+                    }
+                    //contoursBitmap.SetPixel(i, j, medium);
+                }
+            }
+            return colorDictionary;
+        }
+
+        private void PointAnalyze(Dictionary<string, ColorInfo> colorsDict)
+        {
+            StringBuilder analyze = new StringBuilder();
+            var mapColorsObject = MapObjectsColors.GetInstance();
+            var hills = false;
+            var mountains = false;
+            var ponds = false;
+            var culture = false;
+            var plain = false;
+            var rivers = false;
+            var forest = false;
+            var road = false;
+            var sand = false;
+            var swamp = false;
+            var ice = false;
+            foreach (var keyValue in colorsDict)
+            {
+                mountains = mapColorsObject.MountainsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                hills = mapColorsObject.HillsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                ponds = mapColorsObject.PondsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                culture = mapColorsObject.CultureColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                rivers = mapColorsObject.RiversColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                forest = mapColorsObject.ForestsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                road = mapColorsObject.RoadsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                sand = mapColorsObject.SandColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                swamp = mapColorsObject.SwampColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                ice = mapColorsObject.IceColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                plain = mapColorsObject.PlainColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                if (mountains)
+                {
+                    analyze.AppendLine("Есть гора");
+                }
+                if (rivers)
+                {
+                    analyze.AppendLine("Есть река");
+                }
+                if (forest)
+                {
+                    analyze.AppendLine("Есть лес");
+                }
+                if (culture)
+                {
+                    analyze.AppendLine("Есть культуры");
+                }
+                if (plain)
+                {
+                    analyze.AppendLine("Равнина");
+                }
+                if (hills)
+                {
+                    analyze.AppendLine("Холмистая местность");
+                }
+                if (ponds)
+                {
+                    analyze.AppendLine("Водоём");
+                }
+            }
+            using (StreamWriter writer = new StreamWriter($@"{ProjectDir}\analyzePoint.txt"))
+            {
+                writer.WriteLine(analyze);
+            }
+        }
+
+        private void FragmentAnalyzeButton_Click(object sender, EventArgs e)
+        {
+            if (!coordinatesAnalyze.IsEmpty)
+            {
+                var colorDictionary = PointColors();
+                using (StreamWriter writer = new StreamWriter($@"{ProjectDir}\pointColors.txt"))
+                {
+                    foreach (KeyValuePair<string, ColorInfo> keyValue in colorDictionary.OrderByDescending(elem => elem.Value.ColorCount))
+                    {
+                        writer.WriteLine($"{keyValue.Key} : {keyValue.Value.ColorCount}");
+                    }
+                }
+                PointAnalyze(colorDictionary);
+            }
+            else
+            {
+                MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
