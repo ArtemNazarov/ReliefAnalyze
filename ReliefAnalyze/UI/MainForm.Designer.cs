@@ -40,13 +40,15 @@
             this.contoursButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainPictureBox = new System.Windows.Forms.PictureBox();
-            this.HoughButton = new System.Windows.Forms.Button();
             this.opencvbutton = new System.Windows.Forms.Button();
             this.FragmentFindContours = new System.Windows.Forms.Button();
             this.detectColors = new System.Windows.Forms.Button();
-            this.findColorbutton = new System.Windows.Forms.Button();
+            this.analyzeImagebutton = new System.Windows.Forms.Button();
             this.fragmentColorsButton = new System.Windows.Forms.Button();
             this.chooseMainColorsButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.scaleBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
@@ -64,9 +66,11 @@
             this.дополнительноToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1234, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1286, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
             // 
             // файлToolStripMenuItem
             // 
@@ -74,20 +78,20 @@
             this.openFileMenuItem,
             this.exitMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // openFileMenuItem
             // 
             this.openFileMenuItem.Name = "openFileMenuItem";
-            this.openFileMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.openFileMenuItem.Size = new System.Drawing.Size(150, 26);
             this.openFileMenuItem.Text = "Открыть";
             this.openFileMenuItem.Click += new System.EventHandler(this.OpenFileMenuItem_Click);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.exitMenuItem.Size = new System.Drawing.Size(150, 26);
             this.exitMenuItem.Text = "Выход";
             this.exitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -96,13 +100,13 @@
             this.дополнительноToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.histogramMenuItem});
             this.дополнительноToolStripMenuItem.Name = "дополнительноToolStripMenuItem";
-            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
+            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.дополнительноToolStripMenuItem.Text = "Дополнительно";
             // 
             // histogramMenuItem
             // 
             this.histogramMenuItem.Name = "histogramMenuItem";
-            this.histogramMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.histogramMenuItem.Size = new System.Drawing.Size(183, 26);
             this.histogramMenuItem.Text = "Гистограмма";
             this.histogramMenuItem.Click += new System.EventHandler(this.HistogramMenuItem_Click);
             // 
@@ -118,7 +122,7 @@
             // 
             // fragmentControursButton
             // 
-            this.fragmentControursButton.Location = new System.Drawing.Point(194, 57);
+            this.fragmentControursButton.Location = new System.Drawing.Point(168, 57);
             this.fragmentControursButton.Margin = new System.Windows.Forms.Padding(2);
             this.fragmentControursButton.Name = "fragmentControursButton";
             this.fragmentControursButton.Size = new System.Drawing.Size(118, 23);
@@ -129,10 +133,10 @@
             // 
             // contoursButton
             // 
-            this.contoursButton.Location = new System.Drawing.Point(336, 57);
+            this.contoursButton.Location = new System.Drawing.Point(312, 57);
             this.contoursButton.Margin = new System.Windows.Forms.Padding(2);
             this.contoursButton.Name = "contoursButton";
-            this.contoursButton.Size = new System.Drawing.Size(79, 23);
+            this.contoursButton.Size = new System.Drawing.Size(103, 23);
             this.contoursButton.TabIndex = 4;
             this.contoursButton.Text = "Контуры";
             this.contoursButton.UseVisualStyleBackColor = true;
@@ -148,7 +152,7 @@
             this.panel1.Location = new System.Drawing.Point(88, 104);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1064, 507);
+            this.panel1.Size = new System.Drawing.Size(1116, 507);
             this.panel1.TabIndex = 5;
             // 
             // mainPictureBox
@@ -162,20 +166,9 @@
             this.mainPictureBox.TabStop = false;
             this.mainPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPictureBox_MouseDown);
             // 
-            // HoughButton
-            // 
-            this.HoughButton.Location = new System.Drawing.Point(434, 57);
-            this.HoughButton.Margin = new System.Windows.Forms.Padding(2);
-            this.HoughButton.Name = "HoughButton";
-            this.HoughButton.Size = new System.Drawing.Size(85, 23);
-            this.HoughButton.TabIndex = 6;
-            this.HoughButton.Text = "hough";
-            this.HoughButton.UseVisualStyleBackColor = true;
-            this.HoughButton.Click += new System.EventHandler(this.HoughButton_Click);
-            // 
             // opencvbutton
             // 
-            this.opencvbutton.Location = new System.Drawing.Point(693, 57);
+            this.opencvbutton.Location = new System.Drawing.Point(746, 57);
             this.opencvbutton.Name = "opencvbutton";
             this.opencvbutton.Size = new System.Drawing.Size(119, 23);
             this.opencvbutton.TabIndex = 7;
@@ -185,17 +178,17 @@
             // 
             // FragmentFindContours
             // 
-            this.FragmentFindContours.Location = new System.Drawing.Point(540, 57);
+            this.FragmentFindContours.Location = new System.Drawing.Point(755, 27);
             this.FragmentFindContours.Name = "FragmentFindContours";
-            this.FragmentFindContours.Size = new System.Drawing.Size(125, 23);
+            this.FragmentFindContours.Size = new System.Drawing.Size(163, 23);
             this.FragmentFindContours.TabIndex = 8;
-            this.FragmentFindContours.Text = "findcontoursfragment";
+            this.FragmentFindContours.Text = "Контуры фрагмента";
             this.FragmentFindContours.UseVisualStyleBackColor = true;
             this.FragmentFindContours.Click += new System.EventHandler(this.FragmentFindContours_Click);
             // 
             // detectColors
             // 
-            this.detectColors.Location = new System.Drawing.Point(833, 57);
+            this.detectColors.Location = new System.Drawing.Point(890, 57);
             this.detectColors.Name = "detectColors";
             this.detectColors.Size = new System.Drawing.Size(139, 23);
             this.detectColors.TabIndex = 9;
@@ -203,29 +196,29 @@
             this.detectColors.UseVisualStyleBackColor = true;
             this.detectColors.Click += new System.EventHandler(this.DetectColors_Click);
             // 
-            // findColorbutton
+            // analyzeImagebutton
             // 
-            this.findColorbutton.Location = new System.Drawing.Point(978, 57);
-            this.findColorbutton.Name = "findColorbutton";
-            this.findColorbutton.Size = new System.Drawing.Size(75, 23);
-            this.findColorbutton.TabIndex = 10;
-            this.findColorbutton.Text = "Найти цвет";
-            this.findColorbutton.UseVisualStyleBackColor = true;
-            this.findColorbutton.Click += new System.EventHandler(this.FindColorbutton_Click);
+            this.analyzeImagebutton.Location = new System.Drawing.Point(573, 31);
+            this.analyzeImagebutton.Name = "analyzeImagebutton";
+            this.analyzeImagebutton.Size = new System.Drawing.Size(137, 49);
+            this.analyzeImagebutton.TabIndex = 10;
+            this.analyzeImagebutton.Text = "Анализ цветовых объектов";
+            this.analyzeImagebutton.UseVisualStyleBackColor = true;
+            this.analyzeImagebutton.Click += new System.EventHandler(this.FindColorbutton_Click);
             // 
             // fragmentColorsButton
             // 
-            this.fragmentColorsButton.Location = new System.Drawing.Point(1069, 57);
+            this.fragmentColorsButton.Location = new System.Drawing.Point(420, 56);
             this.fragmentColorsButton.Name = "fragmentColorsButton";
-            this.fragmentColorsButton.Size = new System.Drawing.Size(75, 23);
+            this.fragmentColorsButton.Size = new System.Drawing.Size(147, 23);
             this.fragmentColorsButton.TabIndex = 11;
-            this.fragmentColorsButton.Text = "контуры фргамента";
+            this.fragmentColorsButton.Text = "Контуры фргамента";
             this.fragmentColorsButton.UseVisualStyleBackColor = true;
             this.fragmentColorsButton.Click += new System.EventHandler(this.FragmentColorsButton_Click);
             // 
             // chooseMainColorsButton
             // 
-            this.chooseMainColorsButton.Location = new System.Drawing.Point(336, 27);
+            this.chooseMainColorsButton.Location = new System.Drawing.Point(312, 27);
             this.chooseMainColorsButton.Name = "chooseMainColorsButton";
             this.chooseMainColorsButton.Size = new System.Drawing.Size(183, 23);
             this.chooseMainColorsButton.TabIndex = 12;
@@ -233,18 +226,54 @@
             this.chooseMainColorsButton.UseVisualStyleBackColor = true;
             this.chooseMainColorsButton.Click += new System.EventHandler(this.ChooseMainColorsButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1035, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Масштаб";
+            // 
+            // scaleBox
+            // 
+            this.scaleBox.AllowDrop = true;
+            this.scaleBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.scaleBox.FormattingEnabled = true;
+            this.scaleBox.Items.AddRange(new object[] {
+            "5",
+            "10",
+            "20",
+            "50",
+            "100"});
+            this.scaleBox.Location = new System.Drawing.Point(1111, 58);
+            this.scaleBox.Name = "scaleBox";
+            this.scaleBox.Size = new System.Drawing.Size(77, 21);
+            this.scaleBox.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1195, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 15);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "км / 100 пикс";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 671);
+            this.ClientSize = new System.Drawing.Size(1286, 671);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.scaleBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.chooseMainColorsButton);
             this.Controls.Add(this.fragmentColorsButton);
-            this.Controls.Add(this.findColorbutton);
+            this.Controls.Add(this.analyzeImagebutton);
             this.Controls.Add(this.detectColors);
             this.Controls.Add(this.FragmentFindContours);
             this.Controls.Add(this.opencvbutton);
-            this.Controls.Add(this.HoughButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.contoursButton);
             this.Controls.Add(this.fragmentControursButton);
@@ -279,13 +308,15 @@
         private System.Windows.Forms.Button contoursButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox mainPictureBox;
-        private System.Windows.Forms.Button HoughButton;
         private System.Windows.Forms.Button opencvbutton;
         private System.Windows.Forms.Button FragmentFindContours;
         private System.Windows.Forms.Button detectColors;
-        private System.Windows.Forms.Button findColorbutton;
+        private System.Windows.Forms.Button analyzeImagebutton;
         private System.Windows.Forms.Button fragmentColorsButton;
         private System.Windows.Forms.Button chooseMainColorsButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox scaleBox;
+        private System.Windows.Forms.Label label2;
     }
 }
 

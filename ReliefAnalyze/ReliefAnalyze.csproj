@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\ColorDetect\MapObjectsColors.cs" />
+    <Compile Include="Logic\ImageFile.cs" />
     <Compile Include="UI\MainColorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
