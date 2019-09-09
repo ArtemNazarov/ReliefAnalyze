@@ -636,6 +636,46 @@ namespace ReliefAnalyze
             }
         }
 
+        private void FragmentColors()
+        {
+            var imageFile = ImageFile.GetInstance();
+            var imageBitmap = new Bitmap(imageFile.Image);
+            if (!coordinatesAnalyze.IsEmpty)
+            {
+
+                var fragmentBitmap = FragmentBitmap(imageBitmap);
+                var mapObjectColors = MapObjectsColors.GetInstance();
+                foreach (PropertyInfo propertyInfo in mapObjectColors.GetType().GetProperties())
+                {
+                    var colors = (List<ColorInfo>)propertyInfo.GetValue(mapObjectColors, null);
+                    var propName = propertyInfo.Name;
+                    var colorName = propName.Substring(0, propName.IndexOf("Color"));
+                    var colorStrings = colors.Select(color => color.NearColor).ToList();
+                    var bitmap = FindColor(fragmentBitmap, colorStrings);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ImageColors()
+        {
+            var imageFile = ImageFile.GetInstance();
+            var imageBitmap = new Bitmap(imageFile.Image);
+            var mapObjectColors = MapObjectsColors.GetInstance();
+            foreach (PropertyInfo propertyInfo in mapObjectColors.GetType().GetProperties())
+            {
+                var colors = (List<ColorInfo>)propertyInfo.GetValue(mapObjectColors, null);
+                var propName = propertyInfo.Name;
+                var colorName = propName.Substring(0, propName.IndexOf("Color"));
+                var colorStrings = colors.Select(color => color.NearColor).ToList();
+                var bitmap = FindColor(imageBitmap, colorStrings);
+                FindContoursAndDraw(bitmap, colorName);
+            }
+        }
+
         private void ChooseMainColorsButton_Click(object sender, EventArgs e)
         {
             MainColorsForm mainColorsForm = new MainColorsForm();
@@ -756,6 +796,51 @@ namespace ReliefAnalyze
             }
         }
 
+
+
+        private void FragmentObjectsAnalyze()
+        {
+            var imageBitmap = new Bitmap(ImageFile.GetInstance().Image);
+            if (!coordinatesAnalyze.IsEmpty)
+            {
+                var xstart = coordinatesAnalyze.X - RectSide / 2;
+                var ystart = coordinatesAnalyze.Y - RectSide / 2;
+                var xend = coordinatesAnalyze.X + RectSide / 2;
+                var yend = coordinatesAnalyze.Y + RectSide / 2;
+                var xmin = xstart > 0 ? xstart : 0;
+                var ymin = ystart > 0 ? ystart : 0;
+                var xmax = xend < Width ? xend : Width;
+                var ymax = yend < Height ? yend : Height;
+                var newWidth = xmax - xmin;
+                var newHeight = ymax - ymin;
+                for (int i = 0; i < newWidth; i++)
+                {
+                    for (int j = 0; j < newHeight; j++)
+                    {
+                        var x = i + xmin - 1;
+                        var y = j + ymin - 1;
+                        var objectsDict = mapObjects.getObjectDictionary();
+                        var colorsObject = MapObjectsColors.GetInstance();
+                        foreach (PropertyInfo propertyInfo in colorsObject.GetType().GetProperties())
+                        {
+                            var colors = (List<ColorInfo>)propertyInfo.GetValue(colorsObject, null);
+                            var propName = propertyInfo.Name;
+                            var colorName = propName.Substring(0, propName.IndexOf("Color"));
+                            if (objectsDict.ContainsKey(colorName))
+                            {
+                                var points = objectsDict[colorName];
+
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void FragmentAnalyzeButton_Click(object sender, EventArgs e)
         {
             if (!coordinatesAnalyze.IsEmpty)
@@ -769,6 +854,8 @@ namespace ReliefAnalyze
                     }
                 }
                 PointAnalyze(colorDictionary);
+                ImageColors();
+                FragmentObjectsAnalyze();
             }
             else
             {
