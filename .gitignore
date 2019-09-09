@@ -432,3 +432,6 @@ healthchecksdb
 /m/m1_contours_Hills.png
 /m/m1_contours_Forests.png
 /m/m1_contours_Culture.png
+/pointColors.txt
+/matchPoints.txt
+/analyzePoint.txt

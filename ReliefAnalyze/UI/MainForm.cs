@@ -813,26 +813,46 @@ namespace ReliefAnalyze
                 var ymax = yend < Height ? yend : Height;
                 var newWidth = xmax - xmin;
                 var newHeight = ymax - ymin;
-                for (int i = 0; i < newWidth; i++)
+                using (StreamWriter writer = new StreamWriter($@"{ProjectDir}\matchPoints.txt"))
                 {
-                    for (int j = 0; j < newHeight; j++)
+                    //for (int i = 0; i < newWidth; i++)
+                    //{
+                    //    for (int j = 0; j < newHeight; j++)
+                    //    {
+                    var x = i + xmin - 1;
+                    var y = j + ymin - 1;
+                    var objectsDict = mapObjects.getObjectDictionary();
+                    var colorsObject = MapObjectsColors.GetInstance();
+                    foreach (PropertyInfo propertyInfo in colorsObject.GetType().GetProperties())
                     {
-                        var x = i + xmin - 1;
-                        var y = j + ymin - 1;
-                        var objectsDict = mapObjects.getObjectDictionary();
-                        var colorsObject = MapObjectsColors.GetInstance();
-                        foreach (PropertyInfo propertyInfo in colorsObject.GetType().GetProperties())
+                        var colors = (List<ColorInfo>)propertyInfo.GetValue(colorsObject, null);
+                        var propName = propertyInfo.Name;
+                        var colorName = propName.Substring(0, propName.IndexOf("Color"));
+                        if (objectsDict.ContainsKey(colorName))
                         {
-                            var colors = (List<ColorInfo>)propertyInfo.GetValue(colorsObject, null);
-                            var propName = propertyInfo.Name;
-                            var colorName = propName.Substring(0, propName.IndexOf("Color"));
-                            if (objectsDict.ContainsKey(colorName))
+                            var contours = objectsDict[colorName];
+                            foreach (var contour in contours)
                             {
-                                var points = objectsDict[colorName];
+                                var matchContour = contour.Where(point => point.X == x && point.Y == y).ToList();
+                                if (matchContour.Count() > 0)
+                                {
 
+                                    var firstMatch = matchContour.First();
+                                    var lastMatch = matchContour.Last();
+
+                                    writer.WriteLine($"{colorName} first match: x = {firstMatch.X}, y = {firstMatch.Y}");
+                                    writer.WriteLine($"{colorName} last match: x = {lastMatch.X}, y = {lastMatch.Y}");
+
+                                    //foreach (var mp in matchContour)
+                                    //{
+                                    //    writer.WriteLine($"{colorName} match: x = {mp.X}, y = {mp.Y}");
+                                    //}
+                                }
                             }
                         }
                     }
+                    //    }
+                    //}
                 }
             }
             else
