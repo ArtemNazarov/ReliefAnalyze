@@ -21,15 +21,10 @@ namespace ReliefAnalyze
 {
     public partial class MainForm : Form
     {
-        //private Image MyImage { get; set; }
-        //private string MyFileName { get; set; }
-
-        //private string MyFileNameShort { get; set; }
-
-        //private string MyFileFormat { get; set; }
         private System.Drawing.Point coordinatesAnalyze { get; set; }
         private int RectSide { get; set; }
 
+        private MapObjects mapObjects;
         private string ProjectDir { get; set; }
         public MainForm()
         {
@@ -250,10 +245,13 @@ namespace ReliefAnalyze
                 var coordinates = e.Location;
                 coordinatesAnalyze = coordinates;
                 var imageBitmap = new Bitmap(ImageFile.GetInstance().Image);
-                var rectSide = imageBitmap.Height > imageBitmap.Width ? Convert.ToInt32(imageBitmap.Width * 0.1) : Convert.ToInt32((int)imageBitmap.Height * 0.1);
+                var rectSide = imageBitmap.Height > imageBitmap.Width ? Convert.ToInt32(imageBitmap.Width * 0.2) : Convert.ToInt32((int)imageBitmap.Height * 0.2);
                 var gr = Graphics.FromImage(imageBitmap);
                 var rect = new Rectangle(e.Location.X - rectSide / 2, e.Location.Y - rectSide / 2, rectSide, rectSide);
+                var point = new Rectangle(e.Location.X - 5, e.Location.Y - 5, 10, 10);
+
                 gr.DrawRectangle(new Pen(Color.Gray, 3), rect);
+                gr.DrawEllipse(new Pen(Color.Gray, 3), point);
                 gr.Save();
                 mainPictureBox.Image = imageBitmap;
                 RectSide = rectSide;
@@ -268,7 +266,7 @@ namespace ReliefAnalyze
         private void MainForm_Load(object sender, EventArgs e)
         {
             ProjectDir = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-
+            mapObjects = new MapObjects();
             if (File.Exists($@"{ProjectDir}\map (6).png"))
             {
                 var imageFile = ImageFile.GetInstance();
@@ -309,7 +307,7 @@ namespace ReliefAnalyze
             var originalBitmap = new Bitmap(imageFile.Image);
             //var houghBitmap = HoughTransform(originalBitmap);
             //var invertedHoughBitmap = InvertImage(houghBitmap);
-            var originalMat = FindContoursAndDraw(originalBitmap);
+            var originalMat = FindContoursAndDraw(originalBitmap, "Ponds");
             var contoursBitmap = BitmapConverter.ToBitmap(originalMat);
             ContoursForm contoursForm = new ContoursForm();
             contoursForm.Image = contoursBitmap;
@@ -390,7 +388,7 @@ namespace ReliefAnalyze
 
 
 
-        private Mat FindContoursAndDraw(Bitmap originalMap, int minArea = 500, int maxArea = 10000)
+        private Mat FindContoursAndDraw(Bitmap originalMap, string objectName, int minArea = 500, int maxArea = 10000)
         {
             //var houghBitmap = HoughTransform(originalMap);
             //var invertedHoughBitmap = InvertImage(houghBitmap);
@@ -413,47 +411,55 @@ namespace ReliefAnalyze
                 out hierarchyIndexes,
                 mode: RetrievalModes.CComp,
                 method: ContourApproximationModes.ApproxSimple);
-            var markers = new Mat(edgesMat.Size(), MatType.CV_8U, s: Scalar.All(0));
+
+
+
             var componentCount = 0;
             var contourIndex = 0;
-            while ((contourIndex >= 0))
+            if (contours.Length != 0)
             {
-                var contour = contours[contourIndex];
-                var boundingRect = Cv2.BoundingRect(contour);
-                var boundingRectArea = boundingRect.Width * boundingRect.Height;
-                var ca = Cv2.ContourArea(contour) * Convert.ToDouble(scaleBox.SelectedItem) / 100;
-                var cal = Cv2.ArcLength(contour, closed: true) * Convert.ToDouble(scaleBox.SelectedItem) / 100;
-                
-                if (boundingRectArea > minArea)
+                var objectDict = mapObjects.getObjectDictionary();
+                objectDict.Add(objectName, contours);
+                while ((contourIndex >= 0))
                 {
-                    //Cv2.Rectangle(originalMat,
-                    //new OpenCvSharp.Point(boundingRect.X, boundingRect.Y),
-                    //new OpenCvSharp.Point(boundingRect.Right, boundingRect.Bottom),
-                    //Scalar.White, 2);
-                    Cv2.PutText(originalMat, $"L:{ca.ToString("#.##")} km2", new OpenCvSharp.Point(boundingRect.X - 15, boundingRect.Y + 10), HersheyFonts.HersheyPlain, 1.2, Scalar.White, 1);
-                    Cv2.PutText(originalMat, $"A:{cal.ToString("#.##")} km", new OpenCvSharp.Point(boundingRect.X + 10, boundingRect.Y + 40), HersheyFonts.HersheyPlain, 1.2, Scalar.White, 1);
+                    var contour = contours[contourIndex];
+                    var boundingRect = Cv2.BoundingRect(contour);
+                    var boundingRectArea = boundingRect.Width * boundingRect.Height;
+                    var ca = Cv2.ContourArea(contour) * Convert.ToDouble(scaleBox.SelectedItem) / 100;
+                    var cal = Cv2.ArcLength(contour, closed: true) * Convert.ToDouble(scaleBox.SelectedItem) / 100;
 
-                    //Cv2.PutText(originalMat, $"{ boundingRect.Width}in", new OpenCvSharp.Point(boundingRect.X - 15, boundingRect.Y - 10), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
-                    //Cv2.PutText(originalMat, $"{ boundingRect.Height}in", new OpenCvSharp.Point(boundingRect.X + 10, boundingRect.Y), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
+                    if (boundingRectArea > minArea)
+                    {
+                        //Cv2.Rectangle(originalMat,
+                        //new OpenCvSharp.Point(boundingRect.X, boundingRect.Y),
+                        //new OpenCvSharp.Point(boundingRect.Right, boundingRect.Bottom),
+                        //Scalar.White, 2);
+                        Cv2.PutText(originalMat, $"L:{ca.ToString("#.##")} km2", new OpenCvSharp.Point(boundingRect.X, boundingRect.Y + 10), HersheyFonts.HersheyPlain, 1, Scalar.White, 1);
+                        Cv2.PutText(originalMat, $"A:{cal.ToString("#.##")} km", new OpenCvSharp.Point(boundingRect.X, boundingRect.Y + 25), HersheyFonts.HersheyPlain, 1, Scalar.White, 1);
 
+                        //Cv2.PutText(originalMat, $"{ boundingRect.Width}in", new OpenCvSharp.Point(boundingRect.X - 15, boundingRect.Y - 10), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
+                        //Cv2.PutText(originalMat, $"{ boundingRect.Height}in", new OpenCvSharp.Point(boundingRect.X + 10, boundingRect.Y), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
+
+                    }
+
+
+                    Cv2.DrawContours(
+                        originalMat,
+                        contours,
+                        contourIndex,
+                        color: Scalar.All(componentCount + 1),
+                        thickness: -1,
+                        lineType: LineTypes.Link8,
+                        hierarchy: hierarchyIndexes,
+                        maxLevel: int.MaxValue);
+
+                    componentCount++;
+
+
+                    contourIndex = hierarchyIndexes[contourIndex].Next;
                 }
-
-
-                Cv2.DrawContours(
-                    originalMat,
-                    contours,
-                    contourIndex,
-                    color: Scalar.All(componentCount + 1),
-                    thickness: -1,
-                    lineType: LineTypes.Link8,
-                    hierarchy: hierarchyIndexes,
-                    maxLevel: int.MaxValue);
-
-                componentCount++;
-
-
-                contourIndex = hierarchyIndexes[contourIndex].Next;
             }
+
             return originalMat;
         }
 
@@ -464,7 +470,7 @@ namespace ReliefAnalyze
             if (!coordinatesAnalyze.IsEmpty)
             {
                 var fragmentBitmap = FragmentBitmap(imageBitmap);
-                var contoursMat = FindContoursAndDraw(fragmentBitmap);
+                var contoursMat = FindContoursAndDraw(fragmentBitmap, "Ponds");
                 var contoursBitmap = BitmapConverter.ToBitmap(contoursMat);
                 FilteredImageForm filteredImageForm = new FilteredImageForm();
                 filteredImageForm.Image = contoursBitmap;
@@ -574,9 +580,9 @@ namespace ReliefAnalyze
                     var colorName = propName.Substring(0, propName.IndexOf("Color"));
                     var colorStrings = colors.Select(color => color.NearColor).ToList();
                     var bitmap = FindColor(imageBitmap, colorStrings);
-                    var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap));
+                    var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, colorName));
                     contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_contours_{colorName}{imageFile.FileInfo.Extension}");
-                    break;
+                    //break;
                 }
             }
             catch (Exception exception)
@@ -611,7 +617,7 @@ namespace ReliefAnalyze
                     var colorName = propName.Substring(0, propName.IndexOf("Color"));
                     var colorStrings = colors.Select(color => color.NearColor).ToList();
                     var bitmap = FindColor(fragmentBitmap, colorStrings);
-                    var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap));
+                    var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, colorName));
                     contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_fragment_contours_{colorName}{imageFile.FileInfo.Extension}");
                 }
                 //var waterBitmap = FindColor(fragmentBitmap, "LightSteelBlue");

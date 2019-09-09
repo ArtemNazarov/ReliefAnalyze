@@ -97,13 +97,15 @@ namespace ReliefAnalyze.Logic.ColorDetect
             HillsColor.AddRange(new ColorInfo[] {
                 new ColorInfo {NearColor="DimGray", Color = Color.DimGray },
                 new ColorInfo {NearColor="Gray", Color = Color.Gray },
-                new ColorInfo {NearColor="Khaki", Color = Color.Khaki }
+                //new ColorInfo {NearColor="Khaki", Color = Color.Khaki }
             });
             ForestsColor.Add(new ColorInfo {NearColor="DarkGreen" ,Color = Color.DarkGreen });
             PlainColor.AddRange(new ColorInfo[] {
                 new ColorInfo {NearColor="DarkSlateGray",Color = Color.DarkSlateGray },
                 new ColorInfo {NearColor="SeaGreen",Color = Color.SeaGreen },
-                new ColorInfo {NearColor="MediumSeaGreen",Color = Color.MediumSeaGreen }
+                new ColorInfo {NearColor="MediumSeaGreen",Color = Color.MediumSeaGreen },
+                new ColorInfo {NearColor="Khaki", Color = Color.Khaki }
+
             });
             RoadsColor.AddRange(new ColorInfo[] {
                 new ColorInfo {NearColor="Tomato",Color=Color.Tomato },

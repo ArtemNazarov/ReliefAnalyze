@@ -41,7 +41,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainPictureBox = new System.Windows.Forms.PictureBox();
             this.opencvbutton = new System.Windows.Forms.Button();
-            this.FragmentFindContours = new System.Windows.Forms.Button();
             this.detectColors = new System.Windows.Forms.Button();
             this.analyzeImagebutton = new System.Windows.Forms.Button();
             this.fragmentColorsButton = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.scaleBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.FragmentFindContours = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
@@ -67,7 +67,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1286, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1286, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
@@ -168,23 +168,13 @@
             // 
             // opencvbutton
             // 
-            this.opencvbutton.Location = new System.Drawing.Point(746, 57);
+            this.opencvbutton.Location = new System.Drawing.Point(949, 28);
             this.opencvbutton.Name = "opencvbutton";
             this.opencvbutton.Size = new System.Drawing.Size(119, 23);
             this.opencvbutton.TabIndex = 7;
             this.opencvbutton.Text = "findcontours";
             this.opencvbutton.UseVisualStyleBackColor = true;
             this.opencvbutton.Click += new System.EventHandler(this.Opencvbutton_Click);
-            // 
-            // FragmentFindContours
-            // 
-            this.FragmentFindContours.Location = new System.Drawing.Point(755, 27);
-            this.FragmentFindContours.Name = "FragmentFindContours";
-            this.FragmentFindContours.Size = new System.Drawing.Size(163, 23);
-            this.FragmentFindContours.TabIndex = 8;
-            this.FragmentFindContours.Text = "Контуры фрагмента";
-            this.FragmentFindContours.UseVisualStyleBackColor = true;
-            this.FragmentFindContours.Click += new System.EventHandler(this.FragmentFindContours_Click);
             // 
             // detectColors
             // 
@@ -260,6 +250,16 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "км / 100 пикс";
             // 
+            // FragmentFindContours
+            // 
+            this.FragmentFindContours.Location = new System.Drawing.Point(716, 52);
+            this.FragmentFindContours.Name = "FragmentFindContours";
+            this.FragmentFindContours.Size = new System.Drawing.Size(163, 23);
+            this.FragmentFindContours.TabIndex = 8;
+            this.FragmentFindContours.Text = "Контуры фрагмента";
+            this.FragmentFindContours.UseVisualStyleBackColor = true;
+            this.FragmentFindContours.Click += new System.EventHandler(this.FragmentFindContours_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +309,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox mainPictureBox;
         private System.Windows.Forms.Button opencvbutton;
-        private System.Windows.Forms.Button FragmentFindContours;
         private System.Windows.Forms.Button detectColors;
         private System.Windows.Forms.Button analyzeImagebutton;
         private System.Windows.Forms.Button fragmentColorsButton;
@@ -317,6 +316,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox scaleBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button FragmentFindContours;
     }
 }
 
