@@ -419,10 +419,17 @@ namespace ReliefAnalyze
 
             var componentCount = 0;
             var contourIndex = 0;
+            var objectDict = mapObjects.getObjectDictionary();
             if (contours.Length != 0)
             {
-                var objectDict = mapObjects.getObjectDictionary();
-                objectDict.Add(objectName, contours);
+                if (objectDict.ContainsKey(objectName))
+                {
+                    objectDict[objectName] = contours;
+                }
+                else
+                {
+                    objectDict.Add(objectName, contours);
+                }
                 while ((contourIndex >= 0))
                 {
                     var contour = contours[contourIndex];
@@ -575,17 +582,13 @@ namespace ReliefAnalyze
                 var imageFile = ImageFile.GetInstance();
                 var imageBitmap = new Bitmap(imageFile.Image);
                 var mapObjectColors = MapObjectsColors.GetInstance();
-
-                foreach (PropertyInfo propertyInfo in mapObjectColors.GetType().GetProperties())
+                foreach (var elem in mapObjectColors.ColorsDict)
                 {
-                    var colors = (List<ColorInfo>)propertyInfo.GetValue(mapObjectColors, null);
-                    var propName = propertyInfo.Name;
-                    var colorName = propName.Substring(0, propName.IndexOf("Color"));
-                    var colorStrings = colors.Select(color => color.NearColor).ToList();
+                    var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
+                    var colorName = elem.Key;
                     var bitmap = FindColor(imageBitmap, colorStrings);
                     var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, colorName));
                     contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_contours_{colorName}{imageFile.FileInfo.Extension}");
-                    //break;
                 }
             }
             catch (Exception exception)
@@ -613,22 +616,14 @@ namespace ReliefAnalyze
 
                 var fragmentBitmap = FragmentBitmap(imageBitmap);
                 var mapObjectColors = MapObjectsColors.GetInstance();
-                foreach (PropertyInfo propertyInfo in mapObjectColors.GetType().GetProperties())
+                foreach (var elem in mapObjectColors.ColorsDict)
                 {
-                    var colors = (List<ColorInfo>)propertyInfo.GetValue(mapObjectColors, null);
-                    var propName = propertyInfo.Name;
-                    var colorName = propName.Substring(0, propName.IndexOf("Color"));
-                    var colorStrings = colors.Select(color => color.NearColor).ToList();
+                    var colorName = elem.Key;
+                    var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
                     var bitmap = FindColor(fragmentBitmap, colorStrings);
                     var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, colorName));
                     contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_fragment_contours_{colorName}{imageFile.FileInfo.Extension}");
                 }
-                //var waterBitmap = FindColor(fragmentBitmap, "LightSteelBlue");
-                //var riversBitmap = FindColor(fragmentBitmap, "Navy");
-                //var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(riversBitmap));
-                //FilteredImageForm filteredImageForm = new FilteredImageForm();
-                //filteredImageForm.Image = contoursBitmap;
-                //filteredImageForm.Show();
             }
             else
             {
@@ -645,12 +640,10 @@ namespace ReliefAnalyze
 
                 var fragmentBitmap = FragmentBitmap(imageBitmap);
                 var mapObjectColors = MapObjectsColors.GetInstance();
-                foreach (PropertyInfo propertyInfo in mapObjectColors.GetType().GetProperties())
+                foreach (var elem in mapObjectColors.ColorsDict)
                 {
-                    var colors = (List<ColorInfo>)propertyInfo.GetValue(mapObjectColors, null);
-                    var propName = propertyInfo.Name;
-                    var colorName = propName.Substring(0, propName.IndexOf("Color"));
-                    var colorStrings = colors.Select(color => color.NearColor).ToList();
+                    var colorName = elem.Key;
+                    var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
                     var bitmap = FindColor(fragmentBitmap, colorStrings);
                 }
             }
@@ -665,12 +658,10 @@ namespace ReliefAnalyze
             var imageFile = ImageFile.GetInstance();
             var imageBitmap = new Bitmap(imageFile.Image);
             var mapObjectColors = MapObjectsColors.GetInstance();
-            foreach (PropertyInfo propertyInfo in mapObjectColors.GetType().GetProperties())
+            foreach (var elem in mapObjectColors.ColorsDict)
             {
-                var colors = (List<ColorInfo>)propertyInfo.GetValue(mapObjectColors, null);
-                var propName = propertyInfo.Name;
-                var colorName = propName.Substring(0, propName.IndexOf("Color"));
-                var colorStrings = colors.Select(color => color.NearColor).ToList();
+                var colorName = elem.Key;
+                var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
                 var bitmap = FindColor(imageBitmap, colorStrings);
                 FindContoursAndDraw(bitmap, colorName);
             }
@@ -750,17 +741,17 @@ namespace ReliefAnalyze
             var ice = false;
             foreach (var keyValue in colorsDict)
             {
-                mountains = mapColorsObject.MountainsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                hills = mapColorsObject.HillsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                ponds = mapColorsObject.PondsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                culture = mapColorsObject.CultureColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                rivers = mapColorsObject.RiversColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                forest = mapColorsObject.ForestsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                road = mapColorsObject.RoadsColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                sand = mapColorsObject.SandColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                swamp = mapColorsObject.SwampColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                ice = mapColorsObject.IceColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
-                plain = mapColorsObject.PlainColor.Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                mountains = mapColorsObject.ColorsDict["Mountains"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                hills = mapColorsObject.ColorsDict["Hills"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                ponds = mapColorsObject.ColorsDict["Ponds"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                culture = mapColorsObject.ColorsDict["Culture"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                rivers = mapColorsObject.ColorsDict["Rivers"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                forest = mapColorsObject.ColorsDict["Forests"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                road = mapColorsObject.ColorsDict["Roads"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                sand = mapColorsObject.ColorsDict["Sand"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                swamp = mapColorsObject.ColorsDict["Swamp"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                ice = mapColorsObject.ColorsDict["Ice"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
+                plain = mapColorsObject.ColorsDict["Plain"].Where(color => color.NearColor == keyValue.Key).Count() > 0;
                 if (mountains)
                 {
                     analyze.AppendLine("Есть гора");
@@ -819,35 +810,37 @@ namespace ReliefAnalyze
                     //{
                     //    for (int j = 0; j < newHeight; j++)
                     //    {
-                    var x = i + xmin - 1;
-                    var y = j + ymin - 1;
+                    //var x = i + xmin - 1;
+                    //var y = j + ymin - 1;
                     var objectsDict = mapObjects.getObjectDictionary();
                     var colorsObject = MapObjectsColors.GetInstance();
-                    foreach (PropertyInfo propertyInfo in colorsObject.GetType().GetProperties())
+                    foreach (var elem in colorsObject.ColorsDict)
                     {
-                        var colors = (List<ColorInfo>)propertyInfo.GetValue(colorsObject, null);
-                        var propName = propertyInfo.Name;
-                        var colorName = propName.Substring(0, propName.IndexOf("Color"));
+                        var colorName = elem.Key;
                         if (objectsDict.ContainsKey(colorName))
                         {
                             var contours = objectsDict[colorName];
                             foreach (var contour in contours)
                             {
-                                var matchContour = contour.Where(point => point.X == x && point.Y == y).ToList();
-                                if (matchContour.Count() > 0)
+                                var matchContour = contour.Where(point => point.X > xstart && point.X < xend && point.Y > ystart && point.Y < yend).ToList();
+                                foreach (var item in matchContour)
                                 {
-
-                                    var firstMatch = matchContour.First();
-                                    var lastMatch = matchContour.Last();
-
-                                    writer.WriteLine($"{colorName} first match: x = {firstMatch.X}, y = {firstMatch.Y}");
-                                    writer.WriteLine($"{colorName} last match: x = {lastMatch.X}, y = {lastMatch.Y}");
-
-                                    //foreach (var mp in matchContour)
-                                    //{
-                                    //    writer.WriteLine($"{colorName} match: x = {mp.X}, y = {mp.Y}");
-                                    //}
+                                    writer.WriteLine($"{colorName} last match: x = {item.X}, y = {item.Y}");
                                 }
+                                //if (matchContour.Count() > 0)
+                                //{
+
+                                //    var firstMatch = matchContour.First();
+                                //    var lastMatch = matchContour.Last();
+
+                                //    writer.WriteLine($"{colorName} first match: x = {firstMatch.X}, y = {firstMatch.Y}");
+                                //    writer.WriteLine($"{colorName} last match: x = {lastMatch.X}, y = {lastMatch.Y}");
+
+                                //    //foreach (var mp in matchContour)
+                                //    //{
+                                //    //    writer.WriteLine($"{colorName} match: x = {mp.X}, y = {mp.Y}");
+                                //    //}
+                                //}
                             }
                         }
                     }

@@ -47,13 +47,10 @@ namespace ReliefAnalyze
             if (rowsCount < count)
             {
                 colorGridView.Rows.Add(count - rowsCount);
-
-
                 for (int j = 0; j < colorGridView.Columns.Count; j++)
                 {
                     colorGridView.Rows[rowsCount - 1].Cells[j].Style.BackColor = colorGridView.Rows[count - 1].Cells[j].Style.BackColor;
                     colorGridView.Rows[count - 1].Cells[j].Style.BackColor = Color.White;
-
                 }
             }
         }
@@ -62,17 +59,14 @@ namespace ReliefAnalyze
         {
             var mapObjectColors = MapObjectsColors.GetInstance();
 
-
-            foreach (PropertyInfo propertyInfo in mapObjectColors.GetType().GetProperties())
+            foreach (var elem in mapObjectColors.ColorsDict)
             {
-                var colors = (List<ColorInfo>)propertyInfo.GetValue(mapObjectColors, null);
-                var propName = propertyInfo.Name;
-                var colorName = propName.Substring(0, propName.IndexOf("Color"));
+                var colors = elem.Value;
                 AddMissingRows(colors.Count);
                 for (int i = 0; i < colors.Count; i++)
                 {
                     var row = colorGridView.Rows[i];
-                    row.Cells[colorName].Style.BackColor = colors[i].Color;
+                    row.Cells[elem.Key].Style.BackColor = colors[i].Color;
                 }
             }
         }
@@ -81,34 +75,14 @@ namespace ReliefAnalyze
         {
             var mapObjectColors = MapObjectsColors.GetInstance();
             var row = colorGridView.Rows[0];
-            foreach (PropertyInfo propertyInfo in mapObjectColors.GetType().GetProperties())
+            foreach (var elem in mapObjectColors.ColorsDict)
             {
-                var colors = (List<ColorInfo>)propertyInfo.GetValue(mapObjectColors, null);
-                var propName = propertyInfo.Name;
-                var colorName = propName.Substring(0, propName.IndexOf("Color"));
+                var colorName = elem.Key;
                 var selectedColor = row.Cells[colorName].Style.BackColor;
                 var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + selectedColor.Name.Substring(2)));
-                colors.Clear();
-                colors.Add(new ColorInfo { Color = selectedColor, NearColor = near} );
+                elem.Value.Clear();
+                elem.Value.Add(new ColorInfo { Color = selectedColor, NearColor = near });
             }
-            //mapObjectColors.HillsColor.Clear();
-            //mapObjectColors.HillsColor.Add(row.Cells["Hills"].Style.BackColor);
-            //mapObjectColors.MountainsColor.Clear();
-            //mapObjectColors.MountainsColor.Add(row.Cells["Mountains"].Style.BackColor);
-            //mapObjectColors.SandColor.Clear();
-            //mapObjectColors.SandColor.Add(row.Cells["Sand"].Style.BackColor);
-            //mapObjectColors.RiversColor.Clear();
-            //mapObjectColors.RiversColor.Add(row.Cells["Rivers"].Style.BackColor);
-            //mapObjectColors.ForestsColor.Clear();
-            //mapObjectColors.ForestsColor.Add(row.Cells["Forests"].Style.BackColor);
-            //mapObjectColors.PlainColor.Clear();
-            //mapObjectColors.PlainColor.Add(row.Cells["Plain"].Style.BackColor);
-            //mapObjectColors.CultureColor.Clear();
-            //mapObjectColors.CultureColor.Add(row.Cells["Culture"].Style.BackColor);
-            //mapObjectColors.IceColor.Clear();
-            //mapObjectColors.IceColor.Add(row.Cells["Ice"].Style.BackColor);
-            //mapObjectColors.PondsColor.Clear();
-            //mapObjectColors.PondsColor.Add(row.Cells["Ponds"].Style.BackColor);
         }
 
         private void MainColorsForm_Load(object sender, EventArgs e)
