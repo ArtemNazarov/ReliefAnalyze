@@ -45,17 +45,17 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.fragmentGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PondsFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RiversFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ForestsFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoadsFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SandFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HillsFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MountainsFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlainFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CultureFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SwampFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IceFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pointsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fragmentGridView)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +70,7 @@
             this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";
             this.closeButton.Primary = false;
-            this.closeButton.Size = new System.Drawing.Size(93, 36);
+            this.closeButton.Size = new System.Drawing.Size(76, 36);
             this.closeButton.TabIndex = 4;
             this.closeButton.Text = "Закрыть";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.analyzeLabel.Location = new System.Drawing.Point(61, 366);
             this.analyzeLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.analyzeLabel.Name = "analyzeLabel";
-            this.analyzeLabel.Size = new System.Drawing.Size(0, 24);
+            this.analyzeLabel.Size = new System.Drawing.Size(0, 19);
             this.analyzeLabel.TabIndex = 5;
             // 
             // pointsGridView
@@ -214,7 +214,7 @@
             this.materialLabel1.Location = new System.Drawing.Point(13, 83);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(257, 24);
+            this.materialLabel1.Size = new System.Drawing.Size(206, 19);
             this.materialLabel1.TabIndex = 7;
             this.materialLabel1.Text = "Наличие объектов в точках";
             // 
@@ -227,7 +227,7 @@
             this.materialLabel2.Location = new System.Drawing.Point(13, 207);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(306, 24);
+            this.materialLabel2.Size = new System.Drawing.Size(244, 19);
             this.materialLabel2.TabIndex = 8;
             this.materialLabel2.Text = "Наличие объектов во фрагменте";
             // 
@@ -237,17 +237,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fragmentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.fragmentGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
+            this.PondsFragment,
+            this.RiversFragment,
+            this.ForestsFragment,
+            this.RoadsFragment,
+            this.SandFragment,
+            this.HillsFragment,
+            this.MountainsFragment,
+            this.PlainFragment,
+            this.CultureFragment,
+            this.SwampFragment,
+            this.IceFragment});
             this.fragmentGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.fragmentGridView.Location = new System.Drawing.Point(11, 252);
             this.fragmentGridView.Margin = new System.Windows.Forms.Padding(2);
@@ -258,95 +258,95 @@
             this.fragmentGridView.Size = new System.Drawing.Size(1428, 47);
             this.fragmentGridView.TabIndex = 9;
             // 
-            // dataGridViewTextBoxColumn1
+            // PondsFragment
             // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Водоёмы";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.PondsFragment.Frozen = true;
+            this.PondsFragment.HeaderText = "Водоёмы";
+            this.PondsFragment.MinimumWidth = 6;
+            this.PondsFragment.Name = "PondsFragment";
+            this.PondsFragment.ReadOnly = true;
+            this.PondsFragment.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PondsFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn2
+            // RiversFragment
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Реки";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
+            this.RiversFragment.HeaderText = "Реки";
+            this.RiversFragment.MinimumWidth = 6;
+            this.RiversFragment.Name = "RiversFragment";
+            this.RiversFragment.ReadOnly = true;
+            this.RiversFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn3
+            // ForestsFragment
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Леса";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.ForestsFragment.HeaderText = "Леса";
+            this.ForestsFragment.MinimumWidth = 6;
+            this.ForestsFragment.Name = "ForestsFragment";
+            this.ForestsFragment.ReadOnly = true;
+            this.ForestsFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn4
+            // RoadsFragment
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Дороги";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
+            this.RoadsFragment.HeaderText = "Дороги";
+            this.RoadsFragment.MinimumWidth = 6;
+            this.RoadsFragment.Name = "RoadsFragment";
+            this.RoadsFragment.ReadOnly = true;
+            this.RoadsFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn5
+            // SandFragment
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Песок";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
+            this.SandFragment.HeaderText = "Песок";
+            this.SandFragment.MinimumWidth = 6;
+            this.SandFragment.Name = "SandFragment";
+            this.SandFragment.ReadOnly = true;
+            this.SandFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn6
+            // HillsFragment
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Возвышенности";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 125;
+            this.HillsFragment.HeaderText = "Возвышенности";
+            this.HillsFragment.MinimumWidth = 6;
+            this.HillsFragment.Name = "HillsFragment";
+            this.HillsFragment.ReadOnly = true;
+            this.HillsFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn7
+            // MountainsFragment
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Горы";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 125;
+            this.MountainsFragment.HeaderText = "Горы";
+            this.MountainsFragment.MinimumWidth = 6;
+            this.MountainsFragment.Name = "MountainsFragment";
+            this.MountainsFragment.ReadOnly = true;
+            this.MountainsFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn8
+            // PlainFragment
             // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Равнина";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 125;
+            this.PlainFragment.HeaderText = "Равнина";
+            this.PlainFragment.MinimumWidth = 6;
+            this.PlainFragment.Name = "PlainFragment";
+            this.PlainFragment.ReadOnly = true;
+            this.PlainFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn9
+            // CultureFragment
             // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Культуры";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 125;
+            this.CultureFragment.HeaderText = "Культуры";
+            this.CultureFragment.MinimumWidth = 6;
+            this.CultureFragment.Name = "CultureFragment";
+            this.CultureFragment.ReadOnly = true;
+            this.CultureFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn10
+            // SwampFragment
             // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Болота";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 125;
+            this.SwampFragment.HeaderText = "Болота";
+            this.SwampFragment.MinimumWidth = 6;
+            this.SwampFragment.Name = "SwampFragment";
+            this.SwampFragment.ReadOnly = true;
+            this.SwampFragment.Width = 125;
             // 
-            // dataGridViewTextBoxColumn11
+            // IceFragment
             // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Лёд";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 125;
+            this.IceFragment.HeaderText = "Лёд";
+            this.IceFragment.MinimumWidth = 6;
+            this.IceFragment.Name = "IceFragment";
+            this.IceFragment.ReadOnly = true;
+            this.IceFragment.Width = 125;
             // 
             // AnalyzeForm
             // 
@@ -389,16 +389,16 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.DataGridView fragmentGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PondsFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RiversFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ForestsFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoadsFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SandFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HillsFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MountainsFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlainFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CultureFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SwampFragment;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IceFragment;
     }
 }

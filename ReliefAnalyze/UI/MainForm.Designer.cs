@@ -37,9 +37,9 @@
             this.histogramMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.mainPictureBox = new System.Windows.Forms.PictureBox();
+            this.fragmentAnalyzeButton = new System.Windows.Forms.Button();
             this.detectColors = new System.Windows.Forms.Button();
             this.scaleBox = new System.Windows.Forms.ComboBox();
-            this.fragmentAnalyzeButton = new System.Windows.Forms.Button();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.detectSizeRadio = new MaterialSkin.Controls.MaterialRadioButton();
@@ -67,7 +67,7 @@
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.MainMenu.Size = new System.Drawing.Size(199, 28);
+            this.MainMenu.Size = new System.Drawing.Size(161, 24);
             this.MainMenu.TabIndex = 1;
             this.MainMenu.Text = "menuStrip1";
             this.MainMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuStrip1_ItemClicked);
@@ -78,20 +78,20 @@
             this.openFileMenuItem,
             this.exitMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // openFileMenuItem
             // 
             this.openFileMenuItem.Name = "openFileMenuItem";
-            this.openFileMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.openFileMenuItem.Size = new System.Drawing.Size(121, 22);
             this.openFileMenuItem.Text = "Открыть";
             this.openFileMenuItem.Click += new System.EventHandler(this.OpenFileMenuItem_Click);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitMenuItem.Size = new System.Drawing.Size(121, 22);
             this.exitMenuItem.Text = "Выход";
             this.exitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -100,13 +100,13 @@
             this.дополнительноToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.histogramMenuItem});
             this.дополнительноToolStripMenuItem.Name = "дополнительноToolStripMenuItem";
-            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
+            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.дополнительноToolStripMenuItem.Text = "Дополнительно";
             // 
             // histogramMenuItem
             // 
             this.histogramMenuItem.Name = "histogramMenuItem";
-            this.histogramMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.histogramMenuItem.Size = new System.Drawing.Size(147, 22);
             this.histogramMenuItem.Text = "Гистограмма";
             this.histogramMenuItem.Click += new System.EventHandler(this.HistogramMenuItem_Click);
             // 
@@ -135,6 +135,16 @@
             this.mainPictureBox.TabStop = false;
             this.mainPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPictureBox_MouseDown);
             // 
+            // fragmentAnalyzeButton
+            // 
+            this.fragmentAnalyzeButton.Location = new System.Drawing.Point(-76, 32);
+            this.fragmentAnalyzeButton.Name = "fragmentAnalyzeButton";
+            this.fragmentAnalyzeButton.Size = new System.Drawing.Size(198, 23);
+            this.fragmentAnalyzeButton.TabIndex = 17;
+            this.fragmentAnalyzeButton.Text = "Анализ фрагмента";
+            this.fragmentAnalyzeButton.UseVisualStyleBackColor = true;
+            this.fragmentAnalyzeButton.Click += new System.EventHandler(this.FragmentAnalyzeButton_Click);
+            // 
             // detectColors
             // 
             this.detectColors.Location = new System.Drawing.Point(1098, 80);
@@ -160,18 +170,8 @@
             "100"});
             this.scaleBox.Location = new System.Drawing.Point(979, 124);
             this.scaleBox.Name = "scaleBox";
-            this.scaleBox.Size = new System.Drawing.Size(77, 31);
+            this.scaleBox.Size = new System.Drawing.Size(77, 25);
             this.scaleBox.TabIndex = 15;
-            // 
-            // fragmentAnalyzeButton
-            // 
-            this.fragmentAnalyzeButton.Location = new System.Drawing.Point(-76, 32);
-            this.fragmentAnalyzeButton.Name = "fragmentAnalyzeButton";
-            this.fragmentAnalyzeButton.Size = new System.Drawing.Size(198, 23);
-            this.fragmentAnalyzeButton.TabIndex = 17;
-            this.fragmentAnalyzeButton.Text = "Анализ фрагмента";
-            this.fragmentAnalyzeButton.UseVisualStyleBackColor = true;
-            this.fragmentAnalyzeButton.Click += new System.EventHandler(this.FragmentAnalyzeButton_Click);
             // 
             // materialLabel1
             // 
@@ -182,7 +182,7 @@
             this.materialLabel1.Location = new System.Drawing.Point(975, 82);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(92, 24);
+            this.materialLabel1.Size = new System.Drawing.Size(73, 19);
             this.materialLabel1.TabIndex = 18;
             this.materialLabel1.Text = "Масштаб";
             // 
@@ -195,7 +195,7 @@
             this.materialLabel2.Location = new System.Drawing.Point(1072, 127);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(132, 24);
+            this.materialLabel2.Size = new System.Drawing.Size(104, 19);
             this.materialLabel2.TabIndex = 19;
             this.materialLabel2.Text = "км / 100 пикс";
             // 
@@ -210,7 +210,7 @@
             this.detectSizeRadio.MouseState = MaterialSkin.MouseState.HOVER;
             this.detectSizeRadio.Name = "detectSizeRadio";
             this.detectSizeRadio.Ripple = true;
-            this.detectSizeRadio.Size = new System.Drawing.Size(233, 30);
+            this.detectSizeRadio.Size = new System.Drawing.Size(191, 30);
             this.detectSizeRadio.TabIndex = 21;
             this.detectSizeRadio.TabStop = true;
             this.detectSizeRadio.Text = "С выявлением размеров";
@@ -227,7 +227,7 @@
             this.notDetectSizeRadio.MouseState = MaterialSkin.MouseState.HOVER;
             this.notDetectSizeRadio.Name = "notDetectSizeRadio";
             this.notDetectSizeRadio.Ripple = true;
-            this.notDetectSizeRadio.Size = new System.Drawing.Size(238, 30);
+            this.notDetectSizeRadio.Size = new System.Drawing.Size(195, 30);
             this.notDetectSizeRadio.TabIndex = 22;
             this.notDetectSizeRadio.TabStop = true;
             this.notDetectSizeRadio.Text = "Без выявления размеров";
@@ -256,7 +256,7 @@
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(211, 36);
+            this.materialFlatButton1.Size = new System.Drawing.Size(170, 36);
             this.materialFlatButton1.TabIndex = 24;
             this.materialFlatButton1.Text = "Выявление контуров";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
@@ -271,7 +271,7 @@
             this.chooseMainColorsFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.chooseMainColorsFlatButton.Name = "chooseMainColorsFlatButton";
             this.chooseMainColorsFlatButton.Primary = false;
-            this.chooseMainColorsFlatButton.Size = new System.Drawing.Size(238, 36);
+            this.chooseMainColorsFlatButton.Size = new System.Drawing.Size(192, 36);
             this.chooseMainColorsFlatButton.TabIndex = 25;
             this.chooseMainColorsFlatButton.Text = "Выбрать главные цвета";
             this.chooseMainColorsFlatButton.UseVisualStyleBackColor = true;
@@ -285,6 +285,7 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "findcontours";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.Opencvbutton_Click);
             // 
             // MainForm

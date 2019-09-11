@@ -20,10 +20,19 @@ namespace ReliefAnalyze
 
         public void SetPointGridView(Dictionary<string,bool> mapObjects)
         {
-            var row = this.pointsGridView.Rows[1];
+            var row = this.pointsGridView.Rows[0];
             foreach (var elem in mapObjects)
             {
-                row.Cells[elem.Key].Value = elem.Value;
+                row.Cells[elem.Key].Value = Convert.ToInt32(elem.Value); ;
+            }
+        }
+
+        public void SetFragmentGridView(Dictionary<string, bool> mapObjects)
+        {
+            var row = this.fragmentGridView.Rows[0];
+            foreach (var elem in mapObjects)
+            {
+                row.Cells[elem.Key + "Fragment"].Value = Convert.ToInt32(elem.Value);
             }
 
         }

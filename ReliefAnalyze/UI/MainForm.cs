@@ -430,6 +430,10 @@ namespace ReliefAnalyze
             var colorDictionary = new Dictionary<string, ColorInfo>();
             var width = coloredMap.Width;
             var height = coloredMap.Height;
+            var fillColor = Color.Black;
+            if (nearColor.Contains(fillColor.Name)) {
+                fillColor = Color.AliceBlue;
+            }
             for (int i = 0; i < width; i++)
             {
                 for (int j = 0; j < coloredMap.Height; j++)
@@ -442,9 +446,11 @@ namespace ReliefAnalyze
                             var colorValue = medium.ToArgb().ToString();
 
                             var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + medium.Name.Substring(2)));
+
+
                             if (!nearColor.Contains(near))
                             {
-                                coloredMap.SetPixel(i - 1, j - 1, Color.Black);
+                                coloredMap.SetPixel(i - 1, j - 1, fillColor);
 
                             }
                         }
@@ -786,12 +792,13 @@ namespace ReliefAnalyze
             var newHeight = ymax - ymin;
             var imageBitmap = new Bitmap(ImageFile.GetInstance().Image);
             var colorDictionary = new Dictionary<string, ColorInfo>();
-
+            var offsetX = xmin == 0 ? 0 : xmin - 1;
+            var offsetY = ymin == 0 ? 0 : ymin - 1;
             for (int i = 0; i < newWidth; i++)
             {
                 for (int j = 0; j < newHeight; j++)
                 {
-                    var medium = imageBitmap.GetPixel(i + xmin - 1, j + ymin - 1);
+                    var medium = imageBitmap.GetPixel(i + offsetX, j + offsetY);
                     if (medium.ToArgb() != 0)
                     {
 
@@ -822,60 +829,74 @@ namespace ReliefAnalyze
         private Dictionary<string, bool> ColorsAnalyze(Dictionary<string, ColorInfo> colorsDict)
         {
             var mapColorsObject = MapObjectsColors.GetInstance();
+            var defaultColors = mapColorsObject.ColorsDict;
             var objectsPresenceDict = new Dictionary<string, bool>();
-
+            var matchColors = colorsDict.Select(color => color.Key).ToList();
             foreach (var elem in mapColorsObject.ColorsDict)
             {
                 objectsPresenceDict.Add(elem.Key, false);
             }
-            foreach (var keyValue in colorsDict)
-            {
-                var colorName = keyValue.Key;
-                //objectsPresenceDict.Add(colorName, isMapObject);
-                var isMapObject = mapColorsObject.ColorsDict[colorName].Where(color => color.NearColor == colorName).Count() > 0;
-                if (isMapObject)
-                {
-                    objectsPresenceDict[colorName] = isMapObject;
 
-                    if (objectsPresenceDict.ContainsKey(colorName))
+            foreach (var matchColor in matchColors)
+            {
+                foreach (var keyValue in defaultColors)
+                {
+                    var objectName = keyValue.Key;
+                    var hasMapObjectColor = defaultColors[objectName].Any(color => color.NearColor == matchColor);
+                    if (hasMapObjectColor)
                     {
-                        objectsPresenceDict[colorName] = isMapObject;
-                    }
-                    else
-                    {
-                        objectsPresenceDict.Add(colorName, isMapObject);
+                        objectsPresenceDict[objectName] = hasMapObjectColor;
                     }
                 }
-                
-                //if (mountains)
-                //{
-                //    analyze.AppendLine("Есть гора");
-                //}
-                //if (rivers)
-                //{
-                //    analyze.AppendLine("Есть река");
-                //}
-                //if (forest)
-                //{
-                //    analyze.AppendLine("Есть лес");
-                //}
-                //if (culture)
-                //{
-                //    analyze.AppendLine("Есть культуры");
-                //}
-                //if (plain)
-                //{
-                //    analyze.AppendLine("Равнина");
-                //}
-                //if (hills)
-                //{
-                //    analyze.AppendLine("Холмистая местность");
-                //}
-                //if (ponds)
-                //{
-                //    analyze.AppendLine("Водоём");
-                //}
             }
+            //foreach (var keyValue in colorsDict)
+            //{
+            //    var colorName = keyValue.Key;
+            //    //objectsPresenceDict.Add(colorName, isMapObject);
+            //    var isMapObject = defaultColors[colorName].Any(color => color.NearColor == colorName);
+            //    if (isMapObject)
+            //    {
+            //        objectsPresenceDict[colorName] = isMapObject;
+
+            //        if (objectsPresenceDict.ContainsKey(colorName))
+            //        {
+            //            objectsPresenceDict[colorName] = isMapObject;
+            //        }
+            //        else
+            //        {
+            //            objectsPresenceDict.Add(colorName, isMapObject);
+            //        }
+            //    }
+                
+            //    //if (mountains)
+            //    //{
+            //    //    analyze.AppendLine("Есть гора");
+            //    //}
+            //    //if (rivers)
+            //    //{
+            //    //    analyze.AppendLine("Есть река");
+            //    //}
+            //    //if (forest)
+            //    //{
+            //    //    analyze.AppendLine("Есть лес");
+            //    //}
+            //    //if (culture)
+            //    //{
+            //    //    analyze.AppendLine("Есть культуры");
+            //    //}
+            //    //if (plain)
+            //    //{
+            //    //    analyze.AppendLine("Равнина");
+            //    //}
+            //    //if (hills)
+            //    //{
+            //    //    analyze.AppendLine("Холмистая местность");
+            //    //}
+            //    //if (ponds)
+            //    //{
+            //    //    analyze.AppendLine("Водоём");
+            //    //}
+            //}
             //using (StreamWriter writer = new StreamWriter($@"{ProjectDir}\analyzePoint.txt"))
             //{
             //    writer.WriteLine(analyze);
@@ -1001,6 +1022,7 @@ namespace ReliefAnalyze
 
                 AnalyzeForm analyzeForm = new AnalyzeForm();
                 analyzeForm.SetPointGridView(pointAnalyze);
+                analyzeForm.SetFragmentGridView(fragmentAnalyze);
                 //analyzeForm.AddAnalyze(pointAnalyze + fragmentAnalyze);
                 analyzeForm.Show();
                 //MessageBox.Show("Анализ успешно проведён", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
