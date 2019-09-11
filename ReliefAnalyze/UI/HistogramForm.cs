@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ReliefAnalyze
 {
-    public partial class HistogramForm : Form
+    public partial class HistogramForm : MaterialForm
     {
         public Image MyImage { get; set; }
 

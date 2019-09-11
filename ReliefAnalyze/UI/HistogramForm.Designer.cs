@@ -41,7 +41,7 @@
             this.histChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.histChart.Legends.Add(legend1);
-            this.histChart.Location = new System.Drawing.Point(44, 35);
+            this.histChart.Location = new System.Drawing.Point(45, 115);
             this.histChart.Name = "histChart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 577);
             this.Controls.Add(this.histChart);
             this.Name = "HistogramForm";
             this.Text = "Гистограмма";

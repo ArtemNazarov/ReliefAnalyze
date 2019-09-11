@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +11,21 @@ using System.Windows.Forms;
 
 namespace ReliefAnalyze
 {
-    public partial class AnalyzeForm : Form
+    public partial class AnalyzeForm : MaterialForm
     {
         public AnalyzeForm()
         {
             InitializeComponent();
         }
 
-        public void SetDataGridView(List<KeyValuePair<string,ColorInfo>> colors)
+        public void SetPointGridView(Dictionary<string,bool> mapObjects)
         {
-            for (int i = 0; i < colors.Count; i++)
+            var row = this.pointsGridView.Rows[1];
+            foreach (var elem in mapObjects)
             {
-                this.colorGridView.Columns.Add("Color" + (i + 1).ToString(), (i + 1).ToString());
-                Color color = Color.FromArgb(Convert.ToInt32(colors[i].Key));
-                this.colorGridView.Rows[0].Cells[i].Style.BackColor = color;
+                row.Cells[elem.Key].Value = elem.Value;
             }
+
         }
 
         public void AddAnalyze(string analyze)
@@ -36,6 +37,11 @@ namespace ReliefAnalyze
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AnalyzeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

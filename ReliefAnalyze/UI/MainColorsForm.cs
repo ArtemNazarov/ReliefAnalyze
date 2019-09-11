@@ -1,4 +1,5 @@
-﻿using ReliefAnalyze.Logic.ColorDetect;
+﻿using MaterialSkin.Controls;
+using ReliefAnalyze.Logic.ColorDetect;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ReliefAnalyze
 {
-    public partial class MainColorsForm : Form
+    public partial class MainColorsForm : MaterialForm
     {
         public MainColorsForm()
         {
@@ -79,15 +80,20 @@ namespace ReliefAnalyze
             {
                 var colorName = elem.Key;
                 var selectedColor = row.Cells[colorName].Style.BackColor;
-                var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + selectedColor.Name.Substring(2)));
+                //var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + selectedColor.Name.Substring(2)));
                 elem.Value.Clear();
-                elem.Value.Add(new ColorInfo { Color = selectedColor, NearColor = near });
+                elem.Value.Add(new ColorInfo { Color = selectedColor, NearColor = selectedColor.Name });
             }
         }
 
         private void MainColorsForm_Load(object sender, EventArgs e)
         {
             DrawMaincolors();
+        }
+
+        private void CloseButton_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

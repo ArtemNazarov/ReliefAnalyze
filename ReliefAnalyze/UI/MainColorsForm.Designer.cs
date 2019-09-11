@@ -40,12 +40,11 @@
             this.Culture = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Swamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.analyzeLabel = new System.Windows.Forms.Label();
-            this.closeButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.resetColorsButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.closeButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.resetColorsButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.saveColorsButton = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.colorGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,12 +66,12 @@
             this.Swamp,
             this.Ice});
             this.colorGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.colorGridView.Location = new System.Drawing.Point(73, 65);
-            this.colorGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.colorGridView.Location = new System.Drawing.Point(54, 159);
+            this.colorGridView.Margin = new System.Windows.Forms.Padding(2);
             this.colorGridView.Name = "colorGridView";
             this.colorGridView.RowHeadersWidth = 51;
             this.colorGridView.RowTemplate.Height = 24;
-            this.colorGridView.Size = new System.Drawing.Size(1041, 310);
+            this.colorGridView.Size = new System.Drawing.Size(1041, 255);
             this.colorGridView.TabIndex = 0;
             this.colorGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ColorGridView_CellClick);
             // 
@@ -161,16 +160,6 @@
             this.Ice.Name = "Ice";
             this.Ice.Width = 125;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Главные цвета";
-            // 
             // analyzeLabel
             // 
             this.analyzeLabel.AutoSize = true;
@@ -182,47 +171,63 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(427, 429);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeButton.AutoSize = true;
+            this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.closeButton.Depth = 0;
+            this.closeButton.Location = new System.Drawing.Point(536, 449);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(94, 37);
-            this.closeButton.TabIndex = 3;
+            this.closeButton.Primary = false;
+            this.closeButton.Size = new System.Drawing.Size(93, 36);
+            this.closeButton.TabIndex = 6;
             this.closeButton.Text = "Закрыть";
             this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click_1);
             // 
             // resetColorsButton
             // 
-            this.resetColorsButton.Location = new System.Drawing.Point(196, 22);
+            this.resetColorsButton.AutoSize = true;
+            this.resetColorsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.resetColorsButton.Depth = 0;
+            this.resetColorsButton.Location = new System.Drawing.Point(54, 96);
+            this.resetColorsButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.resetColorsButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.resetColorsButton.Name = "resetColorsButton";
-            this.resetColorsButton.Size = new System.Drawing.Size(132, 23);
-            this.resetColorsButton.TabIndex = 4;
+            this.resetColorsButton.Primary = false;
+            this.resetColorsButton.Size = new System.Drawing.Size(215, 36);
+            this.resetColorsButton.TabIndex = 7;
             this.resetColorsButton.Text = "Сброс по умолчанию";
             this.resetColorsButton.UseVisualStyleBackColor = true;
             this.resetColorsButton.Click += new System.EventHandler(this.ResetColorsButton_Click);
             // 
-            // saveButton
+            // saveColorsButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(356, 22);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(124, 23);
-            this.saveButton.TabIndex = 5;
-            this.saveButton.Text = "Сохранить";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.saveColorsButton.AutoSize = true;
+            this.saveColorsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveColorsButton.Depth = 0;
+            this.saveColorsButton.Location = new System.Drawing.Point(312, 96);
+            this.saveColorsButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.saveColorsButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveColorsButton.Name = "saveColorsButton";
+            this.saveColorsButton.Primary = false;
+            this.saveColorsButton.Size = new System.Drawing.Size(174, 36);
+            this.saveColorsButton.TabIndex = 8;
+            this.saveColorsButton.Text = "Сохранить цвета";
+            this.saveColorsButton.UseVisualStyleBackColor = true;
+            this.saveColorsButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // MainColorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 509);
-            this.Controls.Add(this.saveButton);
+            this.ClientSize = new System.Drawing.Size(1155, 509);
+            this.Controls.Add(this.saveColorsButton);
             this.Controls.Add(this.resetColorsButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.analyzeLabel);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.colorGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainColorsForm";
             this.Text = "Главные цвета для определения";
             this.Load += new System.EventHandler(this.MainColorsForm_Load);
@@ -235,12 +240,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView colorGridView;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label analyzeLabel;
-        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button resetColorsButton;
-        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ponds;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rivers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Forests;
@@ -252,5 +253,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Culture;
         private System.Windows.Forms.DataGridViewTextBoxColumn Swamp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ice;
+        private MaterialSkin.Controls.MaterialFlatButton closeButton;
+        private MaterialSkin.Controls.MaterialFlatButton resetColorsButton;
+        private MaterialSkin.Controls.MaterialFlatButton saveColorsButton;
     }
 }
