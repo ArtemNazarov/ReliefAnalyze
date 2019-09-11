@@ -48,6 +48,7 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.chooseMainColorsFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.riversButton = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
@@ -288,11 +289,22 @@
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.Opencvbutton_Click);
             // 
+            // riversButton
+            // 
+            this.riversButton.Location = new System.Drawing.Point(901, 136);
+            this.riversButton.Name = "riversButton";
+            this.riversButton.Size = new System.Drawing.Size(75, 23);
+            this.riversButton.TabIndex = 27;
+            this.riversButton.Text = "Реки";
+            this.riversButton.UseVisualStyleBackColor = true;
+            this.riversButton.Click += new System.EventHandler(this.RiversButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 771);
+            this.Controls.Add(this.riversButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chooseMainColorsFlatButton);
             this.Controls.Add(this.materialFlatButton1);
@@ -341,6 +353,7 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton chooseMainColorsFlatButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button riversButton;
     }
 }
 

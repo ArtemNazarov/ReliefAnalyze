@@ -424,7 +424,7 @@ namespace ReliefAnalyze
             return invertedMap;
         }
 
-        private Bitmap FindColor(Bitmap originalMap, List<string> nearColor)
+        private Bitmap FindColor(Bitmap originalMap, List<string> nearColor, bool saveContour = false)
         {
             var coloredMap = new Bitmap(originalMap);
             var colorDictionary = new Dictionary<string, ColorInfo>();
@@ -444,14 +444,14 @@ namespace ReliefAnalyze
                         if (medium.ToArgb() != 0)
                         {
                             var colorValue = medium.ToArgb().ToString();
-
                             var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + medium.Name.Substring(2)));
+                            if (saveContour)
+                            {
 
-
+                            }
                             if (!nearColor.Contains(near))
                             {
                                 coloredMap.SetPixel(i - 1, j - 1, fillColor);
-
                             }
                         }
                     }
@@ -747,17 +747,45 @@ namespace ReliefAnalyze
             }
         }
 
-        private void ImageColors()
+        private void RiversColors()
+        {
+            try
+            {
+                var imageFile = ImageFile.GetInstance();
+                var imageBitmap = new Bitmap(imageFile.Image);
+                var mapObjectColors = MapObjectsColors.GetInstance();
+                foreach (var elem in mapObjectColors.ColorsDict)
+                {
+                    var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
+                    var colorName = elem.Key;
+                    var bitmap = FindColor(imageBitmap, colorStrings);
+                    var rbitmap = ImageFilter.PrewittFilter(bitmap, grayscale:true);
+                    var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(rbitmap, "Rivers"));
+                    contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_tight_{colorName}{imageFile.FileInfo.Extension}");
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.StackTrace, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ImageColors(Dictionary<string,bool> presenceObjectsDict)
         {
             var imageFile = ImageFile.GetInstance();
             var imageBitmap = new Bitmap(imageFile.Image);
             var mapObjectColors = MapObjectsColors.GetInstance();
-            foreach (var elem in mapObjectColors.ColorsDict)
+            var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Select(obj => obj.Key).ToList();
+            foreach (var elem in presenceObjects)
             {
-                var colorName = elem.Key;
-                var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
-                var bitmap = FindColor(imageBitmap, colorStrings);
-                FindContoursAndDraw(bitmap, colorName);
+                var colors = mapObjectColors.ColorsDict[elem].Select(color=>color.NearColor).ToList();
+                var bitmap = FindColor(imageBitmap, colors);
+                var contoursBitmap = bitmap;
+                if (elem != "Rivers" && elem != "Roads")
+                {
+                    contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, elem));
+                }
+                contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_colors_{elem}{imageFile.FileInfo.Extension}");
             }
         }
 
@@ -849,58 +877,6 @@ namespace ReliefAnalyze
                     }
                 }
             }
-            //foreach (var keyValue in colorsDict)
-            //{
-            //    var colorName = keyValue.Key;
-            //    //objectsPresenceDict.Add(colorName, isMapObject);
-            //    var isMapObject = defaultColors[colorName].Any(color => color.NearColor == colorName);
-            //    if (isMapObject)
-            //    {
-            //        objectsPresenceDict[colorName] = isMapObject;
-
-            //        if (objectsPresenceDict.ContainsKey(colorName))
-            //        {
-            //            objectsPresenceDict[colorName] = isMapObject;
-            //        }
-            //        else
-            //        {
-            //            objectsPresenceDict.Add(colorName, isMapObject);
-            //        }
-            //    }
-                
-            //    //if (mountains)
-            //    //{
-            //    //    analyze.AppendLine("Есть гора");
-            //    //}
-            //    //if (rivers)
-            //    //{
-            //    //    analyze.AppendLine("Есть река");
-            //    //}
-            //    //if (forest)
-            //    //{
-            //    //    analyze.AppendLine("Есть лес");
-            //    //}
-            //    //if (culture)
-            //    //{
-            //    //    analyze.AppendLine("Есть культуры");
-            //    //}
-            //    //if (plain)
-            //    //{
-            //    //    analyze.AppendLine("Равнина");
-            //    //}
-            //    //if (hills)
-            //    //{
-            //    //    analyze.AppendLine("Холмистая местность");
-            //    //}
-            //    //if (ponds)
-            //    //{
-            //    //    analyze.AppendLine("Водоём");
-            //    //}
-            //}
-            //using (StreamWriter writer = new StreamWriter($@"{ProjectDir}\analyzePoint.txt"))
-            //{
-            //    writer.WriteLine(analyze);
-            //}
             return objectsPresenceDict;
         }
 
@@ -987,7 +963,7 @@ namespace ReliefAnalyze
                 }
                 //ColorsAnalyze(colorDictionary, $@"{ProjectDir}\analyzePoint.txt");
                 ColorsAnalyze(colorDictionary);
-                ImageColors();
+                //ImageColors();
                 FragmentObjectsAnalyze();
             }
             else
@@ -1015,7 +991,7 @@ namespace ReliefAnalyze
 
                 if (detectSizeRadio.Checked)
                 {
-                    //ImageColors();
+                    ImageColors(fragmentAnalyze);
                     FragmentObjectsAnalyze();
                 }
 
@@ -1032,6 +1008,11 @@ namespace ReliefAnalyze
             {
                 MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void RiversButton_Click(object sender, EventArgs e)
+        {
+            RiversColors();
         }
     }
 }
