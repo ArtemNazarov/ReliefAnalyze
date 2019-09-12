@@ -431,7 +431,8 @@ namespace ReliefAnalyze
             var width = coloredMap.Width;
             var height = coloredMap.Height;
             var fillColor = Color.Black;
-            if (nearColor.Contains(fillColor.Name)) {
+            if (nearColor.Contains(fillColor.Name))
+            {
                 fillColor = Color.AliceBlue;
             }
             for (int i = 0; i < width; i++)
@@ -471,10 +472,11 @@ namespace ReliefAnalyze
             Mat edgesMat = new Mat();
 
             Cv2.CvtColor(originalMat, blackWhiteMat, ColorConversionCodes.BGRA2GRAY);
-            Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
-            //Bitmap edgesMap = BitmapConverter.ToBitmap(edgesMat);
-            //edgesMap = ImageFilter.SobelFilter(edgesMap, true);
-            //edgesMat = BitmapConverter.ToMat(edgesMap);
+            //Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
+            Bitmap edgesMap = BitmapConverter.ToBitmap(blackWhiteMat);
+            edgesMap = ImageFilter.SobelFilter(edgesMap, grayscale: true);
+            edgesMat = BitmapConverter.ToMat(edgesMap);
+            Cv2.CvtColor(edgesMat, edgesMat, ColorConversionCodes.BGRA2GRAY);
 
             OpenCvSharp.Point[][] contours;
             HierarchyIndex[] hierarchyIndexes;
@@ -508,19 +510,19 @@ namespace ReliefAnalyze
                     var ca = Cv2.ContourArea(contour) * Convert.ToDouble(scaleBox.SelectedItem) / 100;
                     var cal = Cv2.ArcLength(contour, closed: true) * Convert.ToDouble(scaleBox.SelectedItem) / 100;
 
-                    if (boundingRectArea > minArea)
-                    {
+                    //if (boundingRectArea > minArea)
+                    //{
                         //Cv2.Rectangle(originalMat,
                         //new OpenCvSharp.Point(boundingRect.X, boundingRect.Y),
                         //new OpenCvSharp.Point(boundingRect.Right, boundingRect.Bottom),
                         //Scalar.White, 2);
-                        Cv2.PutText(originalMat, $"L:{ca.ToString("#.##")} km2", new OpenCvSharp.Point(boundingRect.X, boundingRect.Y + 10), HersheyFonts.HersheyPlain, 1, Scalar.White, 1);
-                        Cv2.PutText(originalMat, $"A:{cal.ToString("#.##")} km", new OpenCvSharp.Point(boundingRect.X, boundingRect.Y + 25), HersheyFonts.HersheyPlain, 1, Scalar.White, 1);
+                        Cv2.PutText(originalMat, $"A:{ca.ToString("#.##")} km2", new OpenCvSharp.Point(boundingRect.X, boundingRect.Y + 10), HersheyFonts.HersheyPlain, 1, Scalar.White, 1);
+                        Cv2.PutText(originalMat, $"L:{cal.ToString("#.##")} km", new OpenCvSharp.Point(boundingRect.X, boundingRect.Y + 25), HersheyFonts.HersheyPlain, 1, Scalar.White, 1);
 
                         //Cv2.PutText(originalMat, $"{ boundingRect.Width}in", new OpenCvSharp.Point(boundingRect.X - 15, boundingRect.Y - 10), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
                         //Cv2.PutText(originalMat, $"{ boundingRect.Height}in", new OpenCvSharp.Point(boundingRect.X + 10, boundingRect.Y), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
 
-                    }
+                    //}
 
 
                     Cv2.DrawContours(
@@ -543,7 +545,7 @@ namespace ReliefAnalyze
             return originalMat;
         }
 
-        private void FragmentFindContours_Click(object sender, EventArgs e)
+        private void FragmentFindContours()
         {
             var imageFile = ImageFile.GetInstance();
             var imageBitmap = new Bitmap(imageFile.Image);
@@ -559,9 +561,9 @@ namespace ReliefAnalyze
             else
             {
                 MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
+
 
 
 
@@ -677,29 +679,7 @@ namespace ReliefAnalyze
             //contoursForm.Show();
         }
 
-        private void FragmentColorsDetect()
-        {
-            var imageFile = ImageFile.GetInstance();
-            var imageBitmap = new Bitmap(imageFile.Image);
-            if (!coordinatesAnalyze.IsEmpty)
-            {
 
-                var fragmentBitmap = FragmentBitmap(imageBitmap);
-                var mapObjectColors = MapObjectsColors.GetInstance();
-                foreach (var elem in mapObjectColors.ColorsDict)
-                {
-                    var colorName = elem.Key;
-                    var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
-                    var bitmap = FindColor(fragmentBitmap, colorStrings);
-                    var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, colorName));
-                    contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_fragment_contours_{colorName}{imageFile.FileInfo.Extension}");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         private void FragmentColorsButton_Click(object sender, EventArgs e)
         {
@@ -754,12 +734,14 @@ namespace ReliefAnalyze
                 var imageFile = ImageFile.GetInstance();
                 var imageBitmap = new Bitmap(imageFile.Image);
                 var mapObjectColors = MapObjectsColors.GetInstance();
-                foreach (var elem in mapObjectColors.ColorsDict)
+                var tights = mapObjectColors.Tight;
+                var tight = mapObjectColors.ColorsDict.Where(color => tights.Contains(color.Key));
+                foreach (var elem in tight)
                 {
                     var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
                     var colorName = elem.Key;
-                    var bitmap = FindColor(imageBitmap, colorStrings);
-                    var rbitmap = ImageFilter.PrewittFilter(bitmap, grayscale:true);
+                    var bitmap = FindColor(imageBitmap, colorStrings, saveContour: true);
+                    var rbitmap = ImageFilter.PrewittFilter(bitmap, grayscale: true);
                     var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(rbitmap, "Rivers"));
                     contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_tight_{colorName}{imageFile.FileInfo.Extension}");
                 }
@@ -770,41 +752,11 @@ namespace ReliefAnalyze
             }
         }
 
-        private void ImageColors(Dictionary<string,bool> presenceObjectsDict)
-        {
-            var imageFile = ImageFile.GetInstance();
-            var imageBitmap = new Bitmap(imageFile.Image);
-            var mapObjectColors = MapObjectsColors.GetInstance();
-            var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Select(obj => obj.Key).ToList();
-            foreach (var elem in presenceObjects)
-            {
-                var colors = mapObjectColors.ColorsDict[elem].Select(color=>color.NearColor).ToList();
-                var bitmap = FindColor(imageBitmap, colors);
-                var contoursBitmap = bitmap;
-                if (elem != "Rivers" && elem != "Roads")
-                {
-                    contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, elem));
-                }
-                contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_colors_{elem}{imageFile.FileInfo.Extension}");
-            }
-        }
-
         private void ChooseMainColorsButton_Click(object sender, EventArgs e)
         {
             MainColorsForm mainColorsForm = new MainColorsForm();
             mainColorsForm.Show();
         }
-
-        private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void ContoursAnalyzeButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private Dictionary<string, ColorInfo> AreaColors(int side)
         {
@@ -849,7 +801,7 @@ namespace ReliefAnalyze
 
         private Dictionary<string, ColorInfo> PointColors()
         {
-            
+
             var pointDictionary = AreaColors(PointSide);
             return pointDictionary;
         }
@@ -880,11 +832,28 @@ namespace ReliefAnalyze
             return objectsPresenceDict;
         }
 
+        private void ImageColors(Dictionary<string, bool> presenceObjectsDict)
+        {
+            var imageFile = ImageFile.GetInstance();
+            var imageBitmap = new Bitmap(imageFile.Image);
+            var mapObjectColors = MapObjectsColors.GetInstance();
+            var relief = mapObjectColors.Relief;
+            var tight = mapObjectColors.Tight;
+            var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Where(obj => !tight.Contains(obj.Key) && !relief.Contains(obj.Key)).Select(obj => obj.Key).ToList();
+            foreach (var elem in presenceObjects)
+            {
+                var colors = mapObjectColors.ColorsDict[elem].Select(color => color.NearColor).ToList();
+                var bitmap = FindColor(imageBitmap, colors);
+                //var contoursBitmap = bitmap;
+                var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, elem));
+                contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_colors_{elem}{imageFile.FileInfo.Extension}");
+            }
+        }
 
-
-        private void FragmentObjectsAnalyze()
+        private Dictionary<string, List<ImageObjectParameters>> FragmentObjectsAnalyze(Dictionary<string, bool> presenceObjectsDict)
         {
             var imageBitmap = new Bitmap(ImageFile.GetInstance().Image);
+            var objectParameters = new Dictionary<string, List<ImageObjectParameters>>();
             if (!coordinatesAnalyze.IsEmpty)
             {
                 var xstart = coordinatesAnalyze.X - RectSide / 2;
@@ -897,54 +866,57 @@ namespace ReliefAnalyze
                 var ymax = yend < Height ? yend : Height;
                 var newWidth = xmax - xmin;
                 var newHeight = ymax - ymin;
-                using (StreamWriter writer = new StreamWriter($@"{ProjectDir}\matchPoints.txt"))
+
+                //for (int i = 0; i < newWidth; i++)
+                //{
+                //    for (int j = 0; j < newHeight; j++)
+                //    {
+                //var x = i + xmin - 1;
+                //var y = j + ymin - 1;
+                var objectsDict = mapObjects.getObjectDictionary();
+                var colorsObject = MapObjectsColors.GetInstance();
+                var relief = colorsObject.Relief;
+                var tight = colorsObject.Tight;
+                var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Where(obj => !tight.Contains(obj.Key) && !relief.Contains(obj.Key)).Select(obj => obj.Key).ToList();
+
+                foreach (var objectName in presenceObjects)
                 {
-                    //for (int i = 0; i < newWidth; i++)
-                    //{
-                    //    for (int j = 0; j < newHeight; j++)
-                    //    {
-                    //var x = i + xmin - 1;
-                    //var y = j + ymin - 1;
-                    var objectsDict = mapObjects.getObjectDictionary();
-                    var colorsObject = MapObjectsColors.GetInstance();
-                    foreach (var elem in colorsObject.ColorsDict)
+                    if (objectsDict.ContainsKey(objectName))
                     {
-                        var colorName = elem.Key;
-                        if (objectsDict.ContainsKey(colorName))
+                        objectParameters.Add(objectName, new List<ImageObjectParameters>());
+                        var contours = objectsDict[objectName];
+                        foreach (var contour in contours)
                         {
-                            var contours = objectsDict[colorName];
-                            foreach (var contour in contours)
+                            var matchContour = contour.Any(point => point.X > xstart && point.X < xend && point.Y > ystart && point.Y < yend);
+
+                            if (matchContour)
                             {
-                                var matchContour = contour.Where(point => point.X > xstart && point.X < xend && point.Y > ystart && point.Y < yend).ToList();
-                                foreach (var item in matchContour)
-                                {
-                                    writer.WriteLine($"{colorName} last match: x = {item.X}, y = {item.Y}");
-                                }
-                                //if (matchContour.Count() > 0)
-                                //{
+                                var cArea = Cv2.ContourArea(contour) * Convert.ToDouble(scaleBox.SelectedItem) / 100;
+                                var cLength = Cv2.ArcLength(contour, closed: true) * Convert.ToDouble(scaleBox.SelectedItem) / 100;
 
-                                //    var firstMatch = matchContour.First();
-                                //    var lastMatch = matchContour.Last();
-
-                                //    writer.WriteLine($"{colorName} first match: x = {firstMatch.X}, y = {firstMatch.Y}");
-                                //    writer.WriteLine($"{colorName} last match: x = {lastMatch.X}, y = {lastMatch.Y}");
-
-                                //    //foreach (var mp in matchContour)
-                                //    //{
-                                //    //    writer.WriteLine($"{colorName} match: x = {mp.X}, y = {mp.Y}");
-                                //    //}
-                                //}
+                                objectParameters[objectName].Add(new ImageObjectParameters { ArcLength = cLength, Area = cArea });
                             }
+
                         }
                     }
-                    //    }
-                    //}
                 }
             }
             else
             {
                 MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            using (StreamWriter writer = new StreamWriter($@"{ProjectDir}\matchPoints.txt"))
+            {
+                foreach (var elem in objectParameters)
+                {
+                    writer.WriteLine(elem.Key);
+                    foreach (var item in elem.Value)
+                    {
+                        writer.WriteLine($"Area = {item.Area}, ArcLength = {item.ArcLength}");
+                    }
+                }
+            }
+            return objectParameters;
         }
 
 
@@ -964,7 +936,7 @@ namespace ReliefAnalyze
                 //ColorsAnalyze(colorDictionary, $@"{ProjectDir}\analyzePoint.txt");
                 ColorsAnalyze(colorDictionary);
                 //ImageColors();
-                FragmentObjectsAnalyze();
+                //FragmentObjectsAnalyze();
             }
             else
             {
@@ -992,7 +964,7 @@ namespace ReliefAnalyze
                 if (detectSizeRadio.Checked)
                 {
                     ImageColors(fragmentAnalyze);
-                    FragmentObjectsAnalyze();
+                    FragmentObjectsAnalyze(fragmentAnalyze);
                 }
 
 
@@ -1012,7 +984,43 @@ namespace ReliefAnalyze
 
         private void RiversButton_Click(object sender, EventArgs e)
         {
-            RiversColors();
+            if (!coordinatesAnalyze.IsEmpty)
+            {
+                var fragmentDictionary = AreaColors(RectSide);
+                var fragmentAnalyze = ColorsAnalyze(fragmentDictionary);
+                FragmentColorsDetect(fragmentAnalyze);
+
+            }
+            else
+            {
+                MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void FragmentColorsDetect(Dictionary<string,bool> presenceObjectsDict)
+        {
+            var imageFile = ImageFile.GetInstance();
+            var imageBitmap = new Bitmap(imageFile.Image);
+            if (!coordinatesAnalyze.IsEmpty)
+            {
+
+                var fragmentBitmap = FragmentBitmap(imageBitmap);
+                var mapObjectColors = MapObjectsColors.GetInstance();
+                var relief = mapObjectColors.Relief;
+                var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Where(obj => !relief.Contains(obj.Key)).Select(obj => obj.Key).ToList();
+                
+                foreach (var colorName in presenceObjects)
+                {
+                    var colors = mapObjectColors.ColorsDict[colorName].Select(color => color.NearColor).ToList();
+                    var bitmap = FindColor(fragmentBitmap, colors);
+                    var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(bitmap, colorName));
+                    contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_fragment_colors_{colorName}{imageFile.FileInfo.Extension}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

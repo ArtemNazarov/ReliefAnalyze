@@ -10,7 +10,6 @@ namespace ReliefAnalyze.Logic
     {
         private Dictionary<string, OpenCvSharp.Point[][]> objectDictionary;
 
-
         public Dictionary<string, OpenCvSharp.Point[][]> getObjectDictionary() {
             return objectDictionary;
         }

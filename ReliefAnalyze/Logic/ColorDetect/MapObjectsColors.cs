@@ -13,11 +13,15 @@ namespace ReliefAnalyze.Logic.ColorDetect
 
         public IDictionary<string, List<ColorInfo>> ColorsDict;
 
+        public List<string> Tight;
 
+        public List<string> Relief;
 
         protected MapObjectsColors()
         {
             ColorsDict = new Dictionary<string, List<ColorInfo>>();
+            Tight = new List<string>();
+            Relief = new List<string>();
             ColorsDict.Add("Ponds", new List<ColorInfo>());
             ColorsDict.Add("Rivers", new List<ColorInfo>());
             ColorsDict.Add("Forests", new List<ColorInfo>());
@@ -29,8 +33,8 @@ namespace ReliefAnalyze.Logic.ColorDetect
             ColorsDict.Add("Swamp", new List<ColorInfo>());
             ColorsDict.Add("Ice", new List<ColorInfo>());
             ColorsDict.Add("Culture", new List<ColorInfo>());
-
-
+            Tight.AddRange(new string[] { /*"Rivers",*/ "Roads" });
+            Relief.AddRange(new string[] { "Mountains", "Plain", "Hills" });
         }
 
         public static MapObjectsColors GetInstance()
