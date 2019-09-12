@@ -472,7 +472,11 @@ namespace ReliefAnalyze
             Mat edgesMat = new Mat();
 
             Cv2.CvtColor(originalMat, blackWhiteMat, ColorConversionCodes.BGRA2GRAY);
-            //Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
+            if (MapObjectsColors.GetInstance().Tight.Contains(objectName))
+            {
+
+            }
+            Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
             Bitmap edgesMap = BitmapConverter.ToBitmap(blackWhiteMat);
             edgesMap = ImageFilter.SobelFilter(edgesMap, grayscale: true);
             edgesMat = BitmapConverter.ToMat(edgesMap);
@@ -839,7 +843,7 @@ namespace ReliefAnalyze
             var mapObjectColors = MapObjectsColors.GetInstance();
             var relief = mapObjectColors.Relief;
             var tight = mapObjectColors.Tight;
-            var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Where(obj => !tight.Contains(obj.Key) && !relief.Contains(obj.Key)).Select(obj => obj.Key).ToList();
+            var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Where(obj => !relief.Contains(obj.Key)).Select(obj => obj.Key).ToList();
             foreach (var elem in presenceObjects)
             {
                 var colors = mapObjectColors.ColorsDict[elem].Select(color => color.NearColor).ToList();
@@ -877,7 +881,7 @@ namespace ReliefAnalyze
                 var colorsObject = MapObjectsColors.GetInstance();
                 var relief = colorsObject.Relief;
                 var tight = colorsObject.Tight;
-                var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Where(obj => !tight.Contains(obj.Key) && !relief.Contains(obj.Key)).Select(obj => obj.Key).ToList();
+                var presenceObjects = presenceObjectsDict.Where(obj => obj.Value).Where(obj => !relief.Contains(obj.Key)).Select(obj => obj.Key).ToList();
 
                 foreach (var objectName in presenceObjects)
                 {
