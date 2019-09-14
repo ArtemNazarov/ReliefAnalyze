@@ -39,7 +39,7 @@ namespace ReliefAnalyze
 
         public void AddAnalyze(string analyze)
         {
-            this.analyzeLabel.Text = analyze;
+            this.analyzeBox.Text = analyze;
         }
 
 

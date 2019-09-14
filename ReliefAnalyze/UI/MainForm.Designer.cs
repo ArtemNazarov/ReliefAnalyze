@@ -47,8 +47,7 @@
             this.AnalyzePlaceButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.chooseMainColorsFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.riversButton = new System.Windows.Forms.Button();
+            this.criteriaButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.MainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
@@ -67,8 +66,8 @@
             this.дополнительноToolStripMenuItem});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.MainMenu.Size = new System.Drawing.Size(161, 24);
+            this.MainMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.MainMenu.Size = new System.Drawing.Size(200, 28);
             this.MainMenu.TabIndex = 1;
             this.MainMenu.Text = "menuStrip1";
             // 
@@ -78,20 +77,20 @@
             this.openFileMenuItem,
             this.exitMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // openFileMenuItem
             // 
             this.openFileMenuItem.Name = "openFileMenuItem";
-            this.openFileMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.openFileMenuItem.Size = new System.Drawing.Size(150, 26);
             this.openFileMenuItem.Text = "Открыть";
             this.openFileMenuItem.Click += new System.EventHandler(this.OpenFileMenuItem_Click);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.exitMenuItem.Size = new System.Drawing.Size(150, 26);
             this.exitMenuItem.Text = "Выход";
             this.exitMenuItem.Click += new System.EventHandler(this.ExitMenuItem_Click);
             // 
@@ -100,13 +99,13 @@
             this.дополнительноToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.histogramMenuItem});
             this.дополнительноToolStripMenuItem.Name = "дополнительноToolStripMenuItem";
-            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
+            this.дополнительноToolStripMenuItem.Size = new System.Drawing.Size(134, 26);
             this.дополнительноToolStripMenuItem.Text = "Дополнительно";
             // 
             // histogramMenuItem
             // 
             this.histogramMenuItem.Name = "histogramMenuItem";
-            this.histogramMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.histogramMenuItem.Size = new System.Drawing.Size(183, 26);
             this.histogramMenuItem.Text = "Гистограмма";
             this.histogramMenuItem.Click += new System.EventHandler(this.HistogramMenuItem_Click);
             // 
@@ -118,16 +117,17 @@
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.mainPictureBox);
             this.panel1.Controls.Add(this.fragmentAnalyzeButton);
-            this.panel1.Location = new System.Drawing.Point(88, 189);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(117, 233);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1116, 522);
+            this.panel1.Size = new System.Drawing.Size(1488, 642);
             this.panel1.TabIndex = 5;
             // 
             // mainPictureBox
             // 
             this.mainPictureBox.Cursor = System.Windows.Forms.Cursors.Cross;
             this.mainPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.mainPictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainPictureBox.Name = "mainPictureBox";
             this.mainPictureBox.Size = new System.Drawing.Size(800, 400);
             this.mainPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -137,9 +137,10 @@
             // 
             // fragmentAnalyzeButton
             // 
-            this.fragmentAnalyzeButton.Location = new System.Drawing.Point(-76, 32);
+            this.fragmentAnalyzeButton.Location = new System.Drawing.Point(-101, 39);
+            this.fragmentAnalyzeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fragmentAnalyzeButton.Name = "fragmentAnalyzeButton";
-            this.fragmentAnalyzeButton.Size = new System.Drawing.Size(198, 23);
+            this.fragmentAnalyzeButton.Size = new System.Drawing.Size(264, 28);
             this.fragmentAnalyzeButton.TabIndex = 17;
             this.fragmentAnalyzeButton.Text = "Анализ фрагмента";
             this.fragmentAnalyzeButton.UseVisualStyleBackColor = true;
@@ -147,9 +148,10 @@
             // 
             // detectColors
             // 
-            this.detectColors.Location = new System.Drawing.Point(1098, 80);
+            this.detectColors.Location = new System.Drawing.Point(1464, 98);
+            this.detectColors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.detectColors.Name = "detectColors";
-            this.detectColors.Size = new System.Drawing.Size(131, 23);
+            this.detectColors.Size = new System.Drawing.Size(175, 28);
             this.detectColors.TabIndex = 9;
             this.detectColors.Text = "определить цвета";
             this.detectColors.UseVisualStyleBackColor = true;
@@ -168,9 +170,10 @@
             "20",
             "50",
             "100"});
-            this.scaleBox.Location = new System.Drawing.Point(979, 124);
+            this.scaleBox.Location = new System.Drawing.Point(1305, 153);
+            this.scaleBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.scaleBox.Name = "scaleBox";
-            this.scaleBox.Size = new System.Drawing.Size(77, 25);
+            this.scaleBox.Size = new System.Drawing.Size(101, 31);
             this.scaleBox.TabIndex = 15;
             // 
             // materialLabel1
@@ -179,10 +182,11 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(975, 82);
+            this.materialLabel1.Location = new System.Drawing.Point(1300, 101);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(73, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(92, 24);
             this.materialLabel1.TabIndex = 18;
             this.materialLabel1.Text = "Масштаб";
             // 
@@ -192,10 +196,11 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(1072, 127);
+            this.materialLabel2.Location = new System.Drawing.Point(1429, 156);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(104, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(132, 24);
             this.materialLabel2.TabIndex = 19;
             this.materialLabel2.Text = "км / 100 пикс";
             // 
@@ -204,13 +209,13 @@
             this.detectSizeRadio.AutoSize = true;
             this.detectSizeRadio.Depth = 0;
             this.detectSizeRadio.Font = new System.Drawing.Font("Roboto", 10F);
-            this.detectSizeRadio.Location = new System.Drawing.Point(417, 82);
+            this.detectSizeRadio.Location = new System.Drawing.Point(556, 101);
             this.detectSizeRadio.Margin = new System.Windows.Forms.Padding(0);
             this.detectSizeRadio.MouseLocation = new System.Drawing.Point(-1, -1);
             this.detectSizeRadio.MouseState = MaterialSkin.MouseState.HOVER;
             this.detectSizeRadio.Name = "detectSizeRadio";
             this.detectSizeRadio.Ripple = true;
-            this.detectSizeRadio.Size = new System.Drawing.Size(191, 30);
+            this.detectSizeRadio.Size = new System.Drawing.Size(233, 30);
             this.detectSizeRadio.TabIndex = 21;
             this.detectSizeRadio.TabStop = true;
             this.detectSizeRadio.Text = "С выявлением размеров";
@@ -221,13 +226,13 @@
             this.notDetectSizeRadio.AutoSize = true;
             this.notDetectSizeRadio.Depth = 0;
             this.notDetectSizeRadio.Font = new System.Drawing.Font("Roboto", 10F);
-            this.notDetectSizeRadio.Location = new System.Drawing.Point(417, 125);
+            this.notDetectSizeRadio.Location = new System.Drawing.Point(556, 154);
             this.notDetectSizeRadio.Margin = new System.Windows.Forms.Padding(0);
             this.notDetectSizeRadio.MouseLocation = new System.Drawing.Point(-1, -1);
             this.notDetectSizeRadio.MouseState = MaterialSkin.MouseState.HOVER;
             this.notDetectSizeRadio.Name = "notDetectSizeRadio";
             this.notDetectSizeRadio.Ripple = true;
-            this.notDetectSizeRadio.Size = new System.Drawing.Size(195, 30);
+            this.notDetectSizeRadio.Size = new System.Drawing.Size(238, 30);
             this.notDetectSizeRadio.TabIndex = 22;
             this.notDetectSizeRadio.TabStop = true;
             this.notDetectSizeRadio.Text = "Без выявления размеров";
@@ -236,11 +241,12 @@
             // AnalyzePlaceButton
             // 
             this.AnalyzePlaceButton.Depth = 0;
-            this.AnalyzePlaceButton.Location = new System.Drawing.Point(88, 82);
+            this.AnalyzePlaceButton.Location = new System.Drawing.Point(117, 101);
+            this.AnalyzePlaceButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AnalyzePlaceButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.AnalyzePlaceButton.Name = "AnalyzePlaceButton";
             this.AnalyzePlaceButton.Primary = true;
-            this.AnalyzePlaceButton.Size = new System.Drawing.Size(291, 73);
+            this.AnalyzePlaceButton.Size = new System.Drawing.Size(388, 90);
             this.AnalyzePlaceButton.TabIndex = 23;
             this.AnalyzePlaceButton.Text = "Анализ выбранного места";
             this.AnalyzePlaceButton.UseVisualStyleBackColor = true;
@@ -251,60 +257,55 @@
             this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(675, 124);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton1.Location = new System.Drawing.Point(1350, 58);
+            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(170, 36);
+            this.materialFlatButton1.Size = new System.Drawing.Size(211, 36);
             this.materialFlatButton1.TabIndex = 24;
             this.materialFlatButton1.Text = "Выявление контуров";
             this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Visible = false;
             // 
             // chooseMainColorsFlatButton
             // 
             this.chooseMainColorsFlatButton.AutoSize = true;
             this.chooseMainColorsFlatButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.chooseMainColorsFlatButton.Depth = 0;
-            this.chooseMainColorsFlatButton.Location = new System.Drawing.Point(675, 80);
-            this.chooseMainColorsFlatButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.chooseMainColorsFlatButton.Location = new System.Drawing.Point(900, 98);
+            this.chooseMainColorsFlatButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.chooseMainColorsFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.chooseMainColorsFlatButton.Name = "chooseMainColorsFlatButton";
             this.chooseMainColorsFlatButton.Primary = false;
-            this.chooseMainColorsFlatButton.Size = new System.Drawing.Size(192, 36);
+            this.chooseMainColorsFlatButton.Size = new System.Drawing.Size(238, 36);
             this.chooseMainColorsFlatButton.TabIndex = 25;
             this.chooseMainColorsFlatButton.Text = "Выбрать главные цвета";
             this.chooseMainColorsFlatButton.UseVisualStyleBackColor = true;
             this.chooseMainColorsFlatButton.Click += new System.EventHandler(this.ChooseMainColorsButton_Click);
             // 
-            // button1
+            // criteriaButton
             // 
-            this.button1.Location = new System.Drawing.Point(1154, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "findcontours";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.Opencvbutton_Click);
-            // 
-            // riversButton
-            // 
-            this.riversButton.Location = new System.Drawing.Point(901, 136);
-            this.riversButton.Name = "riversButton";
-            this.riversButton.Size = new System.Drawing.Size(75, 23);
-            this.riversButton.TabIndex = 27;
-            this.riversButton.Text = "Реки";
-            this.riversButton.UseVisualStyleBackColor = true;
-            this.riversButton.Click += new System.EventHandler(this.RiversButton_Click);
+            this.criteriaButton.AutoSize = true;
+            this.criteriaButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.criteriaButton.Depth = 0;
+            this.criteriaButton.Location = new System.Drawing.Point(900, 148);
+            this.criteriaButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.criteriaButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.criteriaButton.Name = "criteriaButton";
+            this.criteriaButton.Primary = false;
+            this.criteriaButton.Size = new System.Drawing.Size(103, 36);
+            this.criteriaButton.TabIndex = 28;
+            this.criteriaButton.Text = "Критерии";
+            this.criteriaButton.UseVisualStyleBackColor = true;
+            this.criteriaButton.Click += new System.EventHandler(this.CriteriaButton_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 771);
-            this.Controls.Add(this.riversButton);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1715, 949);
+            this.Controls.Add(this.criteriaButton);
             this.Controls.Add(this.chooseMainColorsFlatButton);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.AnalyzePlaceButton);
@@ -317,7 +318,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MainMenu);
             this.MainMenuStrip = this.MainMenu;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "Анализ рельефа";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -351,8 +352,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton AnalyzePlaceButton;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton chooseMainColorsFlatButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button riversButton;
+        private MaterialSkin.Controls.MaterialFlatButton criteriaButton;
     }
 }
 

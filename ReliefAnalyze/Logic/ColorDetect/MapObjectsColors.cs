@@ -33,7 +33,7 @@ namespace ReliefAnalyze.Logic.ColorDetect
             ColorsDict.Add("Swamp", new List<ColorInfo>());
             ColorsDict.Add("Ice", new List<ColorInfo>());
             ColorsDict.Add("Culture", new List<ColorInfo>());
-            Tight.AddRange(new string[] { /*"Rivers",*/ "Roads" });
+            Tight.AddRange(new string[] { "Rivers", "Roads" });
             Relief.AddRange(new string[] { "Mountains", "Plain", "Hills" });
         }
 

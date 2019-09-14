@@ -56,6 +56,7 @@
             this.CultureFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SwampFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IceFragment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.analyzeBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pointsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fragmentGridView)).BeginInit();
             this.SuspendLayout();
@@ -65,12 +66,12 @@
             this.closeButton.AutoSize = true;
             this.closeButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.closeButton.Depth = 0;
-            this.closeButton.Location = new System.Drawing.Point(745, 558);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.closeButton.Location = new System.Drawing.Point(993, 687);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.closeButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeButton.Name = "closeButton";
             this.closeButton.Primary = false;
-            this.closeButton.Size = new System.Drawing.Size(76, 36);
+            this.closeButton.Size = new System.Drawing.Size(93, 36);
             this.closeButton.TabIndex = 4;
             this.closeButton.Text = "Закрыть";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -82,11 +83,13 @@
             this.analyzeLabel.Depth = 0;
             this.analyzeLabel.Font = new System.Drawing.Font("Roboto", 11F);
             this.analyzeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.analyzeLabel.Location = new System.Drawing.Point(61, 366);
+            this.analyzeLabel.Location = new System.Drawing.Point(17, 398);
+            this.analyzeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.analyzeLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.analyzeLabel.Name = "analyzeLabel";
-            this.analyzeLabel.Size = new System.Drawing.Size(0, 19);
+            this.analyzeLabel.Size = new System.Drawing.Size(184, 24);
             this.analyzeLabel.TabIndex = 5;
+            this.analyzeLabel.Text = "Подробный анализ";
             // 
             // pointsGridView
             // 
@@ -106,13 +109,13 @@
             this.Swamp,
             this.Ice});
             this.pointsGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pointsGridView.Location = new System.Drawing.Point(11, 121);
-            this.pointsGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.pointsGridView.Location = new System.Drawing.Point(15, 149);
+            this.pointsGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pointsGridView.Name = "pointsGridView";
             this.pointsGridView.ReadOnly = true;
             this.pointsGridView.RowHeadersWidth = 51;
             this.pointsGridView.RowTemplate.Height = 24;
-            this.pointsGridView.Size = new System.Drawing.Size(1428, 51);
+            this.pointsGridView.Size = new System.Drawing.Size(1904, 63);
             this.pointsGridView.TabIndex = 6;
             // 
             // Ponds
@@ -211,10 +214,11 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(13, 83);
+            this.materialLabel1.Location = new System.Drawing.Point(17, 102);
+            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(206, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(257, 24);
             this.materialLabel1.TabIndex = 7;
             this.materialLabel1.Text = "Наличие объектов в точках";
             // 
@@ -224,10 +228,11 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(13, 207);
+            this.materialLabel2.Location = new System.Drawing.Point(17, 255);
+            this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(244, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(306, 24);
             this.materialLabel2.TabIndex = 8;
             this.materialLabel2.Text = "Наличие объектов во фрагменте";
             // 
@@ -249,13 +254,13 @@
             this.SwampFragment,
             this.IceFragment});
             this.fragmentGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.fragmentGridView.Location = new System.Drawing.Point(11, 252);
-            this.fragmentGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.fragmentGridView.Location = new System.Drawing.Point(15, 310);
+            this.fragmentGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fragmentGridView.Name = "fragmentGridView";
             this.fragmentGridView.ReadOnly = true;
             this.fragmentGridView.RowHeadersWidth = 51;
             this.fragmentGridView.RowTemplate.Height = 24;
-            this.fragmentGridView.Size = new System.Drawing.Size(1428, 47);
+            this.fragmentGridView.Size = new System.Drawing.Size(1904, 58);
             this.fragmentGridView.TabIndex = 9;
             // 
             // PondsFragment
@@ -348,19 +353,28 @@
             this.IceFragment.ReadOnly = true;
             this.IceFragment.Width = 125;
             // 
+            // analyzeBox
+            // 
+            this.analyzeBox.Location = new System.Drawing.Point(21, 447);
+            this.analyzeBox.Name = "analyzeBox";
+            this.analyzeBox.Size = new System.Drawing.Size(1898, 160);
+            this.analyzeBox.TabIndex = 11;
+            this.analyzeBox.Text = "";
+            // 
             // AnalyzeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1543, 636);
+            this.ClientSize = new System.Drawing.Size(2057, 783);
+            this.Controls.Add(this.analyzeBox);
             this.Controls.Add(this.fragmentGridView);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.pointsGridView);
             this.Controls.Add(this.analyzeLabel);
             this.Controls.Add(this.closeButton);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AnalyzeForm";
             this.Text = "Анализ";
             this.Load += new System.EventHandler(this.AnalyzeForm_Load);
@@ -400,5 +414,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CultureFragment;
         private System.Windows.Forms.DataGridViewTextBoxColumn SwampFragment;
         private System.Windows.Forms.DataGridViewTextBoxColumn IceFragment;
+        private System.Windows.Forms.RichTextBox analyzeBox;
     }
 }

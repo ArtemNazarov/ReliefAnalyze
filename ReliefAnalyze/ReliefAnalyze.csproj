@@ -90,9 +90,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\ColorDetect\MapObjectsColors.cs" />
+    <Compile Include="Logic\CriteriaObject.cs" />
     <Compile Include="Logic\ImageFile.cs" />
     <Compile Include="Logic\ImageObjectParameters.cs" />
     <Compile Include="Logic\MapObjects.cs" />
+    <Compile Include="UI\CriteriaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CriteriaForm.Designer.cs">
+      <DependentUpon>CriteriaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainColorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +143,9 @@
     <Compile Include="Logic\Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\CriteriaForm.resx">
+      <DependentUpon>CriteriaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\MainColorsForm.resx">
       <DependentUpon>MainColorsForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -437,25 +437,21 @@ namespace ReliefAnalyze
             }
             for (int i = 0; i < width; i++)
             {
-                for (int j = 0; j < coloredMap.Height; j++)
+                for (int j = 0; j < height; j++)
                 {
-                    if (!(i == 0 || j == 0 || i == width - 1 || j == height - 1))
-                    {
-                        var medium = originalMap.GetPixel(i - 1, j - 1);
+                    //if (!(i == 0 || j == 0 || i == width - 1 || j == height - 1))
+                    //{
+                        var medium = originalMap.GetPixel(i, j);
                         if (medium.ToArgb() != 0)
                         {
                             var colorValue = medium.ToArgb().ToString();
                             var near = ColorHelper.GetNearestColorName(ColorHelper.GetSystemDrawingColorFromHexString("#" + medium.Name.Substring(2)));
-                            if (saveContour)
-                            {
-
-                            }
                             if (!nearColor.Contains(near))
                             {
-                                coloredMap.SetPixel(i - 1, j - 1, fillColor);
+                                coloredMap.SetPixel(i, j, fillColor);
                             }
                         }
-                    }
+                    //}
                 }
             }
             return coloredMap;
@@ -474,13 +470,16 @@ namespace ReliefAnalyze
             Cv2.CvtColor(originalMat, blackWhiteMat, ColorConversionCodes.BGRA2GRAY);
             if (MapObjectsColors.GetInstance().Tight.Contains(objectName))
             {
-
+                Bitmap edgesMap = BitmapConverter.ToBitmap(blackWhiteMat);
+                edgesMap = ImageFilter.SobelFilter(edgesMap, grayscale: true);
+                edgesMat = BitmapConverter.ToMat(edgesMap);
+                Cv2.CvtColor(edgesMat, edgesMat, ColorConversionCodes.BGRA2GRAY);
             }
-            Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
-            Bitmap edgesMap = BitmapConverter.ToBitmap(blackWhiteMat);
-            edgesMap = ImageFilter.SobelFilter(edgesMap, grayscale: true);
-            edgesMat = BitmapConverter.ToMat(edgesMap);
-            Cv2.CvtColor(edgesMat, edgesMat, ColorConversionCodes.BGRA2GRAY);
+            else
+            {
+                Cv2.Canny(blackWhiteMat, edgesMat, 50, 100);
+            }
+
 
             OpenCvSharp.Point[][] contours;
             HierarchyIndex[] hierarchyIndexes;
@@ -516,28 +515,23 @@ namespace ReliefAnalyze
 
                     //if (boundingRectArea > minArea)
                     //{
-                        //Cv2.Rectangle(originalMat,
-                        //new OpenCvSharp.Point(boundingRect.X, boundingRect.Y),
-                        //new OpenCvSharp.Point(boundingRect.Right, boundingRect.Bottom),
-                        //Scalar.White, 2);
+
                         Cv2.PutText(originalMat, $"A:{ca.ToString("#.##")} km2", new OpenCvSharp.Point(boundingRect.X, boundingRect.Y + 10), HersheyFonts.HersheyPlain, 1, Scalar.White, 1);
                         Cv2.PutText(originalMat, $"L:{cal.ToString("#.##")} km", new OpenCvSharp.Point(boundingRect.X, boundingRect.Y + 25), HersheyFonts.HersheyPlain, 1, Scalar.White, 1);
 
-                        //Cv2.PutText(originalMat, $"{ boundingRect.Width}in", new OpenCvSharp.Point(boundingRect.X - 15, boundingRect.Y - 10), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
-                        //Cv2.PutText(originalMat, $"{ boundingRect.Height}in", new OpenCvSharp.Point(boundingRect.X + 10, boundingRect.Y), HersheyFonts.HersheyPlain, 0.65, Scalar.White, 2);
 
                     //}
 
 
-                    Cv2.DrawContours(
-                        originalMat,
-                        contours,
-                        contourIndex,
-                        color: Scalar.All(componentCount + 1),
-                        thickness: -1,
-                        lineType: LineTypes.Link8,
-                        hierarchy: hierarchyIndexes,
-                        maxLevel: int.MaxValue);
+                    //Cv2.DrawContours(
+                    //    originalMat,
+                    //    contours,
+                    //    contourIndex,
+                    //    color: Scalar.All(componentCount + 1),
+                    //    thickness: -1,
+                    //    lineType: LineTypes.Link8,
+                    //    hierarchy: hierarchyIndexes,
+                    //    maxLevel: int.MaxValue);
 
                     componentCount++;
 
@@ -678,9 +672,6 @@ namespace ReliefAnalyze
 
             AnalyzeImage();
 
-            //ContoursForm contoursForm = new ContoursForm();
-            //contoursForm.Image = contoursBitmap;
-            //contoursForm.Show();
         }
 
 
@@ -709,52 +700,7 @@ namespace ReliefAnalyze
             }
         }
 
-        private void FragmentColors()
-        {
-            var imageFile = ImageFile.GetInstance();
-            var imageBitmap = new Bitmap(imageFile.Image);
-            if (!coordinatesAnalyze.IsEmpty)
-            {
 
-                var fragmentBitmap = FragmentBitmap(imageBitmap);
-                var mapObjectColors = MapObjectsColors.GetInstance();
-                foreach (var elem in mapObjectColors.ColorsDict)
-                {
-                    var colorName = elem.Key;
-                    var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
-                    var bitmap = FindColor(fragmentBitmap, colorStrings);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void RiversColors()
-        {
-            try
-            {
-                var imageFile = ImageFile.GetInstance();
-                var imageBitmap = new Bitmap(imageFile.Image);
-                var mapObjectColors = MapObjectsColors.GetInstance();
-                var tights = mapObjectColors.Tight;
-                var tight = mapObjectColors.ColorsDict.Where(color => tights.Contains(color.Key));
-                foreach (var elem in tight)
-                {
-                    var colorStrings = elem.Value.Select(color => color.NearColor).ToList();
-                    var colorName = elem.Key;
-                    var bitmap = FindColor(imageBitmap, colorStrings, saveContour: true);
-                    var rbitmap = ImageFilter.PrewittFilter(bitmap, grayscale: true);
-                    var contoursBitmap = BitmapConverter.ToBitmap(FindContoursAndDraw(rbitmap, "Rivers"));
-                    contoursBitmap.Save($"{imageFile.FileNameWithoutExtension()}_tight_{colorName}{imageFile.FileInfo.Extension}");
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.StackTrace, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         private void ChooseMainColorsButton_Click(object sender, EventArgs e)
         {
@@ -854,7 +800,7 @@ namespace ReliefAnalyze
             }
         }
 
-        private Dictionary<string, List<ImageObjectParameters>> FragmentObjectsAnalyze(Dictionary<string, bool> presenceObjectsDict)
+        private Dictionary<string, List<ImageObjectParameters>> FragmentObjectsSizeAnalyze(Dictionary<string, bool> presenceObjectsDict)
         {
             var imageBitmap = new Bitmap(ImageFile.GetInstance().Image);
             var objectParameters = new Dictionary<string, List<ImageObjectParameters>>();
@@ -870,13 +816,6 @@ namespace ReliefAnalyze
                 var ymax = yend < Height ? yend : Height;
                 var newWidth = xmax - xmin;
                 var newHeight = ymax - ymin;
-
-                //for (int i = 0; i < newWidth; i++)
-                //{
-                //    for (int j = 0; j < newHeight; j++)
-                //    {
-                //var x = i + xmin - 1;
-                //var y = j + ymin - 1;
                 var objectsDict = mapObjects.getObjectDictionary();
                 var colorsObject = MapObjectsColors.GetInstance();
                 var relief = colorsObject.Relief;
@@ -937,15 +876,44 @@ namespace ReliefAnalyze
                         writer.WriteLine($"{keyValue.Key} : {keyValue.Value.ColorCount}");
                     }
                 }
-                //ColorsAnalyze(colorDictionary, $@"{ProjectDir}\analyzePoint.txt");
                 ColorsAnalyze(colorDictionary);
-                //ImageColors();
-                //FragmentObjectsAnalyze();
             }
             else
             {
                 MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private string DetectObjectName (string objName)
+        {
+            string objRussianName = "";
+            switch (objName) {
+                case "Ponds":
+                    objRussianName = "Обнаружены водоёмы следующих размеров: ";
+                    break;
+                case "Rivers":
+                    objRussianName = "Обнаружены реки следующих размеров: ";
+                    break;
+                case "Forests":
+                    objRussianName = "Обнаружены леса следующих размеров: ";
+                    break;
+                case "Roads":
+                    objRussianName = "Обнаружены дороги следующих размеров: ";
+                    break;
+                case "Sand":
+                    objRussianName = "Обнаружены пустыни следующих размеров: ";
+                    break;
+                case "Swamp":
+                    objRussianName = "Обнаружены болота следующих размеров: ";
+                    break;
+                case "Ice":
+                    objRussianName = "Обнаружены льды следующих размеров: ";
+                    break;
+                case "Culture":
+                    objRussianName = "Обнаружены урожайные поля следующих размеров: ";
+                    break;
+            }
+            return objRussianName;
         }
 
         private void AnalyzePlaceButton_Click(object sender, EventArgs e)
@@ -960,24 +928,42 @@ namespace ReliefAnalyze
                         writer.WriteLine($"{keyValue.Key} : {keyValue.Value.ColorCount}");
                     }
                 }
-                //filename: $@"{ProjectDir}\analyzePoint.txt"
                 var pointAnalyze = ColorsAnalyze(pointDictionary);
                 var fragmentDictionary = AreaColors(RectSide);
                 var fragmentAnalyze = ColorsAnalyze(fragmentDictionary);
+                var analyze = new StringBuilder();
 
                 if (detectSizeRadio.Checked)
                 {
                     ImageColors(fragmentAnalyze);
-                    FragmentObjectsAnalyze(fragmentAnalyze);
+                    var imageObjectsParameters = FragmentObjectsSizeAnalyze(fragmentAnalyze);
+                    var imageObjectsParametersPresence = imageObjectsParameters.Where(param => param.Value.Count > 0);
+                    if (imageObjectsParametersPresence.Any())
+                    {
+                        foreach (var elem in imageObjectsParametersPresence)
+                        {
+                            var objectName = elem.Key;
+                            analyze.AppendLine(DetectObjectName(objectName));
+                            foreach (var objectParameters in elem.Value)
+                            {
+                                if (objectParameters.Area > 1)
+                                {
+                                    analyze.AppendLine($"Длина = {objectParameters.ArcLength}, площадь: {objectParameters.Area}");
+                                }
+                            }
+                        }
+                    }
+
                 }
-
-
+                var criteriaFragmentAnalyze = CriteriaObject.GetInstance().CalculateAnalyze(fragmentAnalyze);
+                var criteriaPointAnalyze = CriteriaObject.GetInstance().CalculateAnalyze(pointAnalyze, true);
+                analyze.AppendLine(criteriaFragmentAnalyze);
+                analyze.AppendLine(criteriaPointAnalyze);
                 AnalyzeForm analyzeForm = new AnalyzeForm();
                 analyzeForm.SetPointGridView(pointAnalyze);
                 analyzeForm.SetFragmentGridView(fragmentAnalyze);
-                //analyzeForm.AddAnalyze(pointAnalyze + fragmentAnalyze);
+                analyzeForm.AddAnalyze(analyze.ToString());
                 analyzeForm.Show();
-                //MessageBox.Show("Анализ успешно проведён", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
@@ -1025,6 +1011,12 @@ namespace ReliefAnalyze
             {
                 MessageBox.Show("Выберите участок карты!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void CriteriaButton_Click(object sender, EventArgs e)
+        {
+            CriteriaForm criteriaForm = new CriteriaForm();
+            criteriaForm.Show();
         }
     }
 }
